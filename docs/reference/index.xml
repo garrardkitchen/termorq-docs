@@ -73,6 +73,14 @@
  &lt;td&gt;MCP servers, without secret values&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;ssh_connections.json&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;SSH connections, without passwords or passphrases&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;ssh_known_hosts&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Host keys you trusted, in OpenSSH format. &lt;code&gt;~/.ssh/known_hosts&lt;/code&gt; is read, never written&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
  &lt;td&gt;&lt;code&gt;mcp_prefs.json&lt;/code&gt;&lt;/td&gt;
  &lt;td&gt;Favourites and related MCP preferences&lt;/td&gt;
  &lt;/tr&gt;

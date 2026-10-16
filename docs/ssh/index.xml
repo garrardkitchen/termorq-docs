@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SSH on Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/ssh/</link><description>Recent content in SSH on Termorq</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://termorq-docs.garrardkitchen.com/docs/ssh/index.xml" rel="self" type="application/rss+xml"/><item><title>Connections</title><link>https://termorq-docs.garrardkitchen.com/docs/ssh/connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/ssh/connections/</guid><description>&lt;p&gt;SSH connections are a Pro feature (&lt;code&gt;ssh.connections&lt;/code&gt; in &lt;code&gt;features.yml&lt;/code&gt;). Termorq speaks SSH itself, through the Rust &lt;code&gt;russh&lt;/code&gt; library, so Windows does not need OpenSSH installed.&lt;/p&gt;
+&lt;h2 id="create-one"&gt;Create one &lt;a href="#create-one" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+
+ 
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@create ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@ssh new&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Both open the same form.&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Field&lt;/th&gt;
+ &lt;th&gt;What it takes&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Name&lt;/td&gt;
+ &lt;td&gt;Unique, ignoring case. It becomes the tab title and the shell pill (&lt;code&gt;SSH: prod-web&lt;/code&gt;)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Host&lt;/td&gt;
+ &lt;td&gt;A name or an IP address. Pasting &lt;code&gt;deploy@10.0.0.5:2222&lt;/code&gt; fills user, host, and port&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Port&lt;/td&gt;
+ &lt;td&gt;22 by default&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;User&lt;/td&gt;
+ &lt;td&gt;The account to log in as&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Authentication&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Private key file&lt;/strong&gt;, &lt;strong&gt;ssh-agent&lt;/strong&gt;, or &lt;strong&gt;Password&lt;/strong&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Private key file&lt;/td&gt;
+ &lt;td&gt;OpenSSH or PEM key. &lt;code&gt;~/&lt;/code&gt; is expanded. &lt;strong&gt;Browse…&lt;/strong&gt; opens a file picker&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Key passphrase / Password&lt;/td&gt;
+ &lt;td&gt;Stored in the OS keychain only. Blank on edit keeps the stored one. &lt;strong&gt;Forget the stored …&lt;/strong&gt; clears it&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Start in folder&lt;/td&gt;
+ &lt;td&gt;Optional. The shell starts with &lt;code&gt;cd&lt;/code&gt; into it&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Jump host&lt;/td&gt;
+ &lt;td&gt;Optional bastion: host, port, and user (blank uses the user above). The same authentication is used for both hops&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Local port forwards&lt;/td&gt;
+ &lt;td&gt;Optional, one per line: &lt;code&gt;8080:localhost:80&lt;/code&gt; or &lt;code&gt;5432:db.internal:5432&lt;/code&gt;. See &lt;a href="https://termorq-docs.garrardkitchen.com/docs/ssh/sessions/"&gt;sessions and files&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Save&lt;/strong&gt; keeps it. &lt;strong&gt;Save and connect&lt;/strong&gt; also opens it in a new tab.&lt;/p&gt;</description></item><item><title>Sessions and files</title><link>https://termorq-docs.garrardkitchen.com/docs/ssh/sessions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/ssh/sessions/</guid><description>&lt;h2 id="open-a-session"&gt;Open a session &lt;a href="#open-a-session" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+
+ 
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@ssh prod-web&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;@ssh&lt;/code&gt; lists saved hosts with &lt;code&gt;user@host&lt;/code&gt;, the authentication, and any jump host. Selecting one opens a &lt;strong&gt;new tab&lt;/strong&gt; named after it. The shell pill in the status strip reads &lt;code&gt;SSH: prod-web&lt;/code&gt;, and the terminal header shows &lt;strong&gt;SSH · connected&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The terminal is a full xterm: &lt;code&gt;vim&lt;/code&gt;, &lt;code&gt;top&lt;/code&gt;, &lt;code&gt;tmux&lt;/code&gt;, and colours work. &lt;strong&gt;Ctrl+Shift+C&lt;/strong&gt; copies and &lt;strong&gt;Ctrl+Shift+V&lt;/strong&gt; pastes. &lt;code&gt;exit&lt;/code&gt; or &lt;strong&gt;End session&lt;/strong&gt; closes it and the tab goes back to the local prompt.&lt;/p&gt;</description></item></channel></rss>

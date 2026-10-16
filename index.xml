@@ -1,52 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Termorq</title><link>https://termorq-docs.garrardkitchen.com/</link><description>Recent content on Termorq</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://termorq-docs.garrardkitchen.com/index.xml" rel="self" type="application/rss+xml"/><item><title>API connections</title><link>https://termorq-docs.garrardkitchen.com/docs/http/connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/http/connections/</guid><description>&lt;p&gt;A &lt;strong&gt;connection&lt;/strong&gt; and an &lt;strong&gt;endpoint&lt;/strong&gt; are separate. One connection (base URL and auth) is reused by many endpoints.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;@create api&lt;/code&gt; asks for the name, the base URL, and the auth. When Settings has environments or customers, the form asks for those too. A new connection starts on the header choice. Changing only the environment or the customer does not require another test after the current values have already passed.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Test connection&lt;/strong&gt; sends &lt;code&gt;GET&lt;/code&gt; to the base URL. Any HTTP status, including 401 or 404, enables &lt;strong&gt;Save&lt;/strong&gt;. DNS failure, connection refused, timeout, or a failed token request does not.&lt;/p&gt;</description></item><item><title>Browse and edit</title><link>https://termorq-docs.garrardkitchen.com/docs/library/browse/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/library/browse/</guid><description>&lt;p&gt;&lt;strong&gt;Library&lt;/strong&gt; on the rail, &lt;code&gt;@library&lt;/code&gt;, or &lt;strong&gt;Cmd+Shift+L&lt;/strong&gt; (&lt;strong&gt;Ctrl+Shift+L&lt;/strong&gt; on Windows and Linux) lists everything saved: MCP servers, API connections, endpoints, OpenAI connections, and collections.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Test connection&lt;/strong&gt; sends &lt;code&gt;GET&lt;/code&gt; to the base URL. Any HTTP status, including 401 or 404, enables &lt;strong&gt;Save&lt;/strong&gt;. DNS failure, connection refused, timeout, or a failed token request does not.&lt;/p&gt;</description></item><item><title>Browse and edit</title><link>https://termorq-docs.garrardkitchen.com/docs/library/browse/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/library/browse/</guid><description>&lt;p&gt;&lt;strong&gt;Library&lt;/strong&gt; on the rail, &lt;code&gt;@library&lt;/code&gt;, or &lt;strong&gt;Cmd+Shift+L&lt;/strong&gt; (&lt;strong&gt;Ctrl+Shift+L&lt;/strong&gt; on Windows and Linux) lists everything saved: MCP servers, API connections, endpoints, OpenAI connections, SSH connections (Pro), and collections. SSH rows also have &lt;strong&gt;Connect&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/library.png" alt="The Library, with a filter for each kind" loading="lazy"&gt;
  &lt;figcaption&gt;Library. Filter by kind, search by name, then Edit, Duplicate, Export, or Delete. Secrets stay in the OS keychain.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
-&lt;p&gt;Filter by name or by kind. The counts on the chips are what is on this machine.&lt;/p&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;Action&lt;/th&gt;
- &lt;th&gt;What it does&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;Edit&lt;/td&gt;
- &lt;td&gt;Opens the same editor as &lt;code&gt;@edit name&lt;/code&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Duplicate&lt;/td&gt;
- &lt;td&gt;Makes &lt;code&gt;&amp;lt;name&amp;gt; (copy)&lt;/code&gt;. When the original has a stored secret, the app asks whether the copy should reuse it or start without one&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Export&lt;/td&gt;
- &lt;td&gt;Writes that row’s transfer file. See &lt;a href="https://termorq-docs.garrardkitchen.com/docs/library/share/"&gt;Share a file&lt;/a&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Delete&lt;/td&gt;
- &lt;td&gt;Removes it, with &lt;strong&gt;Undo&lt;/strong&gt; in a toast&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-
-
- 
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@edit Users API
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@edit List users
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@library&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;@edit name&lt;/code&gt; opens the editor for a server, an API, an endpoint, an OpenAI connection, or a collection. A blank secret on edit keeps the stored one.&lt;/p&gt;</description></item><item><title>Commands</title><link>https://termorq-docs.garrardkitchen.com/docs/reference/commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/reference/commands/</guid><description>&lt;p&gt;&lt;code&gt;termorq-cli&lt;/code&gt; is a Pro-only companion tool. Its commands are listed here for Pro builds; the CLI has no edition switch. See the &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/"&gt;Free and Pro feature breakdown&lt;/a&gt; for app features.&lt;/p&gt;
+&lt;p&gt;Filter by name or by kind. The counts on the chips are what is on this machine.&lt;/p&gt;</description></item><item><title>Commands</title><link>https://termorq-docs.garrardkitchen.com/docs/reference/commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/reference/commands/</guid><description>&lt;p&gt;&lt;code&gt;termorq-cli&lt;/code&gt; is a Pro-only companion tool. Its commands are listed here for Pro builds; the CLI has no edition switch. See the &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/"&gt;Free and Pro feature breakdown&lt;/a&gt; for app features.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;@&lt;/code&gt; opens the commands palette. Type to filter. Entries from &lt;code&gt;commands.yaml&lt;/code&gt; follow these built-ins. &lt;code&gt;@history&lt;/code&gt; is always available and is not a line in that file.&lt;/p&gt;
 &lt;p&gt;The shortcuts dialog lists the same triggers. The shot is the macOS wording.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/shortcuts.png" alt="The shortcuts dialog open on the @ triggers" loading="lazy"&gt;
  &lt;figcaption&gt;Cmd&amp;#43;/ opens Shortcuts. The @ triggers and the call flags are the same list as this page.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;/p&gt;</description></item><item><title>Install Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/get-started/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/get-started/install/</guid><description>&lt;p&gt;Termorq is a Windows desktop app available from the Microsoft Store. Use the badge to open the Store and install it.&lt;/p&gt;
+&lt;/p&gt;</description></item><item><title>Connections</title><link>https://termorq-docs.garrardkitchen.com/docs/ssh/connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/ssh/connections/</guid><description>&lt;p&gt;SSH connections are a Pro feature (&lt;code&gt;ssh.connections&lt;/code&gt; in &lt;code&gt;features.yml&lt;/code&gt;). Termorq speaks SSH itself, through the Rust &lt;code&gt;russh&lt;/code&gt; library, so Windows does not need OpenSSH installed.&lt;/p&gt;
+&lt;h2 id="create-one"&gt;Create one &lt;a href="#create-one" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+
+ 
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@create ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@ssh new&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Both open the same form.&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Field&lt;/th&gt;
+ &lt;th&gt;What it takes&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Name&lt;/td&gt;
+ &lt;td&gt;Unique, ignoring case. It becomes the tab title and the shell pill (&lt;code&gt;SSH: prod-web&lt;/code&gt;)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Host&lt;/td&gt;
+ &lt;td&gt;A name or an IP address. Pasting &lt;code&gt;deploy@10.0.0.5:2222&lt;/code&gt; fills user, host, and port&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Port&lt;/td&gt;
+ &lt;td&gt;22 by default&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;User&lt;/td&gt;
+ &lt;td&gt;The account to log in as&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Authentication&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;Private key file&lt;/strong&gt;, &lt;strong&gt;ssh-agent&lt;/strong&gt;, or &lt;strong&gt;Password&lt;/strong&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Private key file&lt;/td&gt;
+ &lt;td&gt;OpenSSH or PEM key. &lt;code&gt;~/&lt;/code&gt; is expanded. &lt;strong&gt;Browse…&lt;/strong&gt; opens a file picker&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Key passphrase / Password&lt;/td&gt;
+ &lt;td&gt;Stored in the OS keychain only. Blank on edit keeps the stored one. &lt;strong&gt;Forget the stored …&lt;/strong&gt; clears it&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Start in folder&lt;/td&gt;
+ &lt;td&gt;Optional. The shell starts with &lt;code&gt;cd&lt;/code&gt; into it&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Jump host&lt;/td&gt;
+ &lt;td&gt;Optional bastion: host, port, and user (blank uses the user above). The same authentication is used for both hops&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Local port forwards&lt;/td&gt;
+ &lt;td&gt;Optional, one per line: &lt;code&gt;8080:localhost:80&lt;/code&gt; or &lt;code&gt;5432:db.internal:5432&lt;/code&gt;. See &lt;a href="https://termorq-docs.garrardkitchen.com/docs/ssh/sessions/"&gt;sessions and files&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Save&lt;/strong&gt; keeps it. &lt;strong&gt;Save and connect&lt;/strong&gt; also opens it in a new tab.&lt;/p&gt;</description></item><item><title>Install Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/get-started/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/get-started/install/</guid><description>&lt;p&gt;Termorq is a Windows desktop app available from the Microsoft Store. Use the badge to open the Store and install it.&lt;/p&gt;
 &lt;a href="https://get.microsoft.com/installer/download/9n4wvw3sq6ks?referrer=appbadge&amp;amp;cid=termorq-docs" target="_self"&gt;
  &lt;img src="https://get.microsoft.com/images/en-us%20light.svg" width="200" alt="Get it from Microsoft"&gt;
 &lt;/a&gt;
@@ -361,7 +385,13 @@
 &lt;li&gt;The connection&amp;rsquo;s vault reference, &lt;code&gt;akv://…&lt;/code&gt; or &lt;code&gt;op://…&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;The app&amp;rsquo;s secret store, when that store can be reached on this machine.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;The variable name is the connection name in upper case, with every other character written as &lt;code&gt;_&lt;/code&gt;. &lt;strong&gt;Users API&lt;/strong&gt; becomes &lt;code&gt;AIT_SECRET_USERS_API&lt;/code&gt;. &lt;strong&gt;gh-prod.v2&lt;/strong&gt; becomes &lt;code&gt;AIT_SECRET_GH_PROD_V2&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Share a file</title><link>https://termorq-docs.garrardkitchen.com/docs/library/share/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/library/share/</guid><description>&lt;p&gt;The Library import menu is the front door. Save dialogs start in Downloads. Files are written with owner-only permissions.&lt;/p&gt;
+&lt;p&gt;The variable name is the connection name in upper case, with every other character written as &lt;code&gt;_&lt;/code&gt;. &lt;strong&gt;Users API&lt;/strong&gt; becomes &lt;code&gt;AIT_SECRET_USERS_API&lt;/code&gt;. &lt;strong&gt;gh-prod.v2&lt;/strong&gt; becomes &lt;code&gt;AIT_SECRET_GH_PROD_V2&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Sessions and files</title><link>https://termorq-docs.garrardkitchen.com/docs/ssh/sessions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/ssh/sessions/</guid><description>&lt;h2 id="open-a-session"&gt;Open a session &lt;a href="#open-a-session" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+
+ 
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@ssh
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@ssh prod-web&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;@ssh&lt;/code&gt; lists saved hosts with &lt;code&gt;user@host&lt;/code&gt;, the authentication, and any jump host. Selecting one opens a &lt;strong&gt;new tab&lt;/strong&gt; named after it. The shell pill in the status strip reads &lt;code&gt;SSH: prod-web&lt;/code&gt;, and the terminal header shows &lt;strong&gt;SSH · connected&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The terminal is a full xterm: &lt;code&gt;vim&lt;/code&gt;, &lt;code&gt;top&lt;/code&gt;, &lt;code&gt;tmux&lt;/code&gt;, and colours work. &lt;strong&gt;Ctrl+Shift+C&lt;/strong&gt; copies and &lt;strong&gt;Ctrl+Shift+V&lt;/strong&gt; pastes. &lt;code&gt;exit&lt;/code&gt; or &lt;strong&gt;End session&lt;/strong&gt; closes it and the tab goes back to the local prompt.&lt;/p&gt;</description></item><item><title>Share a file</title><link>https://termorq-docs.garrardkitchen.com/docs/library/share/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/library/share/</guid><description>&lt;p&gt;The Library import menu is the front door. Save dialogs start in Downloads. Files are written with owner-only permissions.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/library-import.png" alt="Import chooses the file kind before the password dialog" loading="lazy"&gt;
  &lt;figcaption&gt;Library → Import. Each kind has its own extension. A backup restores. It does not merge by deleting.&lt;/figcaption&gt;
@@ -393,7 +423,7 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td&gt;&lt;code&gt;.aitbak&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Settings, environments, customers, theme, collections, MCP servers, API connections, endpoints, and OpenAI connections, including secrets&lt;/td&gt;
+ &lt;td&gt;Settings, environments, customers, theme, collections, MCP servers, API connections, endpoints, OpenAI connections, and SSH connections, including secrets&lt;/td&gt;
  &lt;td&gt;Always encrypted&lt;/td&gt;
  &lt;/tr&gt;
  &lt;/tbody&gt;
@@ -498,6 +528,14 @@
  &lt;tr&gt;
  &lt;td&gt;&lt;code&gt;mcp_connections.json&lt;/code&gt;&lt;/td&gt;
  &lt;td&gt;MCP servers, without secret values&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;ssh_connections.json&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;SSH connections, without passwords or passphrases&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;ssh_known_hosts&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Host keys you trusted, in OpenSSH format. &lt;code&gt;~/.ssh/known_hosts&lt;/code&gt; is read, never written&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td&gt;&lt;code&gt;mcp_prefs.json&lt;/code&gt;&lt;/td&gt;
