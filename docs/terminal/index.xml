@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The terminal on Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/</link><description>Recent content in The terminal on Termorq</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://termorq-docs.garrardkitchen.com/docs/terminal/index.xml" rel="self" type="application/rss+xml"/><item><title>The prompt</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/the-prompt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/the-prompt/</guid><description>&lt;p&gt;You type in one place. The first characters decide what runs. The accent caret follows the insertion point as you edit the line.&lt;/p&gt;
+&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq command prompt ready for an @ command" loading="lazy"&gt;
+ &lt;figcaption&gt;The screenshot shows the interface only; commands run in the installed app.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
 &lt;pre class="mermaid"&gt;flowchart LR
  line[&amp;#34;The line you type&amp;#34;]:::step
  shell[&amp;#34;Shell&amp;#34;]:::out
@@ -64,43 +69,31 @@
  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;code&gt;@&lt;/code&gt; opens the commands palette. &lt;code&gt;/&lt;/code&gt; opens the skills palette. Both filter as you type. In the commands palette, exact and leading name matches appear before other name matches, and all name matches appear before description matches. Built-in &lt;code&gt;@&lt;/code&gt; actions are listed in &lt;a href="https://termorq-docs.garrardkitchen.com/docs/reference/commands/"&gt;Commands&lt;/a&gt;. Entries from &lt;code&gt;commands.yaml&lt;/code&gt; follow them. &lt;code&gt;@history&lt;/code&gt; is always first and is not a YAML entry.&lt;/p&gt;</description></item><item><title>Shells</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/shells/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/shells/</guid><description>&lt;p&gt;A line that is not an &lt;code&gt;@&lt;/code&gt; command or a &lt;code&gt;/&lt;/code&gt; skill runs in the tab’s shell. One command runs at a time per tab. Output streams in while it runs. &lt;strong&gt;Ctrl+C&lt;/strong&gt; stops that command and everything it started.&lt;/p&gt;
-&lt;h2 id="which-shells"&gt;Which shells &lt;a href="#which-shells" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Settings → Shell&lt;/strong&gt; picks the shell for every tab that has not chosen its own, from the ones installed here.&lt;/p&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;Platform&lt;/th&gt;
- &lt;th&gt;Choices&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;macOS and Linux&lt;/td&gt;
- &lt;td&gt;bash, zsh, fish, sh, PowerShell 7&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Windows&lt;/td&gt;
- &lt;td&gt;Windows PowerShell, PowerShell 7, Command Prompt, Git Bash, WSL&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Right-click a tab, then &lt;strong&gt;Shell&lt;/strong&gt;, to choose one for that tab, or &lt;strong&gt;Default&lt;/strong&gt; to follow Settings. The header shows the active tab’s shell. &lt;code&gt;@shell&lt;/code&gt; opens that shell as an &lt;a href="https://termorq-docs.garrardkitchen.com/docs/terminal/interactive/"&gt;interactive terminal&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Tabs and splits</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/tabs-and-splits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/tabs-and-splits/</guid><description>&lt;p&gt;Each tab is its own session: scrollback, folder, history, MCP servers, and OpenAI connection. Switching tabs leaves a running command where it is.&lt;/p&gt;
-&lt;h2 id="add-rename-close"&gt;Add, rename, close &lt;a href="#add-rename-close" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;+&lt;/strong&gt; adds a tab in the start folder. Right-click for &lt;strong&gt;Rename&lt;/strong&gt; and &lt;strong&gt;Change colour&lt;/strong&gt;. Middle-click, &lt;strong&gt;×&lt;/strong&gt;, or &lt;strong&gt;Close&lt;/strong&gt; removes the tab. Closing the last tab resets it.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Ctrl+Tab&lt;/strong&gt; moves to the next tab. &lt;strong&gt;Ctrl+Shift+Tab&lt;/strong&gt; moves to the previous one. Both wait while a palette or a dialog is open.&lt;/p&gt;</description></item><item><title>Interactive terminal</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/interactive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/interactive/</guid><description>&lt;p&gt;Most lines are non-interactive: the app starts the shell, streams the output, and returns to the prompt. A program that needs a keyboard opens a pseudo-terminal in the tab instead. On Windows that terminal is ConPTY. The screen is drawn with xterm.js.&lt;/p&gt;
+&lt;h2 id="which-shells"&gt;Which shells &lt;a href="#which-shells" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/settings-shells.png" alt="Shell selector in the Terminal section of Termorq Settings" loading="lazy"&gt;
+ &lt;figcaption&gt;The default shell applies to tabs that have not selected their own.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Settings → Shell&lt;/strong&gt; picks the shell for every tab that has not chosen its own, from the ones installed here.&lt;/p&gt;</description></item><item><title>Tabs and splits</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/tabs-and-splits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/tabs-and-splits/</guid><description>&lt;p&gt;Each tab is its own session: scrollback, folder, history, MCP servers, and OpenAI connection. Switching tabs leaves a running command where it is.&lt;/p&gt;
+&lt;h2 id="add-rename-close"&gt;Add, rename, close &lt;a href="#add-rename-close" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq terminal window showing a session tab and prompt" loading="lazy"&gt;
+ &lt;figcaption&gt;A clean prompt ready for the next command.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;+&lt;/strong&gt; adds a tab in the start folder. Right-click for &lt;strong&gt;Rename&lt;/strong&gt; and &lt;strong&gt;Change colour&lt;/strong&gt;. Middle-click, &lt;strong&gt;×&lt;/strong&gt;, or &lt;strong&gt;Close&lt;/strong&gt; removes the tab. Closing the last tab resets it.&lt;/p&gt;</description></item><item><title>Interactive terminal</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/interactive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/interactive/</guid><description>&lt;p&gt;Most lines are non-interactive: the app starts the shell, streams the output, and returns to the prompt. A program that needs a keyboard opens a pseudo-terminal in the tab instead. On Windows that terminal is ConPTY. The screen is drawn with xterm.js.&lt;/p&gt;
 &lt;p&gt;These open a terminal on their own:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Editors and pagers&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ssh&lt;/code&gt; and &lt;code&gt;sudo&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;top&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;git commit&lt;/code&gt; without &lt;code&gt;-m&lt;/code&gt;, and &lt;code&gt;git add -p&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;docker exec -it&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;A REPL started without a script, such as &lt;code&gt;python&lt;/code&gt;, &lt;code&gt;node&lt;/code&gt;, or &lt;code&gt;psql mydb&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;@shell&lt;/code&gt; opens an interactive shell in the tab until you type &lt;code&gt;exit&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>History and plain English</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/history/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/history/</guid><description>&lt;h2 id="command-history"&gt;Command history &lt;a href="#command-history" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;↑&lt;/strong&gt; and &lt;strong&gt;↓&lt;/strong&gt; cycle the commands on this tab when no palette is open. The app keeps the last 500 in &lt;code&gt;command_history.json&lt;/code&gt; in the app data folder. Each entry is the command and &lt;code&gt;at&lt;/code&gt;, Unix epoch milliseconds. An older file that was a plain list of strings is migrated on load (&lt;code&gt;at: 0&lt;/code&gt; shows as an unknown time).&lt;/p&gt;
-
-
- 
- &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#eceff4"&gt;[&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#eceff4"&gt;{&lt;/span&gt; &lt;span style="color:#81a1c1"&gt;&amp;#34;command&amp;#34;&lt;/span&gt;&lt;span style="color:#eceff4"&gt;:&lt;/span&gt; &lt;span style="color:#a3be8c"&gt;&amp;#34;git status&amp;#34;&lt;/span&gt;&lt;span style="color:#eceff4"&gt;,&lt;/span&gt; &lt;span style="color:#81a1c1"&gt;&amp;#34;at&amp;#34;&lt;/span&gt;&lt;span style="color:#eceff4"&gt;:&lt;/span&gt; &lt;span style="color:#b48ead"&gt;1727900000000&lt;/span&gt; &lt;span style="color:#eceff4"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#eceff4"&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The active tab’s history is the one &lt;strong&gt;↑&lt;/strong&gt; and &lt;strong&gt;↓&lt;/strong&gt; and &lt;code&gt;@history&lt;/code&gt; use. It is mirrored to that file when commands run.&lt;/p&gt;</description></item><item><title>Find and export</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/find-and-export/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/find-and-export/</guid><description>&lt;h2 id="find-in-the-scrollback"&gt;Find in the scrollback &lt;a href="#find-in-the-scrollback" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Cmd+F&lt;/strong&gt; on macOS, or &lt;strong&gt;Ctrl+F&lt;/strong&gt; on Windows and Linux, opens a search box over the active tab. Every match is highlighted. The current one is filled in the accent colour, with a count such as &lt;strong&gt;3 of 12&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Enter&lt;/strong&gt; and &lt;strong&gt;Shift+Enter&lt;/strong&gt;, or the arrows, step through matches and wrap at either end. &lt;strong&gt;Aa&lt;/strong&gt; matches case. Esc closes the box. New output is searched as it arrives.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq terminal window showing the prompt and a cleared session" loading="lazy"&gt;
+ &lt;figcaption&gt;Interactive programs open in this terminal area in the installed app.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;</description></item><item><title>History and plain English</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/history/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/history/</guid><description>&lt;h2 id="command-history"&gt;Command history &lt;a href="#command-history" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/cli/termorq-cli-025-run-smoke.png" alt="Pro termorq-cli output from a successful sample collection run" loading="lazy"&gt;
+ &lt;figcaption&gt;Pro termorq-cli prints each step and its result; interactive history remains scoped to the app tab.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;↑&lt;/strong&gt; and &lt;strong&gt;↓&lt;/strong&gt; cycle the commands on this tab when no palette is open. The app keeps the last 500 in &lt;code&gt;command_history.json&lt;/code&gt; in the app data folder. Each entry is the command and &lt;code&gt;at&lt;/code&gt;, Unix epoch milliseconds. An older file that was a plain list of strings is migrated on load (&lt;code&gt;at: 0&lt;/code&gt; shows as an unknown time).&lt;/p&gt;</description></item><item><title>Find and export</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/find-and-export/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/find-and-export/</guid><description>&lt;h2 id="find-in-the-scrollback"&gt;Find in the scrollback &lt;a href="#find-in-the-scrollback" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/shortcuts.png" alt="Shortcuts dialog listing the available @ commands, including response search and export" loading="lazy"&gt;
+ &lt;figcaption&gt;Termorq 0.25 Pro browser preview. On Windows, the dialog maps macOS Cmd shortcuts to Ctrl.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cmd+F&lt;/strong&gt; on macOS, or &lt;strong&gt;Ctrl+F&lt;/strong&gt; on Windows and Linux, opens a search box over the active tab. Every match is highlighted. The current one is filled in the accent colour, with a count such as &lt;strong&gt;3 of 12&lt;/strong&gt;.&lt;/p&gt;</description></item></channel></rss>
