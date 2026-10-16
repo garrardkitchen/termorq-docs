@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Team workspace on Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/workspace/</link><description>Recent content in Team workspace on Termorq</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://termorq-docs.garrardkitchen.com/docs/workspace/index.xml" rel="self" type="application/rss+xml"/><item><title>Open, save, status, close</title><link>https://termorq-docs.garrardkitchen.com/docs/workspace/team-folder/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/workspace/team-folder/</guid><description>&lt;p&gt;Team workspace is a Pro feature. The &lt;code&gt;@workspace&lt;/code&gt; commands are available in Pro builds; Free builds keep local definitions and collections.&lt;/p&gt;
+&lt;p&gt;A team workspace is a folder in a git checkout. The app reads and writes &lt;code&gt;&amp;lt;folder&amp;gt;/.ai-terminal/&lt;/code&gt; and never runs &lt;code&gt;git commit&lt;/code&gt; or &lt;code&gt;git push&lt;/code&gt;.&lt;/p&gt;
+
+
+ 
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@workspace open ~/src/acme-apis
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@workspace
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@workspace status
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@workspace save
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@workspace close&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;@workspace&lt;/code&gt; with no verb is status. &lt;strong&gt;Settings → Team workspace → Open folder&lt;/strong&gt; is the same open. &lt;code&gt;workspace&lt;/code&gt; in the &lt;code&gt;@&lt;/code&gt; palette opens the same commands.&lt;/p&gt;</description></item></channel></rss>

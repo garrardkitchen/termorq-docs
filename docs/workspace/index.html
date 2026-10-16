@@ -1,0 +1,1017 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><title>Team workspace | User guide</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Share definitions in git. Secrets stay on each machine. You commit."><meta name=keywords content="Termorq,termorq-cli,user guide,MCP,HTTP API"><meta name=author content="Garrard Kitchen"><meta name=Version content="0.20.0"><link rel=icon type=image/svg+xml href=/favicon.svg><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><meta property="og:title" content="Team workspace"><meta property="og:description" content="Share definitions in git. Secrets stay on each machine. You commit."><meta property="og:type" content="website"><meta property="og:url" content="https://termorq-docs.garrardkitchen.com/docs/workspace/"><meta property="og:image" content="https://termorq-docs.garrardkitchen.com/opengraph/card-base-2_hu_cb794ade4c5ead66.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://termorq-docs.garrardkitchen.com/opengraph/card-base-2_hu_cb794ade4c5ead66.png"><meta name=twitter:title content="Team workspace"><meta name=twitter:description content="Share definitions in git. Secrets stay on each machine. You commit."><link rel=alternate type=application/atom+xml title="Atom feed for Termorq" href=/index.xml><script>(()=>{var t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,e=localStorage.getItem("theme");t&&e===null&&(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")),t&&e==="dark"&&document.documentElement.setAttribute("data-dark-mode",""),e==="dark"&&document.documentElement.setAttribute("data-dark-mode","")})()</script><script type=text/javascript src=https://termorq-docs.garrardkitchen.com/docs/js/flexsearch.bundle.min.f5159d5a2151ffbb653996ec17eaff7da4e04c286bd879fc41839d36a5586f3f20eaead0b6089de48f9adc669cdee771.js integrity=sha384-9RWdWiFR/7tlOZbsF+r/faTgTChr2Hn8QYOdNqVYbz8g6urQtgid5I+a3Gac3udx crossorigin=anonymous></script><link rel=preconnect href=https://fonts.gstatic.com/><link rel=preconnect href=https://fonts.gstatic.com/ crossorigin><link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600,700|IBM+Plex+Mono:400,500&display=block" rel=stylesheet><link rel=stylesheet href=/docs/scss/style.min.8f2037e544b4bda52ec07668e71bc277011dac9a09010125d837472767008065cd07993eb7ca6a07456f8129ffb36822.css integrity=sha384-jyA35US0vaUuwHZo5xvCdwEdrJoJAQEl2DdHJ2cAgGXNB5k+t8pqB0VvgSn/s2gi crossorigin=anonymous><style>#topnav:not(.scroll):not(.nav-sticky){background:#071614!important}#topnav:not(.scroll):not(.nav-sticky) .navigation-menu>li>a{color:#fff!important}#topnav:not(.scroll):not(.nav-sticky) .navigation-menu>li:hover>a{color:rgba(255,255,255,.75)!important}@media(max-width:991px){#topnav:not(.scroll):not(.nav-sticky) #navigation{background:#071614!important}}#topnav:not(.scroll):not(.nav-sticky) .logo,#topnav:not(.scroll):not(.nav-sticky) .logo svg,#topnav:not(.scroll):not(.nav-sticky) .social-link,#topnav:not(.scroll):not(.nav-sticky) .social-link .btn,#topnav:not(.scroll):not(.nav-sticky) .social-link svg{color:#fff!important}#topnav:not(.scroll):not(.nav-sticky) .navbar-toggle .lines span{background-color:#fff!important}#topnav.scroll,#topnav.nav-sticky{background:#fff!important}#topnav.scroll .navigation-menu>li>a,#topnav.nav-sticky .navigation-menu>li>a{color:#0f766e!important}#topnav.scroll .navigation-menu>li:hover>a,#topnav.scroll .navigation-menu>li.active>a,#topnav.nav-sticky .navigation-menu>li:hover>a,#topnav.nav-sticky .navigation-menu>li.active>a{color:#134e4a!important}#topnav.scroll .logo,#topnav.nav-sticky .logo,#topnav.scroll .social-link,#topnav.scroll .social-link .btn,#topnav.scroll .social-link svg,#topnav.nav-sticky .social-link,#topnav.nav-sticky .social-link .btn,#topnav.nav-sticky .social-link svg{color:#134e4a!important}body{font-family:ibm plex sans,segoe ui,sans-serif}code,kbd,pre,samp{font-family:ibm plex mono,ui-monospace,SFMono-Regular,Menlo,monospace}.termorq-cli-figure{margin:1.25rem 0 1.75rem}.termorq-cli-figure img{display:block;max-width:100%;height:auto;border-radius:12px;border:1px solid rgba(15,118,110,.18)}.termorq-cli-figure figcaption{margin-top:.45rem;font-size:.9rem;color:#5b6b68}pre.mermaid{overflow-x:auto;background:#071614;border:1px solid rgba(94,234,212,.35);border-radius:14px;padding:20px 12px 12px}pre.mermaid svg{min-width:760px;max-width:none!important;height:auto}</style></head><body><div class=content><div class="page-wrapper toggled"><nav id=sidebar class=sidebar-wrapper><div class=sidebar-brand><a href=/ aria-label=HomePage alt=HomePage><svg viewBox="0 0 168 32" width="168" height="32" aria-hidden="true"><rect x="1.5" y="7" width="22" height="16" rx="2.5" fill="#FFC131"/><rect x="3.5" y="10" width="18" height="11" rx="1.2" fill="#0F0F0F"/><path d="M6.5 16.5h7" stroke="#24C8DB" stroke-width="1.7" stroke-linecap="round"/><path d="M24.2 5.2l1.15 2.55L28 8.8l-2.65 1.15-1.15 2.55-1.15-2.55L20.5 8.8l2.55-1.05z" fill="#24C8DB"/><text x="34" y="21" fill="currentColor" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="15" font-weight="600">Termorq</text></svg></a></div><div class=sidebar-content style="height:calc(100% - 131px)"><ul class=sidebar-menu><li class="sidebar-dropdown no-icon"><button class=btn>
+Get started</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/get-started/install/>Install and run</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/get-started/the-window/>The window</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/get-started/sample-workspace/>Sample workspace</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
+The terminal</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/terminal/the-prompt/>The prompt</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/terminal/shells/>Shells</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/terminal/tabs-and-splits/>Tabs and splits</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/terminal/interactive/>Interactive terminal</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/terminal/history/>History and plain English</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/terminal/find-and-export/>Find and export</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
+Collections</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/collections/the-shelf/>The shelf</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/collections/runbooks/>Run as a runbook</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
+HTTP APIs</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/http/connections/>API connections</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/http/auth/>Auth</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/http/calling/>Calling an endpoint</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/http/graphql-and-streams/>GraphQL and streams</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/http/import-and-export/>Import and export</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
+MCP</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/mcp/servers/>Servers</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/mcp/oauth/>OAuth sign-in</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/mcp/tools/>Tools, resources, and prompts</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/mcp/inspector/>The inspector</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
+Models</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/models/connections/>Model connections</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/models/ask/>Ask the model</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
+Library</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/library/browse/>Browse and edit</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/library/share/>Share a file</a></li></ul></div></li><li class="sidebar-dropdown no-icon current active"><button class=btn>
+Team workspace</button><div class="sidebar-submenu d-block"><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/workspace/team-folder/>Open, save, status, close</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
+Secrets</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/secrets/on-this-machine/>On this machine</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
+Termorq CLI</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/cli/run-a-collection/>Run a collection</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/cli/secrets/>Secrets and termorq-cli</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/cli/pipelines/>Pipelines</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/cli/web-check/>Web Check</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
+Settings and updates</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/settings/preferences/>Preferences</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/settings/updates/>Updates</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/settings/editions/>Free and Pro editions</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
+Reference</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/reference/commands/>Commands</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/reference/keyboard/>Keyboard</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/reference/files/>Files</a></li></ul></div></li><li><a class=sidebar-root-link href=https://termorq-docs.garrardkitchen.com/docs/azure/>One Azure path</a></li><li><a class=sidebar-root-link href=https://termorq-docs.garrardkitchen.com/docs/guide-map/>Guide map</a></li></ul></div><ul class="sidebar-footer list-unstyled mb-0"></ul></nav><main class="page-content bg-transparent"><div id=top-header class="top-header d-print-none"><div class="header-bar d-flex justify-content-between"><div class="d-flex align-items-center"><a href=/ class="logo-icon me-3" aria-label=HomePage alt=HomePage><div class=small><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect x="1.5" y="7" width="22" height="16" rx="2.5" fill="#FFC131"/><rect x="3.5" y="10" width="18" height="11" rx="1.2" fill="#0F0F0F"/><path d="M6.5 16.5h7" stroke="#24C8DB" stroke-width="1.7" stroke-linecap="round"/><path d="M24.2 5.2l1.15 2.55L28 8.8l-2.65 1.15-1.15 2.55-1.15-2.55L20.5 8.8l2.55-1.05z" fill="#24C8DB"/></svg></div><div class=big><svg viewBox="0 0 168 32" width="168" height="32" aria-hidden="true"><rect x="1.5" y="7" width="22" height="16" rx="2.5" fill="#FFC131"/><rect x="3.5" y="10" width="18" height="11" rx="1.2" fill="#0F0F0F"/><path d="M6.5 16.5h7" stroke="#24C8DB" stroke-width="1.7" stroke-linecap="round"/><path d="M24.2 5.2l1.15 2.55L28 8.8l-2.65 1.15-1.15 2.55-1.15-2.55L20.5 8.8l2.55-1.05z" fill="#24C8DB"/><text x="34" y="21" fill="currentColor" font-family="IBM Plex Sans, Segoe UI, sans-serif" font-size="15" font-weight="600">Termorq</text></svg></div></a><button id=close-sidebar class="btn btn-icon btn-soft">
+<span class="material-icons size-20 menu-icon align-middle">menu</span>
+</button>
+<button id=flexsearch-button class="ms-3 btn btn-soft" data-bs-toggle=collapse data-bs-target=#FlexSearchCollapse aria-expanded=false aria-controls=FlexSearchCollapse>
+<span class="material-icons size-20 menu-icon align-middle">search</span>
+<span class="flexsearch-button-placeholder ms-1 me-2 d-none d-sm-block">Search</span><div class="d-none d-sm-block"><span class=flexsearch-button-keys><kbd class=flexsearch-button-cmd-key><svg width="44" height="15"><path d="M2.118 11.5A1.519 1.519.0 011 11.042 1.583 1.583.0 011 8.815a1.519 1.519.0 011.113-.458h.715V6.643h-.71A1.519 1.519.0 011 6.185 1.519 1.519.0 01.547 5.071 1.519 1.519.0 011 3.958 1.519 1.519.0 012.118 3.5a1.519 1.519.0 011.114.458A1.519 1.519.0 013.69 5.071v.715H5.4V5.071A1.564 1.564.0 016.976 3.5 1.564 1.564.0 018.547 5.071 1.564 1.564.0 016.976 6.643H6.261V8.357h.715a1.575 1.575.0 011.113 2.685 1.583 1.583.0 01-2.227.0A1.519 1.519.0 015.4 9.929V9.214H3.69v.715a1.519 1.519.0 01-.458 1.113A1.519 1.519.0 012.118 11.5zm0-.857a.714.714.0 00.715-.714V9.214H2.118a.715.715.0 100 1.429zm4.858.0a.715.715.0 100-1.429H6.261v.715a.714.714.0 00.715.714zM3.69 8.357H5.4V6.643H3.69zM2.118 5.786h.715V5.071a.714.714.0 00-.715-.714.715.715.0 00-.5 1.22A.686.686.0 002.118 5.786zm4.143.0h.715a.715.715.0 00.5-1.22.715.715.0 00-1.22.5z" fill="currentColor"/><path d="M12.4 11.475H11.344l3.879-7.95h1.056z" fill="currentColor"/><path d="M25.073 5.384l-.864.576a2.121 2.121.0 00-1.786-.923 2.207 2.207.0 00-2.266 2.326 2.206 2.206.0 002.266 2.325 2.1 2.1.0 001.782-.918l.84.617a3.108 3.108.0 01-2.622 1.293 3.217 3.217.0 01-3.349-3.317 3.217 3.217.0 013.349-3.317A3.046 3.046.0 0125.073 5.384z" fill="currentColor"/><path d="M30.993 5.142h-2.07v5.419H27.891V5.142h-2.07V4.164h5.172z" fill="currentColor"/><path d="M34.67 4.164c1.471.0 2.266.658 2.266 1.851.0 1.087-.832 1.809-2.134 1.855l2.107 2.691h-1.28L33.591 7.87H33.07v2.691H32.038v-6.4zm-1.6.969v1.8h1.572c.832.0 1.22-.3 1.22-.918s-.411-.882-1.22-.882z" fill="currentColor"/><path d="M42.883 10.561H38.31v-6.4h1.033V9.583h3.54z" fill="currentColor"/></svg>
+</kbd><kbd class=flexsearch-button-key><svg width="15" height="15"><path d="M5.926 12.279H4.41L9.073 2.721H10.59z" fill="currentColor"/></svg></kbd></span></div></button></div><div class="d-flex align-items-center"><ul class="list-unstyled mb-0"><li class="list-inline-item mb-0"><a href=https://github.com/garrardkitchen/ai-terminal aria-label=github rel="noopener noreferrer" target=_blank><div class="btn btn-icon btn-default border-0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg></div></a></li></ul><button id=mode class="btn btn-icon btn-default ms-2" type=button aria-label="Toggle user interface mode">
+<span class=toggle-dark><svg height="30" width="30" viewBox="0 0 48 48" fill="currentColor"><title>Enable dark mode</title><path d="M24 42q-7.5.0-12.75-5.25T6 24t5.25-12.75T24 6q.4.0.85.025.45.025 1.15.075-1.8 1.6-2.8 3.95t-1 4.95q0 4.5 3.15 7.65Q28.5 25.8 33 25.8q2.6.0 4.95-.925T41.9 22.3q.05.6.075.975Q42 23.65 42 24q0 7.5-5.25 12.75T24 42zm0-3q5.45.0 9.5-3.375t5.05-7.925q-1.25.55-2.675.825Q34.45 28.8 33 28.8q-5.75.0-9.775-4.025T19.2 15q0-1.2.25-2.575t.9-3.125q-4.9 1.35-8.125 5.475Q9 18.9 9 24q0 6.25 4.375 10.625T24 39zm-.2-14.85z"/></svg>
+</span><span class=toggle-light><svg height="30" width="30" viewBox="0 0 48 48" fill="currentColor"><title>Enable light mode</title><path d="M24 31q2.9.0 4.95-2.05T31 24t-2.05-4.95T24 17t-4.95 2.05T17 24t2.05 4.95T24 31zm0 3q-4.15.0-7.075-2.925T14 24t2.925-7.075T24 14t7.075 2.925T34 24t-2.925 7.075T24 34zM3.5 25.5q-.65.0-1.075-.425Q2 24.65 2 24t.425-1.075Q2.85 22.5 3.5 22.5h5q.65.0 1.075.425Q10 23.35 10 24t-.425 1.075T8.5 25.5zm36 0q-.65.0-1.075-.425Q38 24.65 38 24t.425-1.075T39.5 22.5h5q.65.0 1.075.425Q46 23.35 46 24t-.425 1.075-1.075.425zM24 10q-.65.0-1.075-.425Q22.5 9.15 22.5 8.5v-5q0-.65.425-1.075Q23.35 2 24 2t1.075.425T25.5 3.5v5q0 .65-.425 1.075Q24.65 10 24 10zm0 36q-.65.0-1.075-.425T22.5 44.5v-5q0-.65.425-1.075Q23.35 38 24 38t1.075.425.425 1.075v5q0 .65-.425 1.075Q24.65 46 24 46zM12 14.1l-2.85-2.8q-.45-.45-.425-1.075.025-.625.425-1.075.45-.45 1.075-.45t1.075.45L14.1 12q.4.45.4 1.05.0.6-.4 1-.4.45-1.025.45T12 14.1zm24.7 24.75L33.9 36q-.4-.45-.4-1.075t.45-1.025q.4-.45 1-.45t1.05.45l2.85 2.8q.45.45.425 1.075-.025.625-.425 1.075-.45.45-1.075.45t-1.075-.45zM33.9 14.1q-.45-.45-.45-1.05.0-.6.45-1.05l2.8-2.85q.45-.45 1.075-.425.625.025 1.075.425.45.45.45 1.075t-.45 1.075L36 14.1q-.4.4-1.025.4t-1.075-.4zM9.15 38.85q-.45-.45-.45-1.075t.45-1.075L12 33.9q.45-.45 1.05-.45.6.0 1.05.45.45.45.45 1.05.0.6-.45 1.05l-2.8 2.85q-.45.45-1.075.425-.625-.025-1.075-.425zM24 24z"/></svg></span></button></div></div><div class=collapse id=FlexSearchCollapse><div class=flexsearch-container><div class=flexsearch-keymap><li><kbd class=flexsearch-button-cmd-key><svg width="15" height="15" aria-label="Arrow down" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 3.5v8m3-3-3 3-3-3"/></g></svg></kbd>
+<kbd class=flexsearch-button-cmd-key><svg width="15" height="15" aria-label="Arrow up" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M7.5 11.5v-8m3 3-3-3-3 3"/></g></svg></kbd>
+<span class=flexsearch-key-label>to navigate</span></li><li><kbd class=flexsearch-button-cmd-key><svg width="15" height="15" aria-label="Enter key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M12 3.53088v3c0 1-1 2-2 2H4m3 3-3-3 3-3"/></g></svg></kbd>
+<span class=flexsearch-key-label>to select</span></li><li><kbd class=flexsearch-button-cmd-key><svg width="15" height="15" aria-label="Escape key" role="img"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"><path d="M13.6167 8.936c-.1065.3583-.6883.962-1.4875.962-.7993.0-1.653-.9165-1.653-2.1258v-.5678c0-1.2548.7896-2.1016 1.653-2.1016s1.3601.4778 1.4875 1.0724M9 6c-.1352-.4735-.7506-.9219-1.46-.8972-.7092.0246-1.344.57-1.344 1.2166s.4198.8812 1.3445.9805C8.465 7.3992 8.968 7.9337 9 8.5s-.454 1.398-1.4595 1.398C6.6593 9.898 6 9 5.963 8.4851m-1.4748.5368c-.2635.5941-.8099.876-1.5443.876s-1.7073-.6248-1.7073-2.204v-.4603c0-1.0416.721-2.131 1.7073-2.131.9864.0 1.6425 1.031 1.5443 2.2492h-2.956"/></g></svg></kbd>
+<span class=flexsearch-key-label>to close</span></li></div><form class="flexsearch position-relative flex-grow-1 ms-2 me-2"><div class="d-flex flex-row"><input id=flexsearch class=form-control type=search placeholder=Search aria-label=Search autocomplete=off>
+<button id=hideFlexsearch type=button class="ms-2 btn btn-soft">
+cancel</button></div><div id=suggestions class="shadow rounded-1 d-none"></div></form></div></div></div><div class=container-fluid><div class=layout-spacing><div class="d-md-flex justify-content-between align-items-center"><nav aria-label=breadcrumb class="d-inline-block pb-2 mt-1 mt-sm-0"><ul id=breadcrumbs class="breadcrumb bg-transparent mb-0" itemscope itemtype=https://schema.org/BreadcrumbList><li class="breadcrumb-item text-capitalize active" aria-current=page itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem><a itemprop=item href=/docs/><i class="material-icons size-20 align-text-bottom" itemprop=name>Home</i>
+</a><meta itemprop=position content='1'></li><li class="breadcrumb-item text-capitalize active" itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem><span itemprop=name>Team workspace</span>
+<meta itemprop=position content='2'></li></ul></nav></div><div class="row flex-xl-nowrap"><div class="docs-toc col-xl-3 visually-hidden visually-hidden d-xl-block"><toc><div class="fw-bold text-uppercase mb-2">On this page</div><nav id=TableOfContents></nav></toc></div><div class="docs-toc-mobile visually-hidden visually-hidden d-print-none d-xl-none"><button id=toc-dropdown-btn class="btn-secondary dropdown-toggle" type=button data-bs-toggle=dropdown data-bs-offset=0,0 aria-expanded=false>
+Table of Contents</button><nav id=toc-mobile></nav></div><div class="docs-content col-12 mt-0"><div class="mb-0 d-flex"><h1 class="content-title mb-0">Team workspace</h1></div><div id=content class=main-content><div class="row flex-xl-wrap"><div id=list-item class="col-md-4 col-12 mt-4 pt-2"><a class="text-decoration-none text-reset" href=https://termorq-docs.garrardkitchen.com/docs/workspace/team-folder/><div class="card h-100 features feature-full-bg rounded p-4 position-relative overflow-hidden border-1"><span class="icon-color d-flex my-3"><i class="material-icons align-middle">folder_shared</i></span><div class="card-body p-0 content"><p class="fs-5 fw-semibold card-title mb-1">Open, save, status, close</p><p class="para card-text mb-0">Merge .ai-terminal/ by name, write it back without secrets, and commit the diff yourself.</p></div></div></a></div></div></div><div><hr class=doc-hr><div id=doc-nav class=d-print-none></div></div></div></div></div></div><footer class="shadow py-3 d-print-none"><div class=container-fluid><div class="row align-items-center"><div class=col><div class="text-sm-start text-center mx-md-2"><p class=mb-0>© 2026 Garrard Kitchen</p></div></div></div></div></footer></main></div></div><button onclick=topFunction() id=back-to-top aria-label="Back to Top Button" class="back-to-top fs-5"><svg width="24" height="24"><path d="M12 10.224l-6.3 6.3-1.38-1.372L12 7.472l7.68 7.68-1.38 1.376z" style="fill:#fff"/></svg></button>
+<script>(()=>{var e=document.getElementById("mode");e!==null&&(window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",e=>{e.matches?(localStorage.setItem("theme","dark"),document.documentElement.setAttribute("data-dark-mode","")):(localStorage.setItem("theme","light"),document.documentElement.removeAttribute("data-dark-mode"))}),e.addEventListener("click",()=>{document.documentElement.toggleAttribute("data-dark-mode"),localStorage.setItem("theme",document.documentElement.hasAttribute("data-dark-mode")?"dark":"light")}),localStorage.getItem("theme")==="dark"?document.documentElement.setAttribute("data-dark-mode",""):document.documentElement.removeAttribute("data-dark-mode"))})()</script><script src=/docs/js/bootstrap.9830259bc28edf5a45a3c7aa85d782bb2b8ac9a68e8ff3e14e4ad92a0aaf7882b8c20ea2ba1c4fc65f4415a3046aca9a.js integrity=sha384-mDAlm8KO31pFo8eqhdeCuyuKyaaOj/PhTkrZKgqveIK4wg6iuhxPxl9EFaMEasqa defer></script><script type=text/javascript src=https://termorq-docs.garrardkitchen.com/docs/js/bundle.min.a046e72674401a45bf99217648934a99ff03a7c46d105e47916156e66969388a0643f55a1e850acb495c9bd8be985171.js integrity=sha384-oEbnJnRAGkW/mSF2SJNKmf8Dp8RtEF5HkWFW5mlpOIoGQ/VaHoUKy0lcm9i+mFFx crossorigin=anonymous defer></script><script type=module>
+    var suggestions = document.getElementById('suggestions');
+    var search = document.getElementById('flexsearch');
+
+    const flexsearchContainer = document.getElementById('FlexSearchCollapse');
+
+    const hideFlexsearchBtn = document.getElementById('hideFlexsearch');
+
+    const configObject = { toggle: false }
+    const flexsearchContainerCollapse = new Collapse(flexsearchContainer, configObject) 
+
+    if (search !== null) {
+        document.addEventListener('keydown', inputFocus);
+        flexsearchContainer.addEventListener('shown.bs.collapse', function () {
+            search.focus();
+        });
+        
+        var topHeader = document.getElementById("top-header");
+        document.addEventListener('click', function(elem) {
+            if (!flexsearchContainer.contains(elem.target) && !topHeader.contains(elem.target))
+                flexsearchContainerCollapse.hide();
+        });
+    }
+
+    hideFlexsearchBtn.addEventListener('click', () =>{
+        flexsearchContainerCollapse.hide()
+    })
+
+    function inputFocus(e) {
+        if (e.ctrlKey && e.key === '/') {
+            e.preventDefault();
+            flexsearchContainerCollapse.toggle();
+        }
+        if (e.key === 'Escape' ) {
+            search.blur();
+            
+            flexsearchContainerCollapse.hide();
+        }
+    };
+
+    document.addEventListener('click', function(event) {
+
+    var isClickInsideElement = suggestions.contains(event.target);
+
+    if (!isClickInsideElement) {
+        suggestions.classList.add('d-none');
+    }
+
+    });
+
+    
+
+
+    document.addEventListener('keydown',suggestionFocus);
+
+    function suggestionFocus(e) {
+    const suggestionsHidden = suggestions.classList.contains('d-none');
+    if (suggestionsHidden) return;
+
+    const focusableSuggestions= [...suggestions.querySelectorAll('a')];
+    if (focusableSuggestions.length === 0) return;
+
+    const index = focusableSuggestions.indexOf(document.activeElement);
+
+    if (e.key === "ArrowUp") {
+        e.preventDefault();
+        const nextIndex = index > 0 ? index - 1 : 0;
+        focusableSuggestions[nextIndex].focus();
+    }
+    else if (e.key === "ArrowDown") {
+        e.preventDefault();
+        const nextIndex= index + 1 < focusableSuggestions.length ? index + 1 : index;
+        focusableSuggestions[nextIndex].focus();
+    }
+
+    }
+
+    
+
+
+    (function(){
+
+    var index = new FlexSearch.Document({
+        
+        tokenize: "forward",
+        minlength:  0 ,
+        cache:  100 ,
+        optimize:  true ,
+        document: {
+        id: 'id',
+        store: [
+            "href", "title", "description"
+        ],
+        index: ["title", "description", "content"]
+        }
+    });
+
+
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    
+
+    
+
+    index.add(
+            {
+                id:  0 ,
+                href: "\/docs\/",
+                title: "User guide",
+                description: "The desktop app and the termorq-cli command, from the first window through to a pipeline.",
+                content: "The guide is grouped by the job you are doing. Start with Get started, or open the guide map for the full list.\n"
+            }
+        );
+    index.add(
+            {
+                id:  1 ,
+                href: "\/docs\/http\/connections\/",
+                title: "API connections",
+                description: "A base URL and auth, tested once, then reused by many endpoints.",
+                content: "A connection and an endpoint are separate. One connection (base URL and auth) is reused by many endpoints.\n@create api asks for the name, the base URL, and the auth. When Settings has environments or customers, the form asks for those too. A new connection starts on the header choice. Changing only the environment or the customer does not require another test after the current values have already passed.\nTest connection sends GET to the base URL. Any HTTP status, including 401 or 404, enables Save. DNS failure, connection refused, timeout, or a failed token request does not.\n@apis lists connections, endpoints, and OpenAI connections. A blank secret on edit keeps the stored one. Names show as colour chips for the environment and the customer.\nmock://users is the offline host used by the sample workspace. A test against it succeeds without a network.\nWhere the secret goes linkAPI keys, bearer tokens, basic passwords, and client secrets go to the OS keychain, service com.garrardkitchen.ai-terminal, with an AES-256-GCM file fallback in the app data folder. They are not written to api_connections.json.\nA vault reference is different. akv:// and op:// are saved on the connection as secret_ref and shared in a team workspace. The value is fetched when a call needs it. Secrets has the rules.\nClient certificate linkClient certificate on a connection is a PEM file that holds the certificate and its private key. Calls from that connection use mutual TLS. In a team workspace, a path inside the folder is stored relative. A path outside the folder is left out of the save.\nAdditional CA linkSettings → Additional CA certificate is a corporate CA for HTTPS inspection, a .pem bundle or a .crt, .cer, or .der file. Certificate checks stay enabled. The change applies after you restart the app. This is not a way to turn verification off.\nRelated pages link Auth Calling an endpoint Import and export "
+            }
+        );
+    index.add(
+            {
+                id:  2 ,
+                href: "\/docs\/library\/browse\/",
+                title: "Browse and edit",
+                description: "Filter everything saved on this machine, then edit, duplicate, or delete it.",
+                content: "Library on the rail, @library, or Cmd+Shift+L (Ctrl+Shift+L on Windows and Linux) lists everything saved: MCP servers, API connections, endpoints, OpenAI connections, and collections.\nLibrary. Filter by kind, search by name, then Edit, Duplicate, Export, or Delete. Secrets stay in the OS keychain. Filter by name or by kind. The counts on the chips are what is on this machine.\nAction What it does Edit Opens the same editor as @edit name Duplicate Makes (copy). When the original has a stored secret, the app asks whether the copy should reuse it or start without one Export Writes that row’s transfer file. See Share a file Delete Removes it, with Undo in a toast @edit Users API @edit List users @library @edit name opens the editor for a server, an API, an endpoint, an OpenAI connection, or a collection. A blank secret on edit keeps the stored one.\nRows that came from a team workspace show a workspace badge. A connection whose secret is not on this machine yet shows needs secret. The value you type goes into this computer’s secret store only.\nRelated pages link Share a file Team workspace "
+            }
+        );
+    index.add(
+            {
+                id:  3 ,
+                href: "\/docs\/reference\/commands\/",
+                title: "Commands",
+                description: "Every built-in @ trigger, the call flags, and the termorq-cli subcommands.",
+                content: "Some commands depend on the edition compiled into the app or termorq-cli. See the Free and Pro feature breakdown; termorq-cli has no edition switch.\n@ opens the commands palette. Type to filter. Entries from commands.yaml follow these built-ins. @history is always available and is not a line in that file.\nThe shortcuts dialog lists the same triggers. The shot is the macOS wording.\nCmd+/ opens Shortcuts. The @ triggers and the call flags are the same list as this page. Session link Type What it does @ Commands palette @history Past commands for this tab. Insert into the prompt, unless Settings says run immediately @shell Interactive terminal in this tab until exit @split This tab beside the next one, or back to one pane @export This tab’s scrollback as Markdown, secrets masked @logs Network diagnostics beside the terminal. Memory only, no URLs, headers, or bodies @library Everything saved @edit name Editor for a saved server, API, endpoint, OpenAI connection, or collection HTTP link Type What it does @create Create an MCP server, API connection, endpoint, or OpenAI connection @create api Base URL and auth. Environment and customer come from Settings @create endpoint An endpoint on a saved connection @endpoint List. Favourites first, then A→Z @endpoint name Call, or open the form when a value is missing @endpoint name --param value Call with that parameter @apis Edit or delete API connections, endpoints, and OpenAI connections @sse Server-sent events. Extra words after the name are ignored. Ctrl+C stops @ws [message] WebSocket. Text after the name sends first; type more messages while it stays open. Ctrl+C closes @signin OAuth for an API connection. Browser (PKCE) or device code. Tokens stay in memory @signout Forget that connection’s OAuth tokens @export openapi OpenAPI 3.0 for that connection’s endpoints. No secrets @export postman Postman v2.1. No secrets @check Save a response check, for example status == 200 or $.data.id exists @check List the checks @check clear Remove them @diff Compare the last two responses MCP link Type What it does @create mcp HTTP, Azure client credentials, or stdio @connect Connect this tab. Servers already open on the tab stay connected @tool Tools on the connected servers @tool name Arguments form. Looks up a saved server when the tool is not connected yet @tool name --param value Call immediately. --param=value works too @mcp List, edit, duplicate, delete, export, or import. @servers is the same @mcp signin Browser OAuth for an HTTP server. Ctrl+C cancels @mcp signout Forget that server’s in-memory tokens @mcp inspect Capabilities, tools, resources, prompts, JSON-RPC log, ping @resources List and read resources. A template asks for placeholders @prompts List prompts, fill arguments, put the last user message on the input line Model link Type What it does @create openai Azure OpenAI, OpenAI, or a local compatible server @openai Select a connection for this tab. Hover the pill to disconnect @chat Follow-up, with recent scrollback and token counts. Can call this tab’s tools and saved endpoints; you approve each call @chat Show the running token total @chat clear Start again Agent Prompt toggle, left of ❯. On, a line is chat unless it starts with @. Needs this tab’s OpenAI connection. The system prompt is in Settings # One shell command, placed in the prompt. You run it @explain Why the last command failed. A fix is placed in the prompt. You run it @agent The model may call this tab’s tools and saved endpoints. You approve each call / Skills palette. A prompt skill needs the tab’s model. A command skill runs in the shell Workspace and vault link Type What it does @workspace open Merge /.ai-terminal/ by name. The path is absolute or starts with ~ @workspace Status @workspace save Write definitions without secret values. The guard can refuse @workspace status Git branch and uncommitted files @workspace close Forget the folder. Merged definitions stay. Nothing is committed @vault test Resolve akv:// or op://. Shows the length, not the value @vault clear Forget cached vault values Call flags link Flag Where --llm On a tool call, interpret the JSON with this tab’s model --instruction … Extra instruction. Only with --llm, and it must be last --query key=value On an endpoint call, add or replace a query parameter. Repeat it --body On POST, PUT, or PATCH, replace the JSON. Takes the rest of the line --set key=value Change one body property. --set count:=6 forces a number termorq-cli link Command What it does termorq-cli list Collections and how many endpoints, commands, and tools each holds termorq-cli show Steps in run order, and why a run would skip one termorq-cli env Environments and which variables are still {{name}} termorq-cli apis API connections, without secrets termorq-cli endpoints Endpoints. --connection filters termorq-cli mcp MCP servers, without connecting termorq-cli models OpenAI connections in the data folder. Rejects --workspace termorq-cli tools Connect and list that server’s tools. Use --data-dir termorq-cli check Problems only. Exit 0 when nothing blocks, 2 when a row does termorq-cli check --file plan.yml The plan, without calling. Connects only to confirm each tool exists termorq-cli call \"\" One @endpoint or @tool line. Quote it termorq-cli run The collection. Exit 0 pass, 1 failed step, 2 configuration termorq-cli run --file plan.yml Endpoints and tools. One MCP session per server. Not written back termorq-cli --help The same flags as Run a collection termorq-cli --version termorq-cli 0.20.0 You cannot pass a collection name and --file together. You cannot pass --workspace and --data-dir together. junit is only for run and call.\nRelated pages link Keyboard Run a collection "
+            }
+        );
+    index.add(
+            {
+                id:  4 ,
+                href: "\/docs\/get-started\/",
+                title: "Get started",
+                description: "Install Termorq, open the window, and try the sample workspace offline.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  5 ,
+                href: "\/docs\/get-started\/install\/",
+                title: "Install and run",
+                description: "Node, Rust, and the desktop app. The browser build shows the window and does not run a shell.",
+                content: "Termorq is a desktop app. Version 0.20.0 is the version in src-tauri/tauri.conf.json. The header, termorq-cli --version, and package.json read that same value.\nYou need Node.js 20 or newer, pnpm 10, and Rust 1.90 or newer (stable). Tauri 2.12 requires that Rust version.\ncorepack enable corepack prepare pnpm@10 --activate If the shell still cannot find pnpm, install it with npm: npm install -g pnpm.\nmacOS, Windows, and Linux packages linkOn macOS, install the Xcode Command Line Tools: xcode-select --install.\nOn Windows, install the Microsoft C++ Build Tools. WebView2 is already present on current Windows 10 and 11.\nOn Debian and Ubuntu the app links WebKit, GTK, and the secret service. termorq-cli links the same library and does not open a window, so a pipeline image needs these packages too.\nsudo apt update sudo apt install -y \\ build-essential \\ file \\ libwebkit2gtk-4.1-dev \\ librsvg2-dev \\ patchelf \\ libssl-dev \\ libgtk-3-dev \\ libayatana-appindicator3-dev \\ libxdo-dev \\ libsecret-1-dev \\ libdbus-1-dev \\ pkg-config Open the app linkFrom a checkout:\npnpm install pnpm tauri dev pnpm tauri dev is the app you use. It starts the shell, the keychain, and the file dialogs.\npnpm dev opens the same React window in a browser on port 1420. Invoke calls have nowhere to go, so the scrollback says the shell needs pnpm tauri dev. The rail, the header, and Settings still render. That is the shot below.\npnpm dev on port 1420. The rail and the prompt are the real window. Shell, skills, and commands need pnpm tauri dev. Published installers are on GitHub Releases. This build has an empty updater public key, so in-app installation is off. Updates explains the Settings switch and the release page.\nBuild termorq-cli linkThe headless runner is a second binary in the same crate.\ncargo build --release --bin termorq-cli --manifest-path src-tauri/Cargo.toml The binary is src-tauri/target/release/termorq-cli. It prints termorq-cli 0.20.0. How to point it at a workspace is Run a collection.\nRelated pages link The window Sample workspace "
+            }
+        );
+    index.add(
+            {
+                id:  6 ,
+                href: "\/docs\/models\/connections\/",
+                title: "Model connections",
+                description: "Azure OpenAI, OpenAI, or a local compatible server, selected per tab.",
+                content: " @create openai @openai @create openai asks for a name, a provider, an endpoint, a model or deployment, an API key, and an optional system prompt.\nProvider What you fill in Azure OpenAI The resource endpoint, the deployment name, and the key. This is the default. Existing connections stay Azure OpenAI or compatible A base URL (blank means https://api.openai.com/v1), a model, and a key sent as a Bearer token. The key is optional for a local server Ollama, LM Studio, vLLM, and a gateway work as the compatible base URL. Both Azure URL styles are accepted: an endpoint that contains /openai/v1, and a classic deployment host.\nThe system prompt is stored on the connection. It is not a secret. Blank or whitespace sends no system message. Test is a small chat completion and does not send the system prompt. Save stays disabled unless the deployment accepts the key. Changing only the system prompt does not require another test.\nThe key goes to the OS keychain, or you type a vault reference instead. Secrets covers akv:// and op://.\nSelect it for this tab link@openai selects one connection for the current tab. It does not edit. The status strip shows the name as a pill. Hover that pill and confirm Disconnect? to clear it for this tab. A saved prompt is picked up on the next interpretation without selecting the connection again.\ntermorq-cli models lists these connections from the app data folder. It does not call them. A collection run skips @chat, @agent, and / skills.\ntermorq-cli models --data-dir ~/Library/Application\\ Support/com.garrardkitchen.ai-terminal --workspace is an error here. OpenAI connections are in the data folder.\nRelated pages link Ask the model One Azure path "
+            }
+        );
+    index.add(
+            {
+                id:  7 ,
+                href: "\/docs\/secrets\/on-this-machine\/",
+                title: "On this machine",
+                description: "The keychain, vault references, masking, and how to report a vulnerability.",
+                content: "A secret is a value. A name, a {{placeholder}}, and a vault reference are not. The app stores the value in the OS keychain and keeps the name in the file you might commit.\nflowchart LR field[\"A secret field\"]:::step ref{\"akv:// or op://?\"}:::gate vault[(\"Vault\")]:::secret chain[(\"OS keychain\")]:::store sent[\"The call\"]:::out field --\u003e ref ref --\u003e vault --\u003e sent ref --\u003e chain --\u003e sent classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa classDef secret fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404 classDef gate fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404 classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa classDef out fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa linkStyle 0 stroke:#5eead4,stroke-width:2.5px linkStyle 1,2 stroke:#FFC131,stroke-width:2.5px linkStyle 3,4 stroke:#67e8f9,stroke-width:2.5px The keychain linkAPI keys, bearer tokens, basic passwords, client secrets, the OpenAI key, the MCP Azure client secret, and stdio env values whose names look like secrets use the OS keychain. The service name is com.garrardkitchen.ai-terminal.\nIf the keychain is unavailable, the app falls back to an AES-256-GCM file in the app data folder. That file is not a place to paste a token by hand. A blank secret field on edit keeps the stored value.\nVault references linkAnywhere a secret goes, you can type a reference instead:\nakv://my-vault/users-api akv://my-vault/users-api/abcd1234version op://Private/Users API/credential @vault test akv://my-vault/users-api @vault clear The field shows a vault badge and a Test reference button. The result is resolved, N chars. The value is not shown.\nReference How it is fetched akv:///[/] az keyvault secret show --vault-name V --name N [--version X] --query value -o tsv, using your existing az login op:///[/]/ op read --no-newline , or OP_SERVICE_ACCOUNT_TOKEN when you use a service account The CLI is started directly. Each argument is separate. There is no shell. Vault, secret, and item names are checked first (Key Vault: letters, digits, and hyphens. 1Password: letters, digits, spaces, -, _, .). A reference cannot inject a command. Each run has a 15-second timeout. Errors are short (az not found, not logged in: run az login, op not signed in, secret not found, access denied).\nResolved values stay in memory for 5 minutes and are added to that call’s scrub list. They are never written to disk, logs, history, or the MCP JSON-RPC log. @vault clear forgets the cache at once.\nA reference is saved in the connection file and in a team workspace. The secret guard allows a valid reference and refuses a raw token.\nMasking linkThe mask is ••••••••.\nIt is applied in the scrollback, in @history, in Markdown export, in the last 10 responses kept for @diff, in @logs (which also drops URLs, headers, and bodies), and in the inspector’s JSON-RPC log. A history line that already contains the mask is inserted into the prompt. It is not run again.\nExport to OpenAPI or Postman replaces sensitive fields with {{name}} and writes no secret. .aitapi, .aitmcp, .aitcol bundles that include secrets, and .aitbak are encrypted. The password is not stored.\nWhat does not run unless you ask link Action You ask by A shell line Typing it, or Run on a collection line An interactive program The program itself, or @shell An MCP tool from @agent Run, Run all, Skip, or Stop on each call A destructive tool from termorq-cli --yes Shell lines from termorq-cli --allow-shell (sh -c, or cmd /C on Windows) A git commit You, in your own git client. The app has no commit and no push OAuth tokens for APIs and for MCP stay in memory. A restart means signing in again. Ctrl+C cancels a sign-in.\nThe app is a desktop tool. Do not expose it as a network service.\ntermorq-cli linkHeadless runs use a different order: AIT_SECRET_, then the vault reference, then the app secret store. A missing secret exits 2 before any step. The naming rules, the scrub, and the pipeline variables are on Secrets and termorq-cli.\ntermorq-cli check names AIT_SECRET_USERS_API and does not call. The shell and tool steps are warnings. Report a vulnerability linkDo not report a suspected vulnerability in a public issue, discussion, or pull request. Use private vulnerability reporting.\nIf that form is unavailable, contact the maintainer through the contact options on github.com/garrardkitchen. Include a description, the version or commit, how to reproduce it, and the impact. Redact real credentials. Use test values.\nYou can expect an acknowledgement within seven days. The policy is SECURITY.md in the repository. It covers this source tree and the published artifacts. Reports about a third-party service should also go to that service.\nRelated pages link Secrets and termorq-cli Pipelines Team workspace "
+            }
+        );
+    index.add(
+            {
+                id:  8 ,
+                href: "\/docs\/workspace\/team-folder\/",
+                title: "Open, save, status, close",
+                description: "Merge .ai-terminal/ by name, write it back without secrets, and commit the diff yourself.",
+                content: "Team workspace is a Pro feature. The @workspace commands are available in Pro builds; Free builds keep local definitions and collections.\nA team workspace is a folder in a git checkout. The app reads and writes /.ai-terminal/ and never runs git commit or git push.\n@workspace open ~/src/acme-apis @workspace @workspace status @workspace save @workspace close @workspace with no verb is status. Settings → Team workspace → Open folder is the same open. workspace in the @ palette opens the same commands.\nflowchart LR folder[(\"Checkout\\n.ai-terminal/\")]:::store merge[\"Merge by name\"]:::step local[(\"This machine\\nkeychain\")]:::secret guard{\"Secret\\nguard\"}:::gate diff[\"You review\\nthe diff\"]:::out folder --\u003e merge --\u003e local local --\u003e guard --\u003e diff classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa classDef secret fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404 classDef gate fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404 classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa classDef out fill:#166534,stroke:#86efac,stroke-width:2px,color:#f0fdf4 linkStyle 0,1 stroke:#5eead4,stroke-width:2.5px linkStyle 2 stroke:#FFC131,stroke-width:2.5px linkStyle 3 stroke:#86efac,stroke-width:2.5px The path is absolute, or it starts with ~. A relative path is rejected with Use an absolute path (or one starting with ~). The same rule is why termorq-cli --workspace . fails.\nThe files linkPretty JSON, sorted keys, schema version 1. A newer schema is reported, not guessed at.\nFile Contents workspace.json The name api-connections.json Connections, without secret values. A vault reference stays as secret_ref endpoints.json Endpoints, including checks collections.json Collections and captures environments.json Environments, their variables, and customers mcp-servers.json Servers. Secret env values are names only .gitignore Written on save. Ignores local.json and *.local.json @workspace save leaves out API secrets and tokens, MCP secret env values and headers, and certificate paths outside the folder. Paths inside the folder are stored relative. Secret-looking header, query, body, and environment variable values become {{name}} placeholders. A placeholder never overwrites a value you already have locally.\nA vault reference is kept as written. It is not a secret, and the guard allows a valid akv:// or op://.\nOpen linkOpen merges by name into this machine: API connections, endpoints with their checks, collections, environments and customers with variables, and MCP servers. Rows from the workspace show a workspace badge in @apis, @mcp, and @library. A connection whose secret is not here yet shows needs secret. You edit it and enter the secret. That value stays in this computer’s secret store.\nLocal secrets, favourites, ids, and Connect when the app starts are kept on merge.\nThe guard linkBefore anything is written, the app scans the files for JWTs, sk- keys, GitHub, Slack, AWS, and Google tokens, private keys, password= values, and long base64 or hex strings. A hit refuses the save. The message names the file and the kind of secret. It does not print the value. Nothing is written.\nStatus and close link@workspace status runs git status --porcelain -b and shows the branch and the uncommitted files. @workspace close forgets the folder. Merged definitions stay.\nThere is no @workspace push. You review the diff and commit it yourself.\nThe sample workspace is a folder you can open this way. termorq-cli reads the same files and does not write them, except that a plan file is never written back either.\nRelated pages link Secrets on this machine Pipelines "
+            }
+        );
+    index.add(
+            {
+                id:  9 ,
+                href: "\/docs\/settings\/preferences\/",
+                title: "Preferences",
+                description: "Email, environments, customers, shell, font, history, and tool interpretation.",
+                content: "Settings on the rail, or the avatar, opens in the terminal column. The page says Saved on this machine.\nSettings in version 0.20.0. Environments and customers are empty until you add a name, so the header hides those dropdowns. Primary email linkAn address stored on this machine loads that Gravatar in place of the initials. If the address is empty, or Gravatar has no photo, the initials stay. The shot above shows GK.\nEnvironments and customers linkAdd as many as you need, up to 40 of each. Each name has one of the seven tab colours.\nAction Result Add The name appears in the header dropdown, and a new MCP server or API connection starts on that choice Edit The name changes everywhere a connection uses it Swatch The colour changes straight away Delete, then Delete? The name is removed. A connection that used it keeps working and shows no tag until you pick another The header shows Environment only when at least one environment exists, and Customer only when at least one customer exists. The choice is restored when the app opens.\nVariables on an environment fill {{name}} in endpoints that use that environment. They are not secrets. Prod in the sample keeps region as {{REGION}} so a pipeline can set AIT_VAR_REGION.\nBoth lists and both choices are in localStorage key ai-terminal-settings. A team workspace stores the names, colours, and variables in environments.json.\nShell, folder, and font link Setting Effect Shell The default for every tab that has not picked its own. The browser build only lists System default until the desktop app can see what is installed Start folder Where new tabs open. Empty uses the first tab’s folder Output font 10–24px, default 14. Ctrl and the wheel, and Ctrl+0, change the same value from the terminal Interactive programs On by default. Off runs editors, ssh, and REPLs as plain output Command times Off by default. The Time button on the tab bar is the same switch History and models linkOn history select is Insert into prompt or Run immediately.\nInterpret MCP tool responses with the LLM is off by default. When it is on, the tab’s OpenAI connection explains the tool JSON. A single call can still pass --llm. JSON and interpretation shows both. Interpretation only hides the JSON when the model call succeeds. A failed model call still shows the JSON.\nAgent system prompt is used when Agent is on and the line is sent as chat. The tab’s folder, recent scrollback, and its tools are still included. Blank keeps the built-in chat instructions. This is not the system prompt stored on an OpenAI connection. That one is sent only when a tool result is interpreted.\nAdditional CA certificate linkA .pem bundle, or a .crt, .cer, or .der file, for a corporate CA when HTTPS inspection is not in the operating system trust store. Certificate checks stay enabled. Restart the app after you choose a file. This does not disable verification.\nDiagnostic logs link@logs opens the network panel beside the terminal. It is described on Find and export. The entries are memory only.\nRelated pages link Updates The window Files "
+            }
+        );
+    index.add(
+            {
+                id:  10 ,
+                href: "\/docs\/cli\/run-a-collection\/",
+                title: "Run a collection",
+                description: "Every termorq-cli command, from list and show through check, call, and run, with the output from a sample workspace.",
+                content: "Running collections as runbooks is a Pro feature. Free builds can still list collections with termorq-cli list and inspect them with termorq-cli show. The available commands follow the edition compiled into termorq-cli; the CLI has no edition flag or runtime switch.\ntermorq-cli runs a saved collection without opening Termorq. It uses the same HTTP calls, variables, response checks, and captures as the app. Version 0.20.0 prints termorq-cli 0.20.0.\nThe screenshots on this page are the real binary, taken against a sample workspace at /tmp/acme-apis. That workspace points Users API at mock://users, the app’s offline demo host, so nothing left the machine. A secret named in the prompt is shown as …. The value never appears in the output.\nWhat a run does linkflowchart LR workspace[(\"Workspace\\n.ai-terminal/\")]:::store check{\"Secrets and\\nvariables\"}:::gate steps[\"Favourites,\\nthen the rest\"]:::step report[\"Text, JSON,\\nYAML, or JUnit\"]:::out code([\"Exit 0, 1, or 2\"]):::exit workspace --\u003e check --\u003e steps --\u003e report --\u003e code classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa classDef gate fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404 classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa classDef out fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa classDef exit fill:#9f1239,stroke:#fecdd3,stroke-width:2px,color:#fff1f2 linkStyle 0,1,2 stroke:#5eead4,stroke-width:2.5px linkStyle 3 stroke:#fb7185,stroke-width:2.5px Favourites run first, then the other lines, in order. A capture such as method = $.method is available to later lines as {{method}}.\nA collection run skips MCP tool steps, model lines (@agent, @chat, /skill), app commands, and @sse / @ws streams. A plan file can call tools. OAuth that needs a browser or a device code cannot run headless.\nBuild the binary linkFrom a checkout of the repo:\ncargo build --release --bin termorq-cli --manifest-path src-tauri/Cargo.toml The binary is src-tauri/target/release/termorq-cli. Building it compiles the app library, so Linux needs the same packages as the app. The binary itself does not open a window.\nPoint it at a workspace link termorq-cli list --workspace ~/src/acme-apis --workspace reads /.ai-terminal/. The path must be absolute, or start with ~. A relative . is rejected with Use an absolute path (or one starting with ~).\n--data-dir reads the app’s own data folder instead. Response checks and environments live with the workspace or in the app’s settings, which the CLI cannot read, so use --workspace when you need checks. OpenAI connections are only in the data folder: termorq-cli models tells you to pass --data-dir.\ninfo Save the folder from the app first with @workspace save, or start from a checkout that already has .ai-terminal/.\nList the collections link termorq-cli list on the sample workspace csv, tsv, json, and yaml print the same counts. junit is only for run and call.\nShow one collection link termorq-cli show Smoke The skip column is a preview. It does not call anything.\nLook around linkThese read the workspace and print no secrets.\n$ termorq-cli env --workspace /tmp/acme-apis environment name value placeholder Staging region eu Prod region {{REGION}} REGION $ termorq-cli apis --workspace /tmp/acme-apis name id base_url auth has_secret secret_ref environment endpoints Users API api-18dd12b05e640638 mock://users bearer false Staging 2 $ termorq-cli endpoints --workspace /tmp/acme-apis --connection \"Users API\" name id connection method path graphql favourite checks Get user ep-18dd12b05f77c410 Users API GET /users/{id} false false 1 List users ep-18dd12b05f77b858 Users API GET /users false false 2 $ termorq-cli mcp --workspace /tmp/acme-apis name id transport target has_secret auto_connect Docs http https://docs.example.test/mcp false false The id values are generated when the workspace is read. A later run prints different ids. has_secret is false here because the bearer token is supplied with AIT_SECRET_USERS_API, not stored in the file. The MCP id column is empty until the server is saved with one.\ntermorq-cli endpoints --connection filters to one API. termorq-cli mcp lists saved servers and does not connect. termorq-cli tools Docs --data-dir does connect, and --name filters the tool list. termorq-cli models --data-dir lists saved OpenAI and Azure OpenAI connections.\nCheck, then run linktermorq-cli check prints problems and does not call. A missing secret or an unknown endpoint is blocking and the exit code is 2. A skip is a warning. A destructive tool without --yes is a warning here, and termorq-cli run still refuses it.\ntermorq-cli check Smoke, before the secret is set termorq-cli run stops before the first step when the secret is missing:\ntermorq-cli run Smoke with no secret Set the secret, name the environment, and allow the shell step:\ntermorq-cli run Smoke with the secret, Staging, and --allow-shell Exit code 0. The skipped tool is allowed. Without --allow-shell the echo line is skipped as well, and the run still exits 0 when every endpoint passed:\n✓ 1/4 List users · endpoint · HTTP 200 · 0 ms · captured {{method}} ✓ 2/4 Get user · endpoint · HTTP 200 · 0 ms - 3/4 Echo · shell · skipped — shell steps need --allow-shell - 4/4 Search · tool · skipped — needs MCP: tool steps are not run headless 2 passed, 0 failed, 2 skipped --bail stops at the first failure and reports the rest as skipped. This collection’s first line exits 3:\n$ termorq-cli run Bail --workspace /tmp/acme-apis --allow-shell --bail ✗ 1/2 Fails · shell · 3 ms — it exited with code 3 first - 2/2 After · shell · skipped — not run: an earlier step failed (--bail) 0 passed, 1 failed, 1 skipped exit 1 --timeout is per step, in seconds. The default is 30. --env Staging loads that environment’s variables. Repeat --var key=value to override one name. --var wins over --env.\nOne line linkQuote the line so its flags are not read as termorq-cli options.\ntermorq-cli call of List users termorq-cli call \"@endpoint List users\" --workspace ~/src/acme-apis A tool uses the same command with the app’s data folder. On macOS that folder is ~/Library/Application Support/com.garrardkitchen.ai-terminal. On Linux it is ~/.local/share/com.garrardkitchen.ai-terminal.\ntermorq-cli call \"@tool echo --message hi\" --data-dir ~/Library/Application\\ Support/com.garrardkitchen.ai-terminal --connection Docs --yes --connection is required for a tool when more than one MCP server is saved. --yes is required when the tool is marked destructive. A collection run skips tool lines. JSON and YAML include the response. The secret is not printed.\nWhen a check fails linkThe endpoint Expect missing expects HTTP 404. The mock host answered 200, so the step fails and the exit code is 1.\nA response check failure Checks use the same language as the app: status == 200, status \u003c 400, $.mock == true, $.name == \"Ada\", $.tags contains \"x\", $.items.length \u003e 0, $.path contains GET.\nRun a plan file linktermorq-cli run --file plan.yml runs the steps in the file. The file is not saved as a collection. On a run, --env, --var, --bail, --timeout, and --yes win over the file.\nschema: 1 env: Staging timeout: 30 steps: - endpoint: List users capture: method = $.method - endpoint: Get user - line: echo smoke-ok Against the sample workspace, with the secret set and --allow-shell, that file passed all three steps and printed each JSON body. A tool step looks like this:\n- tool: search connection: Docs args: query: users The plan is checked before any step runs. An unknown endpoint, a missing secret, a missing server, or a destructive tool without --yes stops it. One MCP session is opened per server. termorq-cli check --file plan.yml connects only to confirm each tool exists.\nYou cannot pass a collection name and --file together.\nOutput and exit codes link --format Where it works What you get text every command The tables and the step list above. This is the default. csv, tsv list, show, env, apis, endpoints, mcp, models, tools, and a run A flat table. A run is one row per step. json, yaml the same commands yml is accepted for yaml. A run report has collection, source, ok, passed, failed, skipped, duration_ms, and steps. junit run and call only A JUnit document on standard output. Warnings, such as a skipped tool, go to standard error. The JUnit or JSON document on standard output stays valid. Redirect stdout only:\ntermorq-cli run Smoke --workspace ~/src/acme-apis --format junit \u003e termorq-cli-results.xml Exit code Meaning 0 Every step that ran passed. Skips are allowed. termorq-cli check exits 0 when nothing is blocking. 1 A step failed. 2 Usage or configuration. Unknown command, missing secret, unknown collection, bad flag, empty collection. termorq-cli --help prints the full usage. termorq-cli --version prints termorq-cli and the app version.\nRelated pages link Secrets and termorq-cli Pipelines Guide map "
+            }
+        );
+    index.add(
+            {
+                id:  11 ,
+                href: "\/docs\/mcp\/servers\/",
+                title: "Servers",
+                description: "Create an HTTP, Azure, or stdio server, test it, and connect it to this tab.",
+                content: "@create mcp is one form and three transports.\nTransport You provide HTTP The endpoint. No credentials, or an optional OAuth client id for servers that do not register clients Azure client credentials Tenant id, client id, client secret, scope stdio Command, arguments, working directory, and env When Settings has environments or customers, the form asks for those too. A new server starts on the header choice. Changing only the environment or the customer does not require another test after the current values have already passed.\nTest connection must succeed before Save. An HTTP server that answers 401 is not a form error. The test passes with “asks for OAuth sign-in”. Connecting or calling then says Run @mcp signin .\nmock://local tests and saves offline, with canned echo and ping tools.\nConnect this tab link @connect @connect Docs @connect connects the current tab and keeps any MCP servers already open on that tab. Other tabs keep their own servers. After a restart the tab remembers the names and shows off until you connect again, unless Connect when the app starts is ticked.\nThat tick box is in the server editor, off by default, stored as auto_connect. On launch the app connects those servers on the first tab in the background. The scrollback gets one MCP auto-connected line. Servers that fail are named in a quiet notice. A server that needs sign-in says to run @mcp signin . No browser opens at start-up.\nThe status strip lists connected servers as pills. Hover a pill and confirm Disconnect? to drop that one. Esc cancels.\nList, edit, export link @mcp @servers @mcp and @servers are the same list. You can edit, duplicate, or delete. A blank secret on edit keeps the stored one. Tick rows to export a .aitmcp file, or import one. Import asks before replacing a server of the same name.\n.aitmcp is encrypted (Argon2id, AES-256-GCM) and is MCP only. It stores each server’s environment id and customer id. The names and colours stay in Settings. The export password is at least 12 characters and is not stored.\nSecrets (the Azure client secret, and stdio env values whose names look like secrets) go to the OS keychain. They are not written to yaml, the connections file, the scrollback, or the logs.\nStdio framing linkStdio servers speak newline-delimited JSON-RPC: one compact JSON message per line. Replies from older servers that use Content-Length headers are still read. Stray non-JSON lines on stdout are skipped.\nWhat termorq-cli does with a server linktermorq-cli mcp lists saved servers and does not connect. termorq-cli tools connects and lists that server’s tools. termorq-cli run of a collection skips tool steps. termorq-cli run --file can call tools, one MCP session per server, and a destructive tool needs --yes. Run a collection has the commands.\ntermorq-cli mcp --workspace ~/src/acme-apis termorq-cli tools Docs --data-dir ~/Library/Application\\ Support/com.garrardkitchen.ai-terminal On Linux the data folder is ~/.local/share/com.garrardkitchen.ai-terminal. On Windows it is %APPDATA%\\com.garrardkitchen.ai-terminal. termorq-cli models and termorq-cli tools read that folder. They reject --workspace.\nRelated pages link OAuth sign-in Tools, resources, prompts Inspector "
+            }
+        );
+    index.add(
+            {
+                id:  12 ,
+                href: "\/docs\/terminal\/the-prompt\/",
+                title: "The prompt",
+                description: "One line for a shell, an endpoint, a tool, a skill, or a model. How the scrollback labels each one.",
+                content: "You type in one place. The first characters decide what runs. The accent caret follows the insertion point as you edit the line.\nflowchart LR line[\"The line you type\"]:::step shell[\"Shell\"]:::out endpoint[\"@endpoint\"]:::step tool[\"@tool\"]:::store skill[\"/ skill\"]:::gate model{\"@chat # @agent\"}:::gate line --\u003e shell line --\u003e endpoint line --\u003e tool line --\u003e skill line --\u003e model classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa classDef gate fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404 classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa classDef out fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa linkStyle 0,2 stroke:#5eead4,stroke-width:2.5px linkStyle 1 stroke:#67e8f9,stroke-width:2.5px linkStyle 3,4 stroke:#FFC131,stroke-width:2.5px You type What runs git status The tab’s shell. Output streams in. cd and export carry to the next line on bash, zsh, sh, and PowerShell @endpoint List users A saved HTTP call @tool search --query tea An MCP tool on a server connected to this tab /explain how to make tea A skill from skills.yaml @chat why was that empty? The tab’s model, with recent scrollback. It can call this tab’s MCP tools and saved endpoints; you approve each call Agent on, then why was that empty? The same chat, without typing @chat. A line that starts with @ still runs # find files over 100 MB here The model writes one command into the prompt. You press Enter @history The history overlay for this tab @ opens the commands palette. / opens the skills palette. Both filter as you type. In the commands palette, exact and leading name matches appear before other name matches, and all name matches appear before description matches. Built-in @ actions are listed in Commands. Entries from commands.yaml follow them. @history is always first and is not a YAML entry.\nAgent, to the left of ❯, sends a line as chat when it is on. It needs this tab’s OpenAI connection. A line that starts with @ still runs. While Agent is on, / does not open the skills palette: that line is the question. Ask the model describes the system prompt.\nWhat the scrollback shows linkEach command is its own entry, with a short accent mark on the left.\nThe far right names the call:\nPill Meaning cmd A line you typed script A shell skill, or a command from commands.yaml tool An MCP tool endpoint A saved HTTP call skill A prompt skill ai A model interpretation of a tool result An endpoint, a tool, and a model call show how long they took beside the pill. A prompt skill times the model call. A tool that is then interpreted shows the tool time on tool and the model time on ai.\nAn HTTP response puts a status pill on the call’s line. 2xx is green, 3xx is blue, 4xx is orange, and 5xx is red. The phrase sits in the pill (200 OK, 404 Not found). The body follows on the next line. A connection test uses the same pill.\nA tool result and an endpoint body have a magnifying glass and a copy icon. Search a response covers that search.\nWhen the scrollback is above the latest line, Bottom sits at the lower right and jumps to the end.\nClear, cancel, and copy linkCtrl+L on Windows and Linux, or Cmd+L on macOS, clears the scrollback.\nCtrl+C copies the selection when text is selected, in the prompt or the scrollback. With nothing selected it cancels a running command and the process group it started, or a stream, a sign-in, or an MCP tool call. The server receives notifications/cancelled. When the line is idle, the same key clears the input.\nCmd+C on macOS copies the selection. In the interactive terminal, Ctrl+Shift+C copies and Ctrl+Shift+V pastes, because Ctrl+C belongs to the program.\nCtrl+0 resets the output font to 14px. Ctrl and the wheel changes it between 10px and 24px. The size is stored in settings and does not zoom the window.\nSkills and commands files linkskills.yaml and commands.yaml ship with the app. While you develop, the app also finds the copies at the repo root. Edit the file and restart.\nA skill with prompt runs once against the OpenAI connection selected on this tab. The skill prompt is appended to that connection’s system prompt. The answer is Markdown. Text already on the line before / is the subject. /explain with no subject stays armed on the status strip: the next line is the subject, and Enter on an empty line uses the last command output. Esc cancels an armed skill. With no OpenAI connection selected, nothing is sent.\nA skill or command with command, command_unix, or command_windows runs in the shell at once. The OS-specific field wins on that platform.\nskills: - id: explain name: Explain description: Explain a command or snippet prompt: \"Explain the following in plain English:\" - id: git-status name: Git status description: Run git status command: \"git status\" commands: - id: git-status name: Git status description: Show the working tree status command: \"git status\" Related pages link Shells History Models "
+            }
+        );
+    index.add(
+            {
+                id:  13 ,
+                href: "\/docs\/collections\/the-shelf\/",
+                title: "The shelf",
+                description: "Collect a line, favourite it, reorder it, copy it, or run it. Up to 50 collections.",
+                content: "Collections are lines you already run: a shell line, an @endpoint call, or an @tool call. Collections on the rail, or Cmd+Shift+B (Ctrl+Shift+B on Windows and Linux), opens the shelf in the terminal column and hides the prompt. Press the shortcut again, or Esc, to return.\nCollections in the desktop window. The shelf is empty until you collect a line. This shot is the frontend, so the shell underneath is the browser build. Create one link+ New collection asks for a name and one of the seven tab colours. Save or Enter keeps it. Cancel or Esc puts the form away.\nNew collection. The name starts as Collection 1. The swatches are the seven tab colours. Edit, beside the name, opens the name field again. The swatches change the colour straight away.\nThe shelf holds up to 50 collections and 200 lines. Lines live in collections.json in the app data folder. An older localStorage key ai-terminal-collections is moved there once.\nAdd a line linkCollect on a command in the scrollback, or on an endpoint row or a tool row, adds that line to a named collection. A line can sit in more than one collection. The same line is not stored twice in one collection. A stored line can include text you typed. A masked secret stays masked.\nOn each line linkEach saved line shows its name. When the command differs from that name, the command sits to the right in a lighter tone.\nControl What it does Star Favourite on this shelf. Favourites stay at the top. This star does not change an endpoint or tool favourite Grip Drag to reorder within a group × Remove the line from this collection only, after Remove? Yes / No. Focus starts on No. Esc, or about 4 seconds, backs out Copy Put the exact line on the clipboard. The prompt is left as it is Run Run that line the same way Enter does, then return to the terminal. A line that contains a masked secret is placed in the prompt instead Delete collection asks once (Delete / Cancel), then removes that shelf. A toast offers Undo.\nA line that names an endpoint or tool that no longer exists is flagged.\nRelated pages link Run as a runbook Library termorq-cli run "
+            }
+        );
+    index.add(
+            {
+                id:  14 ,
+                href: "\/docs\/models\/ask\/",
+                title: "Ask the model",
+                description: "@chat, the Agent toggle, @explain, a # line, / skills, and @agent with an approval on every call.",
+                content: "Each of these uses the OpenAI connection selected on the current tab. Nothing is sent when that pill says none.\nflowchart LR you[\"You\"]:::step approve{\"You approve?\"}:::gate model[\"The tab's model\"]:::out tools[(\"MCP tools\\nand endpoints\")]:::store prompt[\"A command\\nin the prompt\"]:::step you --\u003e model model --\u003e approve approve --\u003e tools tools --\u003e model model --\u003e prompt classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa classDef gate fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404 classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa classDef out fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa linkStyle 0,2,3 stroke:#5eead4,stroke-width:2.5px linkStyle 1,4 stroke:#FFC131,stroke-width:2.5px @chat link @chat why did that return an empty list? @chat @chat clear @chat sends the question with the newest scrollback, up to about 8,000 characters, secrets masked. The tab remembers the last 20 turns. After each answer you see the tokens in and out and the chat’s running total. They are marked ≈ when the provider does not report usage. @chat on its own shows the total. @chat clear starts again.\nWhen this tab is connected to MCP servers, or you have saved endpoints, @chat can call them. Each call waits for Run, Run all, Skip, or Stop, the same as @agent. A follow-up still sees the recent scrollback, including what a tool returned.\n@chat list 5 users from the connected Entra tenant Replies stream into the scrollback. A server that does not stream still works.\nAgent in the prompt linkAgent sits in the prompt bar, to the left of ❯. It can be clicked only when this tab has an OpenAI connection. With none selected, the button is dimmed. Hover says to choose one with @openai.\nwhy did that return an empty list? @chat clear @tool list users With Agent on, the first line is the question. It uses the same scrollback, history, and tool approval as @chat. @chat clear still clears this tab’s chat. @tool list users still runs, and Agent stays on for the next line.\nA shell command, a / skill, and a # request are questions too, unless the line starts with @. The right of the bar says chat or command, so you can see which will happen before Enter. While Agent is on, typing / does not open the skills palette.\nflowchart TD typed[\"A line in the prompt\"]:::step atsign{\"Starts with @?\"}:::gate command[\"Runs as a command\"]:::out chat[\"Sent as chat\"]:::step typed --\u003e atsign atsign --\u003e command atsign --\u003e chat classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa classDef gate fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404 classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa classDef out fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa classDef exit fill:#9f1239,stroke:#fecdd3,stroke-width:2px,color:#fff1f2 classDef success fill:#166534,stroke:#86efac,stroke-width:2px,color:#f0fdf4 linkStyle 0,1 stroke:#FFC131,stroke-width:2.5px linkStyle 2 stroke:#5eead4,stroke-width:2.5px The toggle is per tab and is restored with the tab. Turning the connection off, or deleting it, turns Agent off. A collection step still runs as a command.\nSettings → Agent system prompt replaces the built-in chat voice for lines sent this way. The tab’s folder, the recent scrollback, and its tools are still included. Leave the field blank to keep the built-in instructions. The system prompt on an OpenAI connection is separate. It is sent only when a tool result is interpreted.\npnpm dev on port 1420, the browser build. Agent is on because this tab has an OpenAI connection, and the right of the bar says chat. The shell and the model need pnpm tauri dev. @explain linkWhen a command exits non-zero in a tab with a connection:\n@explain The model receives the command, the folder, the shell, the exit code, and the end of the error output, with secrets masked. The explanation streams in. Any corrected command is placed in the prompt for you to check. It is not run for you.\nA line that starts with link # find files over 100 MB here The model writes one command for your shell, OS, and folder, and places it in the prompt with a short note. You press Enter. History is the same feature from the terminal side.\nSkills link/explain how to make tea runs the Explain skill. A prompt skill is marked skill. A command skill runs in the shell and is marked script. The skill file is The prompt.\n@agent link @agent list the users and tell me the method @agent sends the goal with the tab’s connected MCP tools and your saved endpoints. Each call the model wants to make waits above the prompt:\nControl Action Run (Enter) Run this call Run all Run the rest of the calls for this goal Skip (Esc) Skip this call Stop End the goal Results go back to the model. Secret-looking arguments are masked. A goal stops after eight rounds. Ctrl+C stops it at any time.\nAn MCP tool the model calls sits on the right of the scrollback. The card reads OpenAI → MCP and names the tool. It pulses while the tool runs. Click the card to see the parameters that were sent. The JSON response starts closed. Click JSON response to open it. Search and copy work on the open response. A failed call shows failed, and its message opens from Error.\nwarning Run all approves the remaining calls in that goal. Read the tool name before you press it. A destructive tool is still a tool call on your machine.\ntermorq-cli does not run @agent. A collection line that is a model step is counted and then skipped.\nRelated pages link Tools Secrets on this machine "
+            }
+        );
+    index.add(
+            {
+                id:  15 ,
+                href: "\/docs\/http\/auth\/",
+                title: "Auth",
+                description: "None, API key, bearer, basic, client credentials, browser OAuth, and device code.",
+                content: "@create api offers seven auth kinds. The secret fields follow the kind. A blank secret on a later edit keeps the stored one.\nKind What you fill in Where the secret lives None Base URL only Nowhere API key Header name, default X-Api-Key, and the key Keychain, or a vault reference Bearer The token Keychain, or a vault reference Basic Username and password Password in the keychain, or a vault reference Client credentials Azure tenant id, client id, client secret, scope Client secret in the keychain, or a vault reference OAuth (browser) Authorization URL, token URL, client id, optional client secret Tokens in memory. Optional secret in the keychain OAuth (device code) Token URL, device URL, client id, optional client secret Tokens in memory. Optional secret in the keychain Client credentials are the Azure app-only flow: the app asks Entra for a token with the tenant, the client id, and the secret, then sends that token on the call.\nBrowser sign-in linkOAuth (browser) is authorization code with PKCE S256. The app listens on 127.0.0.1, opens your browser, checks state, and exchanges the code at the token URL. The client secret is optional.\n@signin GitHub @signout GitHub A call with no valid token tells you to run @signin . @signout forgets the tokens. Ctrl+C cancels a sign-in.\nTokens are cached in memory only, per connection, and refresh themselves when the server sent a refresh token. A restart means signing in again.\nDevice code linkOAuth (device code) prints the code and the verification URL in the terminal and polls the token URL. It honours interval and slow_down. Ctrl+C cancels the wait.\nwarning Browser and device-code connections cannot run headless. termorq-cli refuses them. Client credentials, a bearer token, an API key, and basic auth can run in termorq-cli when the secret is in AIT_SECRET_…, a vault reference, or the app secret store.\nHeaders that do not belong on the endpoint link@create endpoint refuses Authorization, Cookie, and API-key headers. Those belong on the connection. Endpoint headers are for values that are not the credential.\nRelated pages link Secrets and termorq-cli One Azure path "
+            }
+        );
+    index.add(
+            {
+                id:  16 ,
+                href: "\/docs\/reference\/keyboard\/",
+                title: "Keyboard",
+                description: "The shortcuts dialog, macOS and Windows keys, and what Esc closes first.",
+                content: "Cmd+/ on macOS, or Ctrl+/ on Windows and Linux, opens the shortcuts dialog. Press it again, or Esc, to close. The header hint (⌘/ help or Ctrl+/ help) opens the same dialog.\nThe dialog in the macOS app. Windows and Linux show Ctrl where this shot shows Cmd, for the shortcuts that the dialog remaps. The labels below are the macOS ones from that dialog. Where a row says Cmd, Windows and Linux use Ctrl for that shortcut, except Ctrl+C, Ctrl+Tab, Ctrl+wheel, and Ctrl+0, which stay Ctrl on every platform. Ctrl+Shift+C copies inside the interactive terminal. On macOS the normal copy shortcut is Cmd+C.\nKeys link Key Action Cmd+/ Open this dialog. Press again to close it / Skills palette @ Commands palette ↑ / ↓ Move in a palette. On the prompt, cycle command history Tab Accept ghost text, or complete a path or command. Tab again cycles matches → At the end of the line, accept ghost text Enter Run the line, or choose the highlighted row Esc Close only the top-most layer: a dropdown, a menu, a form, a palette, or a page. On the prompt, cancel an armed skill or clear the line Cmd+L Clear the scrollback Ctrl+C Cancel the running command and its process group, a stream, a sign-in, or an MCP tool call, or clear the line. With text selected, copy it Cmd+C Copy the selected text Cmd+Shift+B Collections. Press again to return to the terminal Cmd+Shift+L Library Ctrl+Tab · Ctrl+Shift+Tab Next or previous tab, when no palette is open Ctrl+wheel Output font size, 10–24px Ctrl+0 Reset the output font to 14px Cmd+F Search this tab’s scrollback. Enter and Shift+Enter step through matches. Aa matches case. A JSON response has its own magnifying glass Cmd+\\ Split with the next tab. Press again for one pane Middle-click a tab Close that tab. The last tab resets Right-click a tab Rename, colour, shell, split, export as Markdown, or close Inside an interactive terminal, keys go to the program. Ctrl+Shift+C copies and Ctrl+Shift+V pastes. End session stops it.\nPrintable page linkThis page is the cheatsheet. Print it from the browser. The dialog in the app is the same list, with the keys for the machine you are on.\nRelated pages link Commands The prompt "
+            }
+        );
+    index.add(
+            {
+                id:  17 ,
+                href: "\/docs\/mcp\/oauth\/",
+                title: "OAuth sign-in",
+                description: "Browser sign-in for an HTTP MCP server, PKCE, and tokens that stay in memory.",
+                content: "An HTTP MCP server that answers 401 is ready for sign-in. You do not fix that in the create form.\n@mcp signin Docs @mcp signout Docs @mcp signin finds the authorization server from the WWW-Authenticate resource_metadata link (protected resource metadata, RFC 9728), and falls back to the well-known URLs. It then reads /.well-known/oauth-authorization-server (RFC 8414), then OpenID discovery.\nIf the server offers dynamic client registration (RFC 7591), the app registers itself. Otherwise it uses the optional OAuth client ID from the server editor.\nSign-in is authorization code with PKCE S256, through a 127.0.0.1 loopback redirect and your browser, with the resource parameter (RFC 8707). The browser opens only when you run the command. Ctrl+C cancels it.\nTokens stay in memory only. They refresh automatically. A call that gets a 401 refreshes once and retries. @mcp signout forgets the tokens. @mcp shows signed in on that row.\nwarning A headless termorq-cli run cannot open the browser. Sign in on a machine where you can see the window, or use a server that authenticates with a secret the pipeline can provide. Do not put the access token in the workspace file.\nAPI connections have their own commands, @signin and @signout. Those are not MCP. Auth covers them.\nRelated pages link Servers Secrets on this machine "
+            }
+        );
+    index.add(
+            {
+                id:  18 ,
+                href: "\/docs\/collections\/runbooks\/",
+                title: "Run as a runbook",
+                description: "Favourites first, captures into the next line, and a stop at the first failure.",
+                content: "Run as runbook on the Collections page runs that collection’s lines in the order shown, in the current tab. Favourites run first, then the rest, which is the same order termorq-cli run uses.\nflowchart LR shelf[(\"Collection\")]:::store fav[\"Favourites,\\nthen the rest\"]:::step stepn[\"Shell, endpoint,\\nor tool\"]:::out looked{\"Check\"}:::gate capture[\"Capture\\nname = $.path\"]:::step halt([\"Stop\"]):::exit shelf --\u003e fav --\u003e stepn --\u003e looked looked --\u003e capture --\u003e stepn looked --\u003e halt classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa classDef gate fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404 classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa classDef out fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa classDef exit fill:#9f1239,stroke:#fecdd3,stroke-width:2px,color:#fff1f2 linkStyle 0,1,2,3,4 stroke:#5eead4,stroke-width:2.5px linkStyle 5 stroke:#fb7185,stroke-width:2.5px The run stops at the first failure:\nA non-zero shell exit Ctrl+C An HTTP 4xx or 5xx A tool or endpoint error A failed response check Ctrl+C stops the runbook.\ntermorq-cli run is the same collection without the window. By default termorq-cli does not stop at the first failure. Pass --bail when you want that. Shell lines in termorq-cli also need --allow-shell. Tool lines in a collection are skipped by termorq-cli run. Run a collection has the transcript.\nCapture linkCapture on a line saves a value from its JSON response. Later lines use it as a placeholder.\nmethod = $.method id = $.data.items[0].id A later line can say @endpoint Get user --id {{id}}. Captures are kept when a collection is exported and imported.\nThe sample workspace captures method = $.method on List users. The placeholder is filled for lines after that one.\nResponse checks link@check saves a rule that runs after every call to that endpoint. Each result shows ✓ or Check failed. A failed check stops a runbook.\n@check List users status == 200 @check List users $.mock == true @check List users $.name == \"Ada\" @check List users $.tags contains \"x\" @check List users $.items.length \u003e 0 @check List users $.data.id exists @check List users @check List users clear Form Meaning @check Save the rule @check List the rules @check clear Remove them A rule is status or a JSON path, then an operator.\nOperator Example == != \u003c \u003c= \u003e \u003e= status == 200, status \u003c 400, $.name == \"Ada\", $.items.length \u003e 0 exists missing $.data.id exists. These take no expected value. status cannot use them contains $.tags contains \"x\". status cannot use contains A quoted string is text. true, false, null, and numbers are JSON literals. A GraphQL response with a non-empty errors array is Check failed as well.\nThe last 10 responses of each endpoint stay on this computer, with secrets masked. @diff List users shows what changed between the last two.\nThe same check language in termorq-cli. mock://users returned 200. The check wanted 404. Related pages link Calling an endpoint Run a collection "
+            }
+        );
+    index.add(
+            {
+                id:  19 ,
+                href: "\/docs\/cli\/secrets\/",
+                title: "Secrets and termorq-cli",
+                description: "Where a connection secret comes from, what termorq-cli refuses to print, and which steps it will not run on their own.",
+                content: "termorq-cli will not start a run that needs a secret it cannot find, and it scrubs every secret it does find from the text, JSON, YAML, and JUnit it writes. This page is the CLI. The app’s keychain, export files, and workspace guard get their own chapter later.\nWhere the secret comes from linkFor each connection a step will call, termorq-cli looks in this order:\nThe environment variable AIT_SECRET_. The connection’s vault reference, akv://… or op://…. The app’s secret store, when that store can be reached on this machine. The variable name is the connection name in upper case, with every other character written as _. Users API becomes AIT_SECRET_USERS_API. gh-prod.v2 becomes AIT_SECRET_GH_PROD_V2.\nA workspace variable left as {{REGION}} is read from AIT_VAR_REGION. A value passed with --var REGION=eu wins over both the environment and AIT_VAR_REGION.\nIf a required secret is missing, nothing runs. The message names the variable and the exit code is 2.\nThe secret row is blocking. The shell and tool rows are warnings. No step runs until the secret is available. warning Put the value in the pipeline’s secret store, not in the plan file and not in .ai-terminal/. A reference (akv://, op://, or {{name}}) is safe to commit. The value is not.\nVault references linkakv:///[/] is read with az keyvault secret show. You need az login on that machine.\nop:///[/]/ is read with op read. You need a signed-in op, or OP_SERVICE_ACCOUNT_TOKEN.\nThe name is checked before the command runs (letters, digits, and a short list of punctuation), each argument is passed on its own, and there is no shell in between. A reference cannot become a second command. The resolved value stays in memory for that run and is added to the scrub list.\nWhat is scrubbed linkAny secret termorq-cli loaded is replaced in the output. The sample runs on this site used a throwaway token. It does not appear in the text report, the JSON report, or these screenshots. The prompt lines show AIT_SECRET_USERS_API=… on purpose.\nResponse bodies are still written. If an API returns customer data, that data is in the JUnit file. Treat the report as sensitive even though the credential is gone.\nWhat does not run unless you ask link Step Default in a collection run How to run it Saved endpoint Runs — Shell line Skipped --allow-shell runs it with sh -c (cmd /C on Windows) MCP tool Skipped Put it in a plan file, or use termorq-cli call. A destructive tool also needs --yes @agent, @chat, /skill Skipped Not run headless @sse, @ws Skipped Not run headless Browser or device-code OAuth Refused Sign in needs a person --allow-shell is off because a shared collection can contain any shell line. Turn it on only for a collection you have read. --yes is the same idea for a tool the server marked destructive: termorq-cli check warns, termorq-cli run refuses, and the flag is how you say you meant it.\nA collection check does not open MCP. termorq-cli check --file connects far enough to see that each named tool exists.\nReport a vulnerability linkDo not file a suspected vulnerability as a public issue. Use private vulnerability reporting for this repository. The policy in SECURITY.md asks for a description, the version, and steps, with real credentials removed. You should get an acknowledgement within seven days.\nRelated pages link Run a collection Pipelines "
+            }
+        );
+    index.add(
+            {
+                id:  20 ,
+                href: "\/docs\/library\/share\/",
+                title: "Share a file",
+                description: ".aitcol, .aitmcp, .aitapi, and an encrypted .aitbak of everything.",
+                content: "The Library import menu is the front door. Save dialogs start in Downloads. Files are written with owner-only permissions.\nLibrary → Import. Each kind has its own extension. A backup restores. It does not merge by deleting. File Holds Secret .aitcol Collections, and optionally the endpoints and API connections those lines use, plus chosen MCP servers A bundle that includes secrets is always encrypted. A plain collections file can be encrypted too. The preview flags lines that look like they contain secrets and can mask them .aitmcp MCP servers only, including environment and customer ids Always encrypted. Password at least 12 characters, not stored .aitapi The ticked endpoints and the API connections they use Encrypted, and the secret is inside. OpenAI connections stay behind. Password at least 12 characters, not a common password, not one character repeated .aitbak Settings, environments, customers, theme, collections, MCP servers, API connections, endpoints, and OpenAI connections, including secrets Always encrypted Older .aitmcp and .aitapi files still import. An older file may have no environment id or customer id. The names and colours stay in Settings on this computer.\nCollections import linkImport previews the .aitcol file, says what is new and what is replaced, and lets you merge, replace, or add as copies. Captures travel with the lines.\nFull backup linkBackup… writes one .aitbak. Restore a full backup shows what is inside first, then replaces same-named records and adds the rest. Nothing is deleted that the file does not replace.\nwarning A .aitbak contains secrets. Treat the password as a secret too. Do not commit the file. Send it through a channel you already trust, and tell the recipient the password some other way.\nAPI descriptions linkEndpoints from OpenAPI, Postman, Insomnia, or curl is the importer that drops credentials. The steps and the OpenAPI and Postman export are on Import and export.\nRelated pages link Secrets on this machine Team workspace "
+            }
+        );
+    index.add(
+            {
+                id:  21 ,
+                href: "\/docs\/terminal\/shells\/",
+                title: "Shells",
+                description: "The default shell, a shell for one tab, the start folder, and what carries over to the next line.",
+                content: "A line that is not an @ command or a / skill runs in the tab’s shell. One command runs at a time per tab. Output streams in while it runs. Ctrl+C stops that command and everything it started.\nWhich shells linkSettings → Shell picks the shell for every tab that has not chosen its own, from the ones installed here.\nPlatform Choices macOS and Linux bash, zsh, fish, sh, PowerShell 7 Windows Windows PowerShell, PowerShell 7, Command Prompt, Git Bash, WSL Right-click a tab, then Shell, to choose one for that tab, or Default to follow Settings. The header shows the active tab’s shell. @shell opens that shell as an interactive terminal.\nbash, zsh, sh, and PowerShell carry both cd and environment changes to the next line. fish carries the folder. Command Prompt and WSL carry neither, though a plain cd still works inside the line you typed. A shell that is no longer installed falls back to the default, with one line saying so.\nUnix lines run with bash -lc when that is the shell. Windows defaults to PowerShell.\nStart folder linkSettings → Start folder is where new tabs open. Type a path or choose Browse…. Empty uses the folder of the first tab. The prompt shows the folder in front of ❯.\ncd inside an interactive session does not change the tab’s folder. cd as a normal line does, on the shells that carry it.\nGhost text and completion linkAs you type, ghost text offers a completion. History comes first, then a small set of common commands for the platform (PowerShell style on Windows, bash and zsh style on macOS and Linux).\nTab accepts the ghost text when it is showing. Otherwise Tab completes a path or a command on PATH, and Tab again cycles the matches. → at the end of the line also accepts the ghost text.\nRelated pages link Interactive terminal Tabs and splits Settings "
+            }
+        );
+    index.add(
+            {
+                id:  22 ,
+                href: "\/docs\/terminal\/",
+                title: "The terminal",
+                description: "The prompt, name-first command search, shells, tabs, splits, history, find, and export.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  23 ,
+                href: "\/docs\/get-started\/the-window\/",
+                title: "The window",
+                description: "The rail, the header, session tabs, colour schemes, and where the version comes from.",
+                content: "The window is one prompt with a rail on the left and a header on top. Everything else, HTTP, MCP, models, and collections, opens in that same column.\nflowchart LR rail[[\"Rail\"]]:::store prompt[\"Prompt\"]:::step shell[\"Shell\"]:::out http[\"HTTP\"]:::step mcp[(\"MCP\")]:::store model{\"Model\"}:::gate rail --\u003e prompt prompt --\u003e shell prompt --\u003e http prompt --\u003e mcp prompt --\u003e model classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa classDef gate fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404 classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa classDef out fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa linkStyle 0,1,2 stroke:#5eead4,stroke-width:2.5px linkStyle 3 stroke:#67e8f9,stroke-width:2.5px linkStyle 4 stroke:#FFC131,stroke-width:2.5px The rail linkThe rail is 64 pixels wide. Each button has a label and a tooltip.\nButton Opens Terminal The prompt Tools @tool Create @create Library @library APIs @apis Endpoints @endpoint History @history Collections The shelf. Cmd+Shift+B on macOS, Ctrl+Shift+B elsewhere Settings Settings. The avatar at the bottom of the rail does the same Collapse menu hides the rail so the terminal uses the full width. The avatar and your name stay on the header. The choice is localStorage key ai-terminal-rail.\nThe avatar shows your initials until Settings has a primary email that Gravatar can resolve.\nThe header linkOne 40-pixel row:\nTermorq, then the version and edition. Free shows created by Garrard Kitchen; Pro omits the credit. The shell name, then the shortcuts hint (⌘/ help on macOS, Ctrl+/ help on Windows and Linux) An Environment dropdown, only after you add an environment A Customer dropdown, only after you add a customer A sun or moon button, then the colour scheme The working directory stays on the prompt line, in front of ❯.\nThe version is version in src-tauri/tauri.conf.json, read through src/appInfo.ts. A release build stamps the same value on the installer.\nColour schemes linkTwelve schemes, in two groups.\nLight: Light, GitHub Light, Solarized Light.\nDark: Teal, Dracula, GitHub, Visual Studio, One Dark, Nord, Solarized, Monokai, Gruvbox.\nThe header dropdown and Settings → Colour scheme are the same list. The sun or moon button switches group and returns to the last scheme you used in that group. The keys are ai-terminal-theme, ai-terminal-theme-light, and ai-terminal-theme-dark.\nA saved choice of dark becomes Teal. A saved choice of system follows this computer once, then stays on Teal or Light.\nA soft accent follows the pointer across the header and the rail. It uses the scheme’s accent and stays dim enough that the text stays in front. prefers-reduced-motion turns the movement off and leaves the caret solid.\nTabs linkSession tabs sit on the next row. Each tab keeps its own scrollback, folder, command history, and, when you set them, its MCP servers and OpenAI connection. + adds a tab. ×, a middle-click, or right-click Close removes one. The last tab resets. It never leaves you with zero tabs.\nRight-click a tab for Rename, Change colour, Shell, Split, or Export as Markdown. Tab colours are teal, violet, rose, amber, sky, lime, and slate.\nCtrl+Tab and Ctrl+Shift+Tab move between tabs when no palette or dialog is open. The strip scrolls sideways.\nTabs are restored from localStorage key ai-terminal-tabs: title, colour, folder, history, and a capped scrollback. The active tab comes back too.\nTime on that row shows or hides the date and time in front of each command. Settings → Command times is the same switch. It is off until you turn it on. Older commands have no time.\nThe status strip linkUnder the tabs, a strip names the MCP servers connected on this tab and the OpenAI connection. Several servers are separated by commas. The URL is on the hover, not on the strip. Hover a connected pill and confirm Disconnect? to drop that server only. Esc cancels.\nWhile the tab is connected, Tool docs replaces the scrollback with each tool’s name, description, parameters, and input schema. Preview renders the markdown. Raw is the source. Esc, Close, or Tool docs again returns to the terminal. The scrollback stays underneath.\nRelated pages link The prompt Settings Keyboard "
+            }
+        );
+    index.add(
+            {
+                id:  24 ,
+                href: "\/docs\/settings\/updates\/",
+                title: "Updates",
+                description: "The 12-hour signed update check and how editions and Windows installers stay separate.",
+                content: "Settings → Application updates is where the check lives. The switch Check automatically is on until you turn it off. Check for updates runs one check now. Download latest release opens GitHub Releases.\nWhile the app is open it considers a check every minute, including on startup when one is due and when the window regains focus after sleep. The 12-hour interval is remembered across restarts. A successful check with no newer version says you are on the latest version. Offline, missing-feed, and malformed-feed errors show as failed checks.\nWhen a newer version is published, Update available appears in the header and opens the notes.\nInstall Update source Free Windows direct installer Free signed NSIS update feed Pro Windows direct installer Pro signed NSIS update feed Free Microsoft Store MSI Free signed Store MSI feed Pro Microsoft Store MSI Pro signed Store MSI feed macOS Signed update archive for the matching edition and CPU architecture Linux AppImage Signed update artifact for the matching edition Linux .deb Opens the release page for manual installation The edition and installer channel are fixed into each release build. Feeds only offer updates for that edition and channel, so a Store install receives an MSI and a direct Windows install receives the NSIS installer. Downloads require HTTPS and a valid updater signature tied to the announced version.\nRelease builds embed the updater public key and generate signed update artifacts. Local and debug builds keep artifact generation disabled and have no updater public key. Install an updater-enabled release once to receive later updates; an older installed build must first be upgraded manually from GitHub Releases.\nInstallers and the version in the header both come from version in tauri.conf.json.\nRelated pages link Install and run Preferences "
+            }
+        );
+    index.add(
+            {
+                id:  25 ,
+                href: "\/docs\/http\/calling\/",
+                title: "Calling an endpoint",
+                description: "Create an endpoint, then call it with a name, --query, --body, and --set.",
+                content: "@create endpoint asks for the connection, the name, the method, and the path. Methods are GET, POST, PUT, PATCH, DELETE, HEAD, and OPTIONS. You can add query defaults, path parameters, and extra headers.\nA {name} in the path becomes a path parameter with an optional default. Call it with --name value.\n@create endpoint Names may contain spaces. POST, PUT, and PATCH can include a JSON body, sent as application/json. A blank body sends none. The test shows the status as a coloured pill. Save stays disabled until an HTTP response comes back.\n{{variable}} anywhere in the path, query, headers, or body is filled from Settings → Environments for the connection’s environment. An unknown variable stops the call. These variables are not secrets. A secret belongs on the connection or in a vault reference.\nList and call link@endpoint lists saved endpoints with favourites first, then A→Z. The star on a row marks or clears a favourite. Endpoint rows in @apis use the same star and the same order.\n@endpoint @endpoint List users @endpoint Get user --id 1 @endpoint List users --query status=active --query limit=20 @endpoint name calls immediately when there is nothing to fill in, or opens the query form. Flags come after the name. An unknown flag does not call.\nFlag Effect --id 1 Sets the path or query parameter of that name --query key=value Adds a query parameter for this call, including a key that is not saved. Repeat it. The value is a string. A same-named flag such as --filter wins over --query filter=. A key already in the path’s query string is replaced --body {\"name\":\"Ada\"} On POST, PUT, or PATCH, replaces the saved JSON for this call. It takes the rest of the line --set key=value Changes one property of the saved body, and adds the key if it is missing. The match ignores case, so totp replaces Totp. Repeat it. The split is the first =. true, false, and null are JSON. Everything else is a string. --set count:=6 forces a JSON number. Quote a value that contains a space --set then --body --body replaces the payload, then --set is applied. Put --set before --body on the line A value that looks like a secret is masked in @history.\nThe scrollback marks the call with an endpoint pill and shows how long it took. The body is a JSON block. The magnifying glass on it searches that response. Search a response has the keys.\nThe same call from termorq-cli, against mock://users. Quote the line so the flags stay with the command. termorq-cli call \"@endpoint List users\" --workspace ~/src/acme-apis GraphQL and streams linkTick GraphQL on the endpoint when the body is a query. @sse and @ws stream a saved endpoint. Both are on GraphQL and streams.\nRelated pages link Response checks Import and export "
+            }
+        );
+    index.add(
+            {
+                id:  26 ,
+                href: "\/docs\/collections\/",
+                title: "Collections",
+                description: "A shelf of lines you already run, and the same lines as a runbook.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  27 ,
+                href: "\/docs\/reference\/files\/",
+                title: "Files",
+                description: "The app data folder, the team workspace, transfer files, and the localStorage keys.",
+                content: "Two places hold state. The data folder is this machine. The workspace folder is what you commit.\nData folder linkcom.garrardkitchen.ai-terminal under the platform data directory.\nPlatform Path macOS ~/Library/Application Support/com.garrardkitchen.ai-terminal Linux $XDG_DATA_HOME or ~/.local/share/com.garrardkitchen.ai-terminal Windows %APPDATA%\\com.garrardkitchen.ai-terminal File What it is collections.json The shelf. Older localStorage data is moved here once command_history.json The last 500 commands and their times api_connections.json API connections, without secret values api_endpoints.json Endpoints openai_connections.json Model connections, without the key mcp_connections.json MCP servers, without secret values mcp_prefs.json Favourites and related MCP preferences network_settings.json The additional CA certificate setting The keychain service is com.garrardkitchen.ai-terminal. An AES-256-GCM fallback file lives in this folder when the keychain cannot be used. Do not edit it to plant a token.\ntermorq-cli --data-dir points at this folder. termorq-cli models and termorq-cli tools use it. Checks and environment variables for a headless run come from --workspace, not from this folder.\nTeam workspace link/.ai-terminal/, schema 1, pretty JSON, sorted keys.\nFile What you commit workspace.json Name api-connections.json Connections and vault references endpoints.json Endpoints and checks collections.json Lines and captures environments.json Environments, variables, customers mcp-servers.json Servers, secret env names only .gitignore local.json and *.local.json termorq-cli --workspace is the folder that contains .ai-terminal, not the .ai-terminal directory itself. The path is absolute or starts with ~.\nTransfer files link Extension Encryption Notes .aitcol Optional, required when a bundle includes secrets Collections, optional endpoints, connections, and MCP servers .aitmcp Always MCP only .aitapi Always Endpoints and their API connections, including secrets .aitbak Always Full backup, including secrets. Restore replaces same-named records and deletes nothing else Passwords are at least 12 characters and are not stored.\nYAML beside the app linkskills.yaml and commands.yaml ship with the app. A checkout uses the copies at the repo root while CARGO_MANIFEST_DIR or the working directory points there. Edit, then restart.\nA plan file for termorq-cli run --file is schema 1 and is not written back. The shape is on Run a collection.\nlocalStorage linkThese stay in the webview, on this machine.\nKey Contents ai-terminal-settings Environments and customers as used by the header, history behaviour, command times, font, shell, interpretation, Agent system prompt ai-terminal-tabs Tab title, colour, folder, history, capped scrollback, active tab, and whether Agent is on ai-terminal-theme Current scheme ai-terminal-theme-light / ai-terminal-theme-dark Last scheme in each group ai-terminal-rail Whether the rail is collapsed Related pages link Team workspace Sample workspace "
+            }
+        );
+    index.add(
+            {
+                id:  28 ,
+                href: "\/docs\/settings\/editions\/",
+                title: "Free and Pro editions",
+                description: "Compare the features included in each Termorq edition.",
+                content: "Termorq has Free and Pro builds. The edition appears beside the application version in the window header. The Free header includes created by Garrard Kitchen; Pro omits this credit. Open License from the left rail to compare plans; the current build is highlighted.\nThe root features.yml manifest is the source of this feature list and the app’s feature availability. Every new feature must have an explicit plan assignment there.\nFeature What it includes Free Pro Terminal, tabs and split panes Run shell commands in persistent terminal tabs and split panes. ✓ ✓ Saved APIs and endpoints Create, import, call and check saved HTTP endpoints. ✓ ✓ MCP connections and tools Connect to MCP servers and inspect or call their tools. ✓ ✓ OpenAI-compatible connections and model features Use model connections, skills, chat, and model-assisted interpretation. — ✓ AI Agent tool use Let the model propose API and MCP calls for your approval. — ✓ Collections Save, organize, import, and export reusable command lines. ✓ ✓ Run collections as runbooks Run saved collection lines in order and capture response values. — ✓ Team workspace Share API, MCP, endpoint, and collection definitions through a git folder. — ✓ Product support, feature requests and experimental early access Access product support, submit feature requests, and get early access to experimental features. — ✓ Web Check monitoring Schedule saved API and MCP checks and inspect their history. — ✓ Application updates and appearance Manage updates, themes, shell preferences, and diagnostics. ✓ ✓ Encrypted backup and secret handling Protect local data and move it between installations. ✓ ✓ Source builds default to Free. Set AI_TERMINAL_EDITION=pro before pnpm tauri dev or pnpm tauri build to build Pro. Any value other than free or pro stops the build.\nWindows release builds produce separate Free and Pro installers. When Authenticode is not configured, the unsigned .exe installers are uploaded as Actions artifacts for local testing and the GitHub release stays in draft. The same build creates Free and Pro MSIX packages for Store submission; the Pro package uses the separate Store identity Garrard.Termorq-Pro.\nThe termorq-cli CLI has no edition flag or runtime edition switch. Its Pro-only runbook, team workspace, model listing, and Web Check capabilities follow the edition compiled into that termorq-cli binary. Collection listing and display remain available in Free.\n"
+            }
+        );
+    index.add(
+            {
+                id:  29 ,
+                href: "\/docs\/cli\/pipelines\/",
+                title: "Pipelines",
+                description: "Run termorq-cli in GitHub Actions, GitLab CI, and Azure DevOps, and publish the JUnit report.",
+                content: "A pipeline builds termorq-cli, points it at the checkout with an absolute path, and passes each connection secret in from the forge’s secret store. The JUnit document is written to standard output. Warnings stay on standard error, so a skipped step does not corrupt the XML.\nflowchart LR checkout[(\"Checkout\\n.ai-terminal/\")]:::store secrets[(\"Forge\\nsecret store\")]:::secret build[\"cargo build\\n--bin termorq-cli\"]:::step run[\"termorq-cli run\\n--format junit\"]:::run report([\"Publish the XML\\neven if the run fails\"]):::out checkout --\u003e build --\u003e run secrets --\u003e run run --\u003e report classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa classDef secret fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404 classDef step fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa classDef run fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa classDef out fill:#166534,stroke:#86efac,stroke-width:2px,color:#f0fdf4 linkStyle 0,1 stroke:#5eead4,stroke-width:2.5px linkStyle 2 stroke:#FFC131,stroke-width:2.5px linkStyle 3 stroke:#86efac,stroke-width:2.5px The commands below are the same ones in Run a collection. Swap Smoke and AIT_SECRET_USERS_API for your collection and connection. Add --allow-shell only when you have read the shell lines. Add --yes only when the plan calls a destructive tool.\nExit code 1 fails the job, which is what you want when a check fails. Exit code 2 fails it too, because the workspace or the secret is wrong. Publish the report anyway, or a failed run leaves you with no XML.\nGitHub Actions link name: termorq-cli on: push: workflow_dispatch: jobs: smoke: runs-on: ubuntu-latest steps: - uses: actions/checkout@v4 - uses: dtolnay/rust-toolchain@stable - name: Build termorq-cli run: cargo build --release --bin termorq-cli --manifest-path src-tauri/Cargo.toml - name: Run Smoke run: | src-tauri/target/release/termorq-cli run Smoke \\ --workspace \"${{ github.workspace }}\" \\ --env Staging \\ --format junit \u003e \"$RUNNER_TEMP/termorq-cli-results.xml\" env: AIT_SECRET_USERS_API: ${{ secrets.USERS_API_KEY }} - uses: actions/upload-artifact@v4 if: always() with: name: termorq-cli-results path: ${{ runner.temp }}/termorq-cli-results.xml ${{ github.workspace }} is absolute, which --workspace requires. GitHub Actions does not publish JUnit on its own. The artifact is the report. A test-reporter action can turn that file into a check if you want one.\nLinux runners need the Tauri build packages before cargo build, the same list as the app. The termorq-cli binary does not open a window.\nGitLab CI link termorq-cli: image: rust:1-bookworm script: - cargo build --release --bin termorq-cli --manifest-path src-tauri/Cargo.toml - | src-tauri/target/release/termorq-cli run Smoke \\ --workspace \"$CI_PROJECT_DIR\" \\ --env Staging \\ --format junit \u003e termorq-cli-results.xml variables: AIT_SECRET_USERS_API: $USERS_API_KEY artifacts: when: always paths: - termorq-cli-results.xml reports: junit: termorq-cli-results.xml Store USERS_API_KEY as a masked CI variable. when: always uploads the report after a failed step. The reports.junit entry is what GitLab shows on the pipeline.\nThe rust image does not include the WebKit and GTK packages the app library needs to link. Install those first, or use an image that already has the Tauri Linux prerequisites.\nAzure DevOps link steps: - script: cargo build --release --bin termorq-cli --manifest-path src-tauri/Cargo.toml displayName: Build termorq-cli - script: \u003e src-tauri/target/release/termorq-cli run Smoke --workspace \"$(Build.SourcesDirectory)\" --env Staging --format junit \u003e \"$(Build.ArtifactStagingDirectory)/termorq-cli.xml\" displayName: Run Smoke env: AIT_SECRET_USERS_API: $(USERS_API_KEY) - task: PublishTestResults@2 condition: always() inputs: testResultsFormat: JUnit testResultsFiles: $(Build.ArtifactStagingDirectory)/termorq-cli.xml testRunTitle: termorq-cli Smoke Map USERS_API_KEY from a secret variable or a variable group. $(Build.SourcesDirectory) is the absolute checkout path. condition: always() publishes the results when the run exits 1.\nRelated pages link Run a collection Secrets and termorq-cli "
+            }
+        );
+    index.add(
+            {
+                id:  30 ,
+                href: "\/docs\/get-started\/sample-workspace\/",
+                title: "Sample workspace",
+                description: "An offline Users API on mock://users, with a Smoke collection you can run with termorq-cli.",
+                content: "The download is the workspace the termorq-cli chapter already runs. It contains no token. mock://users answers on this machine, so the HTTP steps need no network.\nUnpack it, then point termorq-cli at the folder with an absolute path. A relative . is rejected.\ntermorq-cli list --workspace ~/src/acme-apis termorq-cli show Smoke --workspace ~/src/acme-apis termorq-cli check Smoke --workspace ~/src/acme-apis termorq-cli check exits 2 until you set AIT_SECRET_USERS_API. The value can be any non-empty string for this demo. The app masks it as ••••••••.\nAIT_SECRET_USERS_API=demo-token-not-real \\ termorq-cli run Smoke --workspace ~/src/acme-apis --env Staging --allow-shell Smoke runs List users, then Get user, then echo smoke-ok. The @tool search step is skipped. A collection run does not open MCP. Bail is the collection that stops on a non-zero exit when you pass --bail and --allow-shell.\ntermorq-cli list on the sample workspace. mock://users is the offline demo host. termorq-cli show Smoke. The shell step wants --allow-shell. The tool step is not run headless. The id values termorq-cli prints are generated when the workspace is read. A later run prints different ids. The files in the zip do not store those ids.\nWhat is in the folder link acme-apis/.ai-terminal/ workspace.json api-connections.json endpoints.json collections.json environments.json mcp-servers.json .gitignore Piece Value Workspace name Acme APIs API Users API, base mock://users, bearer, environment Staging List users GET /users, checks status == 200 and $.mock == true, capture method = $.method Get user GET /users/{id}, path default id=1, check status == 200 Smoke The two calls, echo smoke-ok, and @tool search Bail echo first \u0026\u0026 exit 3, then echo should-not-run Environments Staging region=eu, Prod region still {{REGION}} MCP Docs, HTTP, https://docs.example.test/mcp, not connected by termorq-cli run {{REGION}} is filled from AIT_VAR_REGION when a call needs it. Prod is unused by Smoke.\nOpen the same folder in the app with @workspace open ~/src/acme-apis. The bearer token is not in the file. The connection shows needs secret until you enter one on that machine. Team workspace is the full save and guard behaviour.\nDownload link[acme-apis.zip]({{ “/samples/acme-apis.zip” | relURL }})\nYou can also read the JSON in place under /samples/acme-apis/.ai-terminal/ on this site.\ninfo Do not commit a real token beside these files. The sample is bearer auth with an empty secret on purpose. Set AIT_SECRET_USERS_API in the shell, or store the value in the OS keychain from the app.\nRelated pages link Run a collection Secrets and termorq-cli "
+            }
+        );
+    index.add(
+            {
+                id:  31 ,
+                href: "\/docs\/terminal\/tabs-and-splits\/",
+                title: "Tabs and splits",
+                description: "Several sessions, two panes, and what each half keeps while you switch.",
+                content: "Each tab is its own session: scrollback, folder, history, MCP servers, and OpenAI connection. Switching tabs leaves a running command where it is.\nAdd, rename, close link+ adds a tab in the start folder. Right-click for Rename and Change colour. Middle-click, ×, or Close removes the tab. Closing the last tab resets it.\nCtrl+Tab moves to the next tab. Ctrl+Shift+Tab moves to the previous one. Both wait while a palette or a dialog is open.\nSplit panes linkCmd+\\ on macOS, Ctrl+\\ on Windows and Linux, @split, or right-click Split with next tab shows two tabs side by side. A lone tab gets a new tab to pair with.\nEach pane keeps its own folder, history, and running command. An interactive terminal stays in its own half. Click a pane to make it the one the prompt types into. That pane is underlined in the accent colour.\nSwitching to a tab outside the pair shows that tab alone. Going back to either tab of the pair brings the pair back. Press the shortcut again, or Close split, for one pane. Closing either tab ends the split.\nflowchart LR tabA[\"Tab A\\nfolder, history, command\"]:::step tabB[\"Tab B\\nfolder, history, command\"]:::out pair[\"Side by side\"]:::store alone[\"One pane\"]:::gate tabA --\u003e pair tabB --\u003e pair pair --\u003e alone classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa classDef gate fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404 classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa classDef out fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa linkStyle 0,1 stroke:#5eead4,stroke-width:2.5px linkStyle 2 stroke:#FFC131,stroke-width:2.5px Related pages link Interactive terminal Find and export "
+            }
+        );
+    index.add(
+            {
+                id:  32 ,
+                href: "\/docs\/mcp\/tools\/",
+                title: "Tools, resources, and prompts",
+                description: "Call a tool with flags, read a resource, fill a prompt, and cancel a long call.",
+                content: "@tool link @tool @tool search @tool search --query tea @tool echo --message hi @tool echo --message=hi @tool lists the tools on the servers connected to this tab, favourites first within each server, then A→Z. When more than one server is connected, the list names the server after the description. An empty @tool with an active connection shows Disconnect on the chip.\n@tool name opens the arguments form when that tool is already connected. If it is not, the scrollback says it was not found and the app looks through the saved servers, stops at the first server that has the tool, connects it, and shows MCP connected with the server name and tool count. It then opens the form, or runs the call when the line already has flags. Servers already connected are checked first.\nWhen the header environment or customer is set, only saved servers with that same environment and customer are searched. When a header value is not set and the remaining servers disagree, a dialog asks for the environment, the customer, or both. Search continues. Cancel leaves the line in the prompt and writes Tool search cancelled. If nothing matches, the scrollback says the tool was not found.\n@tool with no MCP server saved points you to @create mcp.\nQuotes and --param=value both work. Unknown flags, duplicate flags, bad types, and missing required parameters do not call. The scrollback marks the call with a tool pill and shows how long it took.\nParameter recall keeps the last 10 argument sets per tool and connection, and drops names that look like secrets.\nProgress and cancel linkEvery tool call carries a progressToken. notifications/progress updates one system line in place, for example ⏳ search · 3/10 (30%) · Indexing files. A quiet call can run for up to 5 minutes between updates.\nCtrl+C during a tool call sends notifications/cancelled with the request id and stops waiting. The scrollback says the call was cancelled. This works over HTTP (progress on the call’s event stream) and stdio. The tool form shows the same progress and has Stop.\nThe client asks for MCP 2025-06-18, uses the version the server answers with, and sends it as MCP-Protocol-Version on every request alongside Mcp-Session-Id.\nInterpret the result linkTool output stays JSON unless Settings → Interpret MCP tool responses with the LLM is on (off by default) or the call includes --llm.\n@tool search --query tea --llm @tool search --query tea --llm --instruction Summarise in three lines JSON and interpretation is the default. Interpretation only hides the JSON when the model call succeeds. The interpretation is Markdown, with an ai pill and how long the model call took. A fenced code block is coloured for the language on the fence. A fence with no language, or text, stays plain.\nA failed tool call, a missing connection, or a failed model call still shows the JSON. A failed model call still shows the ai pill and the time.\nA large tool result is shortened before it is sent to the model, keeping whole records and saying how many were left out. The scrollback still shows the full JSON. The magnifying glass on that block searches the response. Search a response has the keys.\n--instruction is only valid with --llm, and it must be last. Everything after it is extra instruction appended to the user message. It does not replace the connection’s system prompt, and it is not stored as a tool parameter. Secret-looking instruction text is masked in @history.\n@resources and @prompts link @resources @prompts @resources lists the resources and resource templates on the tab’s servers. Choosing one reads it into the scrollback. JSON is pretty-printed, Markdown is rendered, and binary content is summarised as a size and a MIME type. A template asks for its placeholders first.\n@prompts lists the servers’ prompts. Choosing one asks for its arguments, shows the messages, and puts the last user message in the input line.\nAgent approval link@agent can ask to call these same tools. Each call waits above the prompt. Ask the model covers Run, Run all, Skip, and Stop. Nothing runs without that approval. A call that runs sits on the right of the scrollback while the tool is working. Click it for the parameters, and open the JSON response when you want the body.\nRelated pages link Inspector Models "
+            }
+        );
+    index.add(
+            {
+                id:  33 ,
+                href: "\/docs\/http\/graphql-and-streams\/",
+                title: "GraphQL and streams",
+                description: "A GraphQL body, server-sent events, and a WebSocket on a saved endpoint.",
+                content: "GraphQL linkTick GraphQL on an endpoint. Its saved body is the query. The call sends POST with {\"query\", \"variables\"}.\nThe call’s body, or --body, is the variables JSON. A blank body sends {}.\nA non-empty errors array shows as Check failed, so a check and a runbook treat it as a failure even when the HTTP status is 200.\nServer-sent events link @sse ticks @sse live events @sse streams server-sent events. The name completes the same way @endpoint does: favourites first, then A–Z, Tab cycles, and → accepts the ghost. A name may contain spaces. Extra words after a finished @sse name are ignored.\nThe stream uses the connection’s auth headers and scrubs secrets from every line. Ctrl+C stops it.\ntermorq-cli skips @sse steps in a collection. A stream has no single response to check.\nWebSocket link @ws chat @ws chat {\"hello\": 1} @ws live events hello @ws [message] opens a WebSocket. An http base URL becomes ws. Text after a finished name is sent as the first message. For example, run @ws chat, then type hello at the prompt and press Enter to send it on that same socket. Replies keep appearing in the scrollback. Leave the message off the command to connect and start sending later.\nAuth headers and secret scrubbing match @sse. Ctrl+C closes the socket. termorq-cli skips @ws steps as well.\nRelated pages link Calling an endpoint Run a collection "
+            }
+        );
+    index.add(
+            {
+                id:  34 ,
+                href: "\/docs\/http\/",
+                title: "HTTP APIs",
+                description: "Connections, endpoints, auth, GraphQL, streams, and import and export.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  35 ,
+                href: "\/docs\/terminal\/interactive\/",
+                title: "Interactive terminal",
+                description: "Editors, ssh, sudo, and REPLs open a real terminal inside the tab.",
+                content: "Most lines are non-interactive: the app starts the shell, streams the output, and returns to the prompt. A program that needs a keyboard opens a pseudo-terminal in the tab instead. On Windows that terminal is ConPTY. The screen is drawn with xterm.js.\nThese open a terminal on their own:\nEditors and pagers ssh and sudo top git commit without -m, and git add -p docker exec -it A REPL started without a script, such as python, node, or psql mydb @shell opens an interactive shell in the tab until you type exit.\nKeys, Ctrl+C, and Ctrl+L go to the program. Ctrl+Shift+C copies. Ctrl+Shift+V pastes. End session on the terminal’s header stops it. When it exits, the tab is back to the normal prompt with one line saying how it ended.\nSwitching tabs keeps the session running. cd inside the session does not change the folder the next normal line uses.\nSettings → Interactive programs turns detection off. With it off, everything runs as plain output, including the programs in the list above.\ninfo The interactive terminal is this machine’s shell. Do not expose the app as a network service. A person who can type here can run what the shell can run.\nRelated pages link Shells Secrets "
+            }
+        );
+    index.add(
+            {
+                id:  36 ,
+                href: "\/docs\/mcp\/inspector\/",
+                title: "The inspector",
+                description: "Capabilities, tools, resources, prompts, a JSON-RPC log, and ping.",
+                content: " @mcp inspect Docs Inspect on a row in @mcp opens the same dialog. The app connects that server on the current tab first if it needs to.\nSection What you see Overview Server info, instructions, the capabilities from initialize, and the negotiated protocol version Tools Description, pretty-printed input schema, and annotations (read-only, destructive, idempotent, open world). Call… opens the usual tool form and approval flow Resources Resources and templates (resources/list, resources/templates/list, following nextCursor). Read shows text, or the size and MIME type of binary contents. A template’s placeholders are filled first Prompts Arguments, then Get shows the messages JSON-RPC log The last 200 messages sent and received for that server. Memory only. Bodies over 16 KB are cut. Secret-looking fields and the server’s stored secrets are masked. Copy copies the log as text Ping Sends ping and shows the round trip A section the server has no capability for shows an empty state.\ninfo The JSON-RPC log is for this session, on this machine. Copy still runs it through the mask. Read it before you paste it into a ticket.\nRelated pages link Tools, resources, and prompts Secrets on this machine "
+            }
+        );
+    index.add(
+            {
+                id:  37 ,
+                href: "\/docs\/cli\/web-check\/",
+                title: "Web Check",
+                description: "Schedule saved HTTP endpoints and MCP tools, then inspect availability in a local browser.",
+                content: "Web Check is available in Pro builds. Free termorq-cli binaries do not include the termorq-cli web-check command.\nWeb Check runs saved API endpoints and MCP tools from a foreground termorq-cli process. Its local browser interface manages checks and displays SQLite-backed history. The header labels the build edition as FREE or PRO. Closing the browser keeps monitoring running. Ctrl+C or computer sleep interrupts it.\nOn Pro builds, use the Windows notification-area menu, the macOS menu-bar menu, or the macOS Dock menu to start or stop Web Check and show its output. The Show Web Check output option includes the local URL and pairing code. Windows Pro NSIS .exe and Microsoft Store MSIX packages include the matching termorq-cli.exe; macOS and other builds need termorq-cli beside the app or on PATH for Start Web Check to work. If the CLI is missing, the menu still appears and reports that when selected.\nThe sidebar shows the data folder used for Web Check history and the monitoring source. Select Copy beside either value to copy it.\nBuild and run linkFrom the repository checkout, build browser assets before the CLI:\nAI_TERMINAL_EDITION=pro pnpm build:web-check AI_TERMINAL_EDITION=pro cargo build --manifest-path src-tauri/Cargo.toml --bin termorq-cli src-tauri/target/debug/termorq-cli web-check --workspace ~/source/acme-apis --env Staging Use your saved workspace and environment. Omit source options to use the local app data, or pass --data-dir /absolute/path/to/app-data. Workspace and data-dir options are mutually exclusive. Local sources do not support --env.\nThe CLI prints a URL on 127.0.0.1, the containing database folder, full database path and private pairing.txt path. Open that exact URL, read the pairing file locally and paste its code into Pair this browser. Codes never appear in URLs or CLI output; when the runner starts from the tray, Show Web Check output displays the code in a local dialog. Restart rotates credentials. Pairing a second browser replaces the first session.\nSQLite is bundled; no database service is needed. Frontend assets are embedded in the binary. Published installers need a release containing this feature; pnpm dev does not run Web Check.\nAdd and manage a check linkOn Checks, choose Add check. Select a saved API endpoint or expand Discover MCP tools to contact a saved server and choose a tool. Set frequency, timeout, expected HTTP status or result assertions, optional parameters and a failure threshold.\nIntervals range from 5 seconds to 24 hours. Timeout is 1–240 seconds and must be shorter than the interval; it includes authentication and session setup. The editor displays projected daily calls.\nPath/query parameter overrides change URL parameters only. To change a POST, PUT or PATCH JSON object body, enter fields in JSON body field overrides:\n{ \"message\": \"Hi from Termorq Web Check\" } This replaces the saved message and preserves other fields, such as the recipient. Nested values are replaced in full; null sends null. Leave {} to use the saved body. Non-object bodies, other methods and GraphQL are unsupported for body field overrides. Existing checks keep their URL overrides until edited. Move body fields from the old parameters box into the body override box, review and save. The saved endpoint in the terminal stays unchanged.\nReal Web Check Rust runner and Chromium editor, using a temporary local SMS fixture; no SMS is sent Review the request’s effects and confirm that it is safe to repeat. A new check starts paused unless you select Start immediately after saving. Use Test once, inspect History, then Start. Manual tests appear in history but do not affect scheduled metrics or alerts.\nPause stops future scheduling and requests cancellation. Already processed remote operations cannot be undone. Edit creates a reviewed revision. Remove stops inclusion, retains history for seven days and leaves the saved target intact. Underlying target or schema changes block a check until reviewed again.\nUse keychain/environment/vault credentials through the existing workflow. Sensitive argument literals are rejected; use akv://... or op://... references. Destructive MCP tools are rejected. Read-only annotations still require review. Tool arguments must match the schema; external schema references are unsupported.\nRead the dashboard link Real Web Check Rust runner and Chromium browser, using temporary local HTTP and MCP fixtures Choose 15 minutes, 1 hour, 4 hours, 24 hours or 7 days. Focus selects a check, including one removed from monitoring. All cards, chart buckets and breakdowns use the same window. Recent history pages the latest 100 records, 20 per page, with the original revision and whether each call was scheduled or manual. Use Previous and Next to browse; changing the window or Focus returns to page one. The list refreshes with the dashboard. Details opens the reviewed rules and parameters used by that execution.\nThe histogram labels dates and times in your browser timezone. Hover, tap or focus a bar to read its exact period and outcomes. Arrow keys move between bars. Phone layouts show fewer date/time labels to keep them readable.\nScheduled calls counts logical executions, not token requests or MCP handshakes. Observed pass rate is passed divided by completed calls. No observations means Unknown. Observation coverage includes missed eligible slots from capacity limits, sleep, downtime and Retry-After backoff. Intentional pauses are excluded. p95 duration is the exact nearest-rank percentile of completed scheduled calls, including authentication and setup. The sample count is displayed. HTTP status, protocol error and tool failure remain distinct. HTTP 200 can contain an MCP failure; stdio has no HTTP status. Response bodies are evaluated in memory and discarded. History contains sanitized metadata, never raw responses, credentials or protocol error messages. Old observations are Stale. A selected seven-day window does not imply seven days of data exist: available-history start is shown.\nFailure and recovery events appear locally after the configured consecutive-failure threshold and the next observed scheduled pass. Acknowledge them in the interface. Pause, cancellation and gaps do not fabricate recovery. External notifications are not included.\nCompare targets over time link Real Web Check Rust runner and Chromium browser, using temporary local HTTP and MCP fixtures Open Target trends and select up to eight targets. Both charts share the history window, 24 time buckets and target colours. Success rate over time shows passed divided by passed plus failed, as a percentage. Mean duration over time shows the arithmetic mean duration of completed scheduled calls in milliseconds, including failed calls and connection setup.\nHover or tap either chart to inspect a period. The Time bucket slider supports arrow, Home and End keys. The table shows the measured values and passed/failed sample counts. Empty buckets are Unknown, and lines stop across missing observations. Manual tests, cancelled and interrupted calls, gaps and in-flight calls do not produce points; use the availability dashboard for coverage and those outcomes.\nThe charts use all retained observations, independently of the latest 100 results list. Separate schedules remain separate series, even for the same endpoint. A schedule keeps its history across revisions and pauses. Removed targets appear while they have scheduled history in the selected window. Selection persists when you change the window on this page.\nOperate the runner linkThe default concurrency limit is four, with one active call per check and serialized MCP calls per server. Missed ticks become gaps; no catch-up burst occurs. Previously enabled schedules revalidate on restart. Use --pause-on-start after restoring a backup.\ntermorq-cli web-check --workspace ~/source/acme-apis --env Staging --pause-on-start termorq-cli web-check --data-dir /absolute/path/to/app-data --state-dir /absolute/path/to/check-state --storage-mib 2048 Default storage is /web-check//web-check.db. macOS uses ~/Library/Application Support/com.garrardkitchen.ai-terminal; Windows uses %APPDATA%/com.garrardkitchen.ai-terminal; Linux uses $XDG_DATA_HOME/com.garrardkitchen.ai-terminal or ~/.local/share/com.garrardkitchen.ai-terminal. Startup prints exact paths. The database stays outside team exports and desktop encrypted backups.\nRetention is seven days and the default database/journal budget is 1 GiB. Storage failure stops scheduling. A synthetic 10,000-row measurement extrapolated to about 92 MiB per check for seven days at five-second intervals. One hundred such checks exceed the default budget; choose fewer checks, longer intervals or a measured larger budget.\nStop cleanly before copying the entire scope folder for backup. Preserve database and journal files together after an unclean stop. Restore while stopped, preserve user-only permissions, start with --pause-on-start, review credentials and test before enabling checks.\nInteractive API OAuth is rejected. Use an unattended connection. Monitoring verifies TLS using system roots and configured custom CA settings; redirects are disabled. The runner binds only to loopback, validates Host/Origin and authenticates browser access. An offline browser shows potentially stale results and disables management.\nThe dedicated README-WEBCHECK.md in the repository covers all CLI options, prerequisites, backup/restore, supported authentication, limits, troubleshooting and integration-test commands.\nRelated link Calling an endpoint Secrets and termorq-cli Run a collection "
+            }
+        );
+    index.add(
+            {
+                id:  38 ,
+                href: "\/docs\/terminal\/history\/",
+                title: "History and plain English",
+                description: "Up and down, @history, ghost text, and a",
+                content: "Command history link↑ and ↓ cycle the commands on this tab when no palette is open. The app keeps the last 500 in command_history.json in the app data folder. Each entry is the command and at, Unix epoch milliseconds. An older file that was a plain list of strings is migrated on load (at: 0 shows as an unknown time).\n[ { \"command\": \"git status\", \"at\": 1727900000000 } ] The active tab’s history is the one ↑ and ↓ and @history use. It is mirrored to that file when commands run.\n@history link@history, or History on the rail, opens an overlay above the prompt: a number, the command, and a muted date and time. Esc dismisses it.\nThe default is Insert into prompt. You edit, then press Enter. Settings → On history select can switch that to Run immediately. The preference is in localStorage key ai-terminal-settings.\nA history line that contains a masked secret (••••••••) is inserted. It is not re-run.\nA line that starts with link # find files over 100 MB here The tab’s OpenAI connection turns that into one command for your shell, your OS, and your folder. The command is placed in the prompt with a short note on anything it changes. Press Enter to run it, or edit it first. Nothing runs on its own.\nThis needs an OpenAI connection selected on the tab. Ask the model covers @explain and @agent, which are the other ways to involve the model without pasting a secret into the prompt.\nRelated pages link Find and export Models "
+            }
+        );
+    index.add(
+            {
+                id:  39 ,
+                href: "\/docs\/http\/import-and-export\/",
+                title: "Import and export",
+                description: "OpenAPI, Postman, Insomnia, curl, and the encrypted .aitapi file.",
+                content: "Two exports exist. One is a file another API client can open, with secrets replaced by placeholders. The other is an encrypted file for this app, and it can carry the secret.\nOpenAPI and Postman, with no secrets linkIn @endpoint, tick endpoints of one API connection and choose Export OpenAPI or Export Postman. Or type:\n@export openapi Users API @export postman Users API That exports every endpoint on the connection.\nOpenAPI is 3.0 JSON. The base URL is the server. {{var}} becomes a server variable. There is one operation per endpoint, with its operationId, path, query, and header parameters, defaults as examples, and request body examples. GraphQL is a POST {query, variables} schema. A security scheme describes the auth kind: API key header, bearer, basic, OAuth client credentials, authorization code with PKCE, or device code in the description.\nPostman is Collection v2.1. One request per endpoint, on {{baseUrl}}, with collection-level auth and {{placeholder}} values.\nNo secret is written. Sensitive header, query, and body values (authorization, token, key, secret, password, cookie) become {{name}} placeholders. Other secret-looking text is masked. The tenant, client id, and client certificate path are left out.\nEncrypted .aitapi linkTick endpoint rows in @endpoint and choose Export. The default file name is endpoints.aitapi. The file holds those endpoints and each API connection they use, including the secret. OpenAI connections stay on this machine.\nEncryption is Argon2id and AES-256-GCM, the same as .aitmcp. The password is at least 12 characters, is not a common password, and is not one character repeated. It is not stored. The file also stores each connection’s environment id and customer id. The names and colours stay in Settings on this computer. An older file has neither id.\nImport on that footer opens a .aitapi file with the export password. Names match regardless of case. When an endpoint or connection of the same name already exists, the app lists those names and waits before replacing them. A replaced connection keeps its id, so endpoints that already use it stay linked. New names are added. Favourites in the file are restored. The secret is written back to the keychain.\nSave dialogs start in Downloads. Export files are written with owner-only permissions.\nImport from another client linkLibrary → Import → Endpoints from OpenAPI, Postman, Insomnia, or curl reads:\nOpenAPI 3 or Swagger 2, JSON or YAML A Postman v2.x collection An Insomnia v4 export A pasted curl command The preview lets you rename the API connection, set its base URL, and tick the endpoints to keep. Credentials are never imported: Authorization, cookies, API-key headers and query values, and curl -u. A note says what was left out. An existing connection with the same name is reused as it is.\nImport from the Library: .aitmcp, .aitapi, .aitcol, an API description or curl, and a full .aitbak restore. info Paste curl into the importer. Do not paste a live token into a page or a chat. The importer drops the credential and tells you it did.\nRelated pages link Share a file Secrets on this machine "
+            }
+        );
+    index.add(
+            {
+                id:  40 ,
+                href: "\/docs\/mcp\/",
+                title: "MCP",
+                description: "HTTP, Azure, and stdio servers, then tools, resources, prompts, and the inspector.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  41 ,
+                href: "\/docs\/terminal\/find-and-export\/",
+                title: "Find and export",
+                description: "Search the scrollback or one MCP or endpoint response, and save the tab as Markdown with secrets masked.",
+                content: "Find in the scrollback linkCmd+F on macOS, or Ctrl+F on Windows and Linux, opens a search box over the active tab. Every match is highlighted. The current one is filled in the accent colour, with a count such as 3 of 12.\nEnter and Shift+Enter, or the arrows, step through matches and wrap at either end. Aa matches case. Esc closes the box. New output is searched as it arrives.\nSearch a response linkAn endpoint body is a JSON block under the endpoint pill. An MCP tool result is the same block under the tool pill. A resource whose type is JSON is too, and so is a stream message that is a JSON object or array.\nThe magnifying glass on that block searches that response. The match is case-insensitive and can sit in a key, a value, or a number of the pretty-printed text. Each hit is marked. The current one is filled, and the block scrolls to keep it on screen. The count reads 1 / 12. No matches means the text is not in this response.\nEnter and the down arrow move to the next match. Shift+Enter and the up arrow move to the previous one. They wrap. Esc, or the magnifying glass again, closes the search and clears what you typed. The copy icon beside it copies the pretty-printed JSON.\nThe block indents valid JSON with two spaces before it searches. Text that did not parse is shown as it arrived, and the search runs over that text.\nInterpretation only hides a successful tool result, so that answer has no magnifying glass. A failed tool call still shows the JSON. An endpoint body is always shown.\nExport as Markdown link@export, or right-click a tab and choose Export as Markdown…, saves that tab’s scrollback to a .md file. The save dialog starts in Downloads.\nEach command and its output become a console block. JSON stays a json block. Model answers stay Markdown. Notices become quotes.\nSecret-looking values are masked before anything is written: tokens, keys, and passwords. The file is written with owner-only permissions.\nwarning Read the file before you send it. Masking covers values that look like secrets. A secret sitting in an unusual shape can still be in the output you choose to share.\nDiagnostic logs link@logs opens recent API, MCP, Entra token, and OpenAI network activity beside the terminal: request start, connection status, completion, and failures. The panel stays open while you use palettes and run commands.\nFailure entries include the destination host, a failure category, a short error chain, and whether proxy environment variables are configured. They stay in memory for this app session, up to 500 entries. They omit full URLs, proxy values, headers, and request bodies.\nRelated pages link Secrets on this machine Keyboard "
+            }
+        );
+    index.add(
+            {
+                id:  42 ,
+                href: "\/docs\/models\/",
+                title: "Models",
+                description: "Azure OpenAI, OpenAI, or a local server. Chat, explain, and agent mode.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  43 ,
+                href: "\/docs\/library\/",
+                title: "Library",
+                description: "One list of everything saved, plus encrypted export and import.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  44 ,
+                href: "\/docs\/workspace\/",
+                title: "Team workspace",
+                description: "Share definitions in git. Secrets stay on each machine. You commit.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  45 ,
+                href: "\/docs\/secrets\/",
+                title: "Secrets",
+                description: "Keychain, vault references, masking, and how to report a vulnerability.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  46 ,
+                href: "\/docs\/cli\/",
+                title: "Termorq CLI",
+                description: "Run a saved collection without opening the app. Same checks, captures, and secret rules.",
+                content: "termorq-cli runs a collection headless. Pro-only capabilities follow the edition compiled into the binary; the CLI has no edition switch. The pages cover the commands, the secret rules, and GitHub, GitLab, and Azure DevOps. Pro users can start Web Check from the Windows notification-area menu, the macOS menu-bar menu, or the macOS Dock menu.\n"
+            }
+        );
+    index.add(
+            {
+                id:  47 ,
+                href: "\/docs\/settings\/",
+                title: "Settings and updates",
+                description: "Preferences, editions, environments, customers, diagnostics, and application updates.",
+                content: "Free and Pro editions, preferences, and updates.\n"
+            }
+        );
+    index.add(
+            {
+                id:  48 ,
+                href: "\/docs\/reference\/",
+                title: "Reference",
+                description: "Every @ trigger, the keyboard, the files, and where each secret lives.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  49 ,
+                href: "\/docs\/azure\/",
+                title: "One Azure path",
+                description: "Key Vault, Entra client credentials, Azure OpenAI, and the Azure DevOps pipeline, as one path.",
+                content: "These four Azure pieces are already in the app. This page is the order to wire them, using the sample collection as the thing the pipeline runs.\nflowchart LR entra[\"Entra\\nclient credentials\"]:::step kv[(\"Key Vault\\nakv://\")]:::secret api[\"Users API\\nor an MCP server\"]:::out aoai[\"Azure OpenAI\\non the tab\"]:::store ado([\"Azure DevOps\\ntermorq-cli run\"]):::exit entra --\u003e api kv --\u003e api api --\u003e aoai api --\u003e ado classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa classDef secret fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404 classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa classDef out fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa classDef exit fill:#166534,stroke:#86efac,stroke-width:2px,color:#f0fdf4 linkStyle 0,2 stroke:#5eead4,stroke-width:2.5px linkStyle 1 stroke:#FFC131,stroke-width:2.5px linkStyle 3 stroke:#86efac,stroke-width:2.5px 1. A secret in Key Vault linkCreate the secret in Key Vault. In the app, put the reference in the connection’s secret field:\nakv://my-vault/users-api Test reference, or @vault test akv://my-vault/users-api, resolves it with az keyvault secret show under your current az login. The screen shows the length. @workspace save keeps the reference. The guard refuses the raw secret if it is still in a file.\nThe same reference works for an API key, a bearer token, a client secret, an OpenAI key, or an MCP Azure client secret.\n2. Entra client credentials linkFor an API that expects an app token, @create api → Client credentials: tenant id, client id, client secret (or the akv:// reference), and scope.\nFor an MCP server that expects the same, @create mcp → Azure client credentials, with the same four fields.\nThe app requests the token when it calls. It does not open a browser. That is the form termorq-cli can run. Browser OAuth and device code stay on your machine.\n3. Azure OpenAI on the tab link@create openai → Azure OpenAI: resource endpoint, deployment name, and key (or akv://). Both URL styles work: a host that contains /openai/v1, and a classic deployment host.\n@openai selects it for this tab. @chat, the Agent toggle, @explain, a line that starts with #, a prompt skill, and --llm on a tool call all use that connection. With Agent on, a line that starts with @ still runs as a command. termorq-cli does not call the model. A collection step that is @chat or @agent is skipped.\n4. Azure DevOps linkBuild termorq-cli, point --workspace at the checkout with an absolute path, and publish JUnit from stdout. The secret is a pipeline variable, not a file.\n- script: \u003e src-tauri/target/release/termorq-cli run Smoke --workspace $(Build.SourcesDirectory) --env Staging --allow-shell --format junit \u003e $(Build.ArtifactStagingDirectory)/termorq-cli.xml env: AIT_SECRET_USERS_API: $(USERS_API_KEY) - task: PublishTestResults@2 condition: always() inputs: testResultsFormat: JUnit testResultsFiles: $(Build.ArtifactStagingDirectory)/termorq-cli.xml $(Build.SourcesDirectory) is absolute. A relative . is rejected. If the connection’s secret field is already akv://…, the hosted agent needs az logged in with access to that vault, and you can omit AIT_SECRET_USERS_API. The environment variable wins when both are set.\nThe full GitHub, GitLab, and Azure DevOps files, including the Linux packages the link needs, are on Pipelines.\nRelated pages link Auth Secrets on this machine Model connections "
+            }
+        );
+    index.add(
+            {
+                id:  50 ,
+                href: "\/docs\/guide-map\/",
+                title: "Guide map",
+                description: "Every chapter, in the order a reader meets it.",
+                content: "The sidebar is this list. Each group below is a chapter.\nGet started linkInstall and run, the window, and the sample workspace you can run offline.\nThe terminal linkThe prompt and command search, shells, tabs and splits, the interactive terminal, history, and find and export.\nCollections and runbooks linkThe shelf and run as a runbook, including captures, checks, and @diff.\nHTTP APIs linkConnections, auth, calling, GraphQL and streams, and import and export.\nMCP linkServers, OAuth, tools, resources, and prompts, and the inspector.\nModels linkConnections and ask the model: @chat, the Agent toggle, @explain, #, and @agent.\nLibrary and sharing linkBrowse and edit and share a file.\nTeam workspace linkOpen, save, status, close. The app never commits.\nSecrets linkOn this machine: keychain, akv://, op://, masking, and vulnerability reports. Secrets and termorq-cli is the headless half.\nTermorq CLI linkRun a collection, secrets and termorq-cli, pipelines, and Web Check for scheduled API and MCP availability checks, including its Pro Windows tray and macOS Dock and menu-bar controls.\nSettings and editions linkFree and Pro editions, preferences, and updates.\nReference linkCommands, the keyboard, and files.\nOne Azure path linkKey Vault, Entra, Azure OpenAI, and Azure DevOps on a single page.\nStill outside this site link Release notes generated from GitHub Releases, next to the version in the header. The version menu can wait until more than one release is documented here. Search is already on (FlexSearch). Short recordings of split panes and streaming output. Screenshots in this guide are still frames: the desktop window from the frontend build, and termorq-cli transcripts against the sample workspace. Related pages link Install and run Run a collection "
+            }
+        );
+    search.addEventListener('input', show_results, true);
+
+    function show_results(){
+        const maxResult =  5 ;
+        const minlength =  0 ;
+        var searchQuery = sanitizeHTML(this.value);
+        var results = index.search(searchQuery, {limit: maxResult, enrich: true});
+
+        
+        const flatResults = new Map(); 
+        for (const result of results.flatMap(r => r.result)) {
+        if (flatResults.has(result.doc.href)) continue;
+        flatResults.set(result.doc.href, result.doc);
+        }
+
+        suggestions.innerHTML = "";
+        suggestions.classList.remove('d-none');
+
+        
+        if (searchQuery.length < minlength) {
+            const minCharMessage = document.createElement('div')
+            minCharMessage.innerHTML = `Please type at least <strong>${minlength}</strong> characters`
+            minCharMessage.classList.add("suggestion__no-results");
+            suggestions.appendChild(minCharMessage);
+            return;
+        } else {
+            
+            if (flatResults.size === 0 && searchQuery) {
+                const noResultsMessage = document.createElement('div')
+                noResultsMessage.innerHTML = "No results for" + ` "<strong>${searchQuery}</strong>"`
+                noResultsMessage.classList.add("suggestion__no-results");
+                suggestions.appendChild(noResultsMessage);
+                return;
+            }
+        }
+
+        
+        for(const [href, doc] of flatResults) {
+            const entry = document.createElement('div');
+            suggestions.appendChild(entry);
+
+            const a = document.createElement('a');
+            a.href = href;
+            entry.appendChild(a);
+
+            const title = document.createElement('span');
+            title.textContent = doc.title;
+            title.classList.add("suggestion__title");
+            a.appendChild(title);
+
+            const description = document.createElement('span');
+            description.textContent = doc.description;
+            description.classList.add("suggestion__description");
+            a.appendChild(description);
+
+            suggestions.appendChild(entry);
+
+            if(suggestions.childElementCount == maxResult) break;
+        }
+    }
+    }());
+</script></body></html>

@@ -1,0 +1,38 @@
+{
+  "items": [
+    {
+      "body": "",
+      "checks": [
+        "status == 200",
+        "$.mock == true"
+      ],
+      "connection": "Users API",
+      "headers": [],
+      "method": "GET",
+      "name": "List users",
+      "path": "/users",
+      "path_params": [],
+      "query": []
+    },
+    {
+      "body": "",
+      "checks": [
+        "status == 200"
+      ],
+      "connection": "Users API",
+      "headers": [],
+      "method": "GET",
+      "name": "Get user",
+      "path": "/users/{id}",
+      "path_params": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ],
+      "query": []
+    }
+  ],
+  "kind": "endpoints",
+  "schema": 1
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MCP on Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/mcp/</link><description>Recent content in MCP on Termorq</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://termorq-docs.garrardkitchen.com/docs/mcp/index.xml" rel="self" type="application/rss+xml"/><item><title>Servers</title><link>https://termorq-docs.garrardkitchen.com/docs/mcp/servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/mcp/servers/</guid><description>&lt;p&gt;&lt;code&gt;@create mcp&lt;/code&gt; is one form and three transports.&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Transport&lt;/th&gt;
+ &lt;th&gt;You provide&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;HTTP&lt;/td&gt;
+ &lt;td&gt;The endpoint. No credentials, or an optional OAuth client id for servers that do not register clients&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Azure client credentials&lt;/td&gt;
+ &lt;td&gt;Tenant id, client id, client secret, scope&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;stdio&lt;/td&gt;
+ &lt;td&gt;Command, arguments, working directory, and env&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;When Settings has environments or customers, the form asks for those too. A new server starts on the header choice. Changing only the environment or the customer does not require another test after the current values have already passed.&lt;/p&gt;</description></item><item><title>OAuth sign-in</title><link>https://termorq-docs.garrardkitchen.com/docs/mcp/oauth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/mcp/oauth/</guid><description>&lt;p&gt;An HTTP MCP server that answers &lt;strong&gt;401&lt;/strong&gt; is ready for sign-in. You do not fix that in the create form.&lt;/p&gt;
+
+
+ 
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@mcp signin Docs
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@mcp signout Docs&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;@mcp signin &amp;lt;server&amp;gt;&lt;/code&gt; finds the authorization server from the &lt;code&gt;WWW-Authenticate&lt;/code&gt; &lt;code&gt;resource_metadata&lt;/code&gt; link (protected resource metadata, RFC 9728), and falls back to the well-known URLs. It then reads &lt;code&gt;/.well-known/oauth-authorization-server&lt;/code&gt; (RFC 8414), then OpenID discovery.&lt;/p&gt;
+&lt;p&gt;If the server offers dynamic client registration (RFC 7591), the app registers itself. Otherwise it uses the optional &lt;strong&gt;OAuth client ID&lt;/strong&gt; from the server editor.&lt;/p&gt;</description></item><item><title>Tools, resources, and prompts</title><link>https://termorq-docs.garrardkitchen.com/docs/mcp/tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/mcp/tools/</guid><description>&lt;h2 id="tool"&gt;@tool &lt;a href="#tool" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+
+ 
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@tool
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@tool search
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@tool search --query tea
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@tool echo --message hi
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@tool echo --message=hi&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;@tool&lt;/code&gt; lists the tools on the servers connected to this tab, favourites first within each server, then A→Z. When more than one server is connected, the list names the server after the description. An empty &lt;code&gt;@tool&lt;/code&gt; with an active connection shows &lt;strong&gt;Disconnect&lt;/strong&gt; on the chip.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@tool name&lt;/code&gt; opens the arguments form when that tool is already connected. If it is not, the scrollback says it was not found and the app looks through the saved servers, stops at the first server that has the tool, connects it, and shows &lt;strong&gt;MCP connected&lt;/strong&gt; with the server name and tool count. It then opens the form, or runs the call when the line already has flags. Servers already connected are checked first.&lt;/p&gt;</description></item><item><title>The inspector</title><link>https://termorq-docs.garrardkitchen.com/docs/mcp/inspector/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/mcp/inspector/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@mcp inspect Docs&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Inspect&lt;/strong&gt; on a row in &lt;code&gt;@mcp&lt;/code&gt; opens the same dialog. The app connects that server on the current tab first if it needs to.&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Section&lt;/th&gt;
+ &lt;th&gt;What you see&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Overview&lt;/td&gt;
+ &lt;td&gt;Server info, instructions, the capabilities from &lt;code&gt;initialize&lt;/code&gt;, and the negotiated protocol version&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Tools&lt;/td&gt;
+ &lt;td&gt;Description, pretty-printed input schema, and annotations (read-only, destructive, idempotent, open world). &lt;strong&gt;Call…&lt;/strong&gt; opens the usual tool form and approval flow&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Resources&lt;/td&gt;
+ &lt;td&gt;Resources and templates (&lt;code&gt;resources/list&lt;/code&gt;, &lt;code&gt;resources/templates/list&lt;/code&gt;, following &lt;code&gt;nextCursor&lt;/code&gt;). &lt;strong&gt;Read&lt;/strong&gt; shows text, or the size and MIME type of binary contents. A template’s placeholders are filled first&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Prompts&lt;/td&gt;
+ &lt;td&gt;Arguments, then &lt;strong&gt;Get&lt;/strong&gt; shows the messages&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;JSON-RPC log&lt;/td&gt;
+ &lt;td&gt;The last 200 messages sent and received for that server. Memory only. Bodies over 16 KB are cut. Secret-looking fields and the server’s stored secrets are masked. &lt;strong&gt;Copy&lt;/strong&gt; copies the log as text&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Ping&lt;/td&gt;
+ &lt;td&gt;Sends &lt;code&gt;ping&lt;/code&gt; and shows the round trip&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;A section the server has no capability for shows an empty state.&lt;/p&gt;</description></item></channel></rss>

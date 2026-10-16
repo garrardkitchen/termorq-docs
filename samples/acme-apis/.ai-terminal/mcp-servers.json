@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "endpoint": "https://docs.example.test/mcp",
+      "env": [],
+      "environment": "Staging",
+      "name": "Docs",
+      "transport": "http"
+    }
+  ],
+  "kind": "mcp-servers",
+  "schema": 1
+}

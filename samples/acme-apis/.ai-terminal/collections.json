@@ -1,0 +1,49 @@
+{
+  "items": [
+    {
+      "colour": "teal",
+      "items": [
+        {
+          "capture": "method = $.method",
+          "kind": "endpoint",
+          "label": "List users",
+          "line": "@endpoint List users"
+        },
+        {
+          "kind": "endpoint",
+          "label": "Get user",
+          "line": "@endpoint Get user --id 1"
+        },
+        {
+          "kind": "shell",
+          "label": "Echo",
+          "line": "echo smoke-ok"
+        },
+        {
+          "kind": "tool",
+          "label": "Search",
+          "line": "@tool search"
+        }
+      ],
+      "name": "Smoke"
+    },
+    {
+      "colour": "rose",
+      "items": [
+        {
+          "kind": "shell",
+          "label": "Fail",
+          "line": "echo first && exit 3"
+        },
+        {
+          "kind": "shell",
+          "label": "Should not run",
+          "line": "echo should-not-run"
+        }
+      ],
+      "name": "Bail"
+    }
+  ],
+  "kind": "collections",
+  "schema": 1
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Models on Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/models/</link><description>Recent content in Models on Termorq</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://termorq-docs.garrardkitchen.com/docs/models/index.xml" rel="self" type="application/rss+xml"/><item><title>Model connections</title><link>https://termorq-docs.garrardkitchen.com/docs/models/connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/models/connections/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@create openai
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@openai&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;@create openai&lt;/code&gt; asks for a name, a provider, an endpoint, a model or deployment, an API key, and an optional system prompt.&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Provider&lt;/th&gt;
+ &lt;th&gt;What you fill in&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Azure OpenAI&lt;/td&gt;
+ &lt;td&gt;The resource endpoint, the deployment name, and the key. This is the default. Existing connections stay Azure&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;OpenAI or compatible&lt;/td&gt;
+ &lt;td&gt;A base URL (blank means &lt;code&gt;https://api.openai.com/v1&lt;/code&gt;), a model, and a key sent as a Bearer token. The key is optional for a local server&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Ollama, LM Studio, vLLM, and a gateway work as the compatible base URL. Both Azure URL styles are accepted: an endpoint that contains &lt;code&gt;/openai/v1&lt;/code&gt;, and a classic deployment host.&lt;/p&gt;</description></item><item><title>Ask the model</title><link>https://termorq-docs.garrardkitchen.com/docs/models/ask/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/models/ask/</guid><description>&lt;p&gt;Each of these uses the OpenAI connection selected on the &lt;strong&gt;current tab&lt;/strong&gt;. Nothing is sent when that pill says none.&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+ you[&amp;#34;You&amp;#34;]:::step
+ approve{&amp;#34;You approve?&amp;#34;}:::gate
+ model[&amp;#34;The tab&amp;#39;s model&amp;#34;]:::out
+ tools[(&amp;#34;MCP tools\nand endpoints&amp;#34;)]:::store
+ prompt[&amp;#34;A command\nin the prompt&amp;#34;]:::step
+
+ you --&amp;gt; model
+ model --&amp;gt; approve
+ approve --&amp;gt; tools
+ tools --&amp;gt; model
+ model --&amp;gt; prompt
+
+ classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa
+ classDef gate fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404
+ classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa
+ classDef out fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa
+ linkStyle 0,2,3 stroke:#5eead4,stroke-width:2.5px
+ linkStyle 1,4 stroke:#FFC131,stroke-width:2.5px
+&lt;/pre&gt;
+&lt;h2 id="chat"&gt;@chat &lt;a href="#chat" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+
+ 
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@chat why did that return an empty list?
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@chat
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@chat clear&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;@chat &amp;lt;question&amp;gt;&lt;/code&gt; sends the question with the newest scrollback, up to about 8,000 characters, secrets masked. The tab remembers the last 20 turns. After each answer you see the tokens in and out and the chat’s running total. They are marked ≈ when the provider does not report usage. &lt;code&gt;@chat&lt;/code&gt; on its own shows the total. &lt;code&gt;@chat clear&lt;/code&gt; starts again.&lt;/p&gt;</description></item></channel></rss>

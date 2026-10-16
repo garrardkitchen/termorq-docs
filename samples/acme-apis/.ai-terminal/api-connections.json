@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "auth": "bearer",
+      "base_url": "mock://users",
+      "environment": "Staging",
+      "name": "Users API"
+    }
+  ],
+  "kind": "api-connections",
+  "schema": 1
+}

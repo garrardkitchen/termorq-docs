@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HTTP APIs on Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/http/</link><description>Recent content in HTTP APIs on Termorq</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://termorq-docs.garrardkitchen.com/docs/http/index.xml" rel="self" type="application/rss+xml"/><item><title>API connections</title><link>https://termorq-docs.garrardkitchen.com/docs/http/connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/http/connections/</guid><description>&lt;p&gt;A &lt;strong&gt;connection&lt;/strong&gt; and an &lt;strong&gt;endpoint&lt;/strong&gt; are separate. One connection (base URL and auth) is reused by many endpoints.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@create api&lt;/code&gt; asks for the name, the base URL, and the auth. When Settings has environments or customers, the form asks for those too. A new connection starts on the header choice. Changing only the environment or the customer does not require another test after the current values have already passed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Test connection&lt;/strong&gt; sends &lt;code&gt;GET&lt;/code&gt; to the base URL. Any HTTP status, including 401 or 404, enables &lt;strong&gt;Save&lt;/strong&gt;. DNS failure, connection refused, timeout, or a failed token request does not.&lt;/p&gt;</description></item><item><title>Auth</title><link>https://termorq-docs.garrardkitchen.com/docs/http/auth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/http/auth/</guid><description>&lt;p&gt;&lt;code&gt;@create api&lt;/code&gt; offers seven auth kinds. The secret fields follow the kind. A blank secret on a later edit keeps the stored one.&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Kind&lt;/th&gt;
+ &lt;th&gt;What you fill in&lt;/th&gt;
+ &lt;th&gt;Where the secret lives&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;None&lt;/td&gt;
+ &lt;td&gt;Base URL only&lt;/td&gt;
+ &lt;td&gt;Nowhere&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;API key&lt;/td&gt;
+ &lt;td&gt;Header name, default &lt;code&gt;X-Api-Key&lt;/code&gt;, and the key&lt;/td&gt;
+ &lt;td&gt;Keychain, or a vault reference&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Bearer&lt;/td&gt;
+ &lt;td&gt;The token&lt;/td&gt;
+ &lt;td&gt;Keychain, or a vault reference&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Basic&lt;/td&gt;
+ &lt;td&gt;Username and password&lt;/td&gt;
+ &lt;td&gt;Password in the keychain, or a vault reference&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Client credentials&lt;/td&gt;
+ &lt;td&gt;Azure tenant id, client id, client secret, scope&lt;/td&gt;
+ &lt;td&gt;Client secret in the keychain, or a vault reference&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;OAuth (browser)&lt;/td&gt;
+ &lt;td&gt;Authorization URL, token URL, client id, optional client secret&lt;/td&gt;
+ &lt;td&gt;Tokens in memory. Optional secret in the keychain&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;OAuth (device code)&lt;/td&gt;
+ &lt;td&gt;Token URL, device URL, client id, optional client secret&lt;/td&gt;
+ &lt;td&gt;Tokens in memory. Optional secret in the keychain&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Client credentials are the Azure app-only flow: the app asks Entra for a token with the tenant, the client id, and the secret, then sends that token on the call.&lt;/p&gt;</description></item><item><title>Calling an endpoint</title><link>https://termorq-docs.garrardkitchen.com/docs/http/calling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/http/calling/</guid><description>&lt;p&gt;&lt;code&gt;@create endpoint&lt;/code&gt; asks for the connection, the name, the method, and the path. Methods are &lt;code&gt;GET&lt;/code&gt;, &lt;code&gt;POST&lt;/code&gt;, &lt;code&gt;PUT&lt;/code&gt;, &lt;code&gt;PATCH&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt;, &lt;code&gt;HEAD&lt;/code&gt;, and &lt;code&gt;OPTIONS&lt;/code&gt;. You can add query defaults, path parameters, and extra headers.&lt;/p&gt;
+&lt;p&gt;A &lt;code&gt;{name}&lt;/code&gt; in the path becomes a path parameter with an optional default. Call it with &lt;code&gt;--name value&lt;/code&gt;.&lt;/p&gt;
+
+
+ 
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@create endpoint&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Names may contain spaces. &lt;strong&gt;POST&lt;/strong&gt;, &lt;strong&gt;PUT&lt;/strong&gt;, and &lt;strong&gt;PATCH&lt;/strong&gt; can include a JSON body, sent as &lt;code&gt;application/json&lt;/code&gt;. A blank body sends none. The test shows the status as a coloured pill. &lt;strong&gt;Save&lt;/strong&gt; stays disabled until an HTTP response comes back.&lt;/p&gt;</description></item><item><title>GraphQL and streams</title><link>https://termorq-docs.garrardkitchen.com/docs/http/graphql-and-streams/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/http/graphql-and-streams/</guid><description>&lt;h2 id="graphql"&gt;GraphQL &lt;a href="#graphql" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Tick &lt;strong&gt;GraphQL&lt;/strong&gt; on an endpoint. Its saved body is the query. The call sends &lt;code&gt;POST&lt;/code&gt; with &lt;code&gt;{&amp;quot;query&amp;quot;, &amp;quot;variables&amp;quot;}&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The call’s body, or &lt;code&gt;--body&lt;/code&gt;, is the variables JSON. A blank body sends &lt;code&gt;{}&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A non-empty &lt;code&gt;errors&lt;/code&gt; array shows as &lt;strong&gt;Check failed&lt;/strong&gt;, so a check and a runbook treat it as a failure even when the HTTP status is 200.&lt;/p&gt;
+&lt;h2 id="server-sent-events"&gt;Server-sent events &lt;a href="#server-sent-events" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+
+ 
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@sse ticks
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@sse live events&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;@sse &amp;lt;endpoint&amp;gt;&lt;/code&gt; streams server-sent events. The name completes the same way &lt;code&gt;@endpoint&lt;/code&gt; does: favourites first, then A–Z, Tab cycles, and → accepts the ghost. A name may contain spaces. Extra words after a finished &lt;code&gt;@sse&lt;/code&gt; name are ignored.&lt;/p&gt;</description></item><item><title>Import and export</title><link>https://termorq-docs.garrardkitchen.com/docs/http/import-and-export/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/http/import-and-export/</guid><description>&lt;p&gt;Two exports exist. One is a file another API client can open, with secrets replaced by placeholders. The other is an encrypted file for this app, and it can carry the secret.&lt;/p&gt;
+&lt;h2 id="openapi-and-postman-with-no-secrets"&gt;OpenAPI and Postman, with no secrets &lt;a href="#openapi-and-postman-with-no-secrets" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In &lt;code&gt;@endpoint&lt;/code&gt;, tick endpoints of one API connection and choose &lt;strong&gt;Export OpenAPI&lt;/strong&gt; or &lt;strong&gt;Export Postman&lt;/strong&gt;. Or type:&lt;/p&gt;
+
+
+ 
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@export openapi Users API
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@export postman Users API&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That exports every endpoint on the connection.&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,27 @@
+{
+  "customers": [],
+  "environments": [
+    {
+      "colour": "teal",
+      "name": "Staging",
+      "variables": [
+        {
+          "name": "region",
+          "value": "eu"
+        }
+      ]
+    },
+    {
+      "colour": "rose",
+      "name": "Prod",
+      "variables": [
+        {
+          "name": "region",
+          "value": "{{REGION}}"
+        }
+      ]
+    }
+  ],
+  "kind": "environments",
+  "schema": 1
+}

@@ -1,0 +1,3 @@
+# Written by Termorq. Local-only files never belong in git.
+local.json
+*.local.json

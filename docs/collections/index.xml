@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Collections on Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/collections/</link><description>Recent content in Collections on Termorq</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://termorq-docs.garrardkitchen.com/docs/collections/index.xml" rel="self" type="application/rss+xml"/><item><title>The shelf</title><link>https://termorq-docs.garrardkitchen.com/docs/collections/the-shelf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/collections/the-shelf/</guid><description>&lt;p&gt;Collections are lines you already run: a shell line, an &lt;code&gt;@endpoint&lt;/code&gt; call, or an &lt;code&gt;@tool&lt;/code&gt; call. &lt;strong&gt;Collections&lt;/strong&gt; on the rail, or &lt;strong&gt;Cmd+Shift+B&lt;/strong&gt; (&lt;strong&gt;Ctrl+Shift+B&lt;/strong&gt; on Windows and Linux), opens the shelf in the terminal column and hides the prompt. Press the shortcut again, or Esc, to return.&lt;/p&gt;
+&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/collections.png" alt="The Collections shelf before anything is saved" loading="lazy"&gt;
+ &lt;figcaption&gt;Collections in the desktop window. The shelf is empty until you collect a line. This shot is the frontend, so the shell underneath is the browser build.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;</description></item><item><title>Run as a runbook</title><link>https://termorq-docs.garrardkitchen.com/docs/collections/runbooks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/collections/runbooks/</guid><description>&lt;p&gt;&lt;strong&gt;Run as runbook&lt;/strong&gt; on the Collections page runs that collection’s lines in the order shown, in the current tab. Favourites run first, then the rest, which is the same order &lt;code&gt;termorq-cli run&lt;/code&gt; uses.&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+ shelf[(&amp;#34;Collection&amp;#34;)]:::store
+ fav[&amp;#34;Favourites,\nthen the rest&amp;#34;]:::step
+ stepn[&amp;#34;Shell, endpoint,\nor tool&amp;#34;]:::out
+ looked{&amp;#34;Check&amp;#34;}:::gate
+ capture[&amp;#34;Capture\nname = $.path&amp;#34;]:::step
+ halt([&amp;#34;Stop&amp;#34;]):::exit
+
+ shelf --&amp;gt; fav --&amp;gt; stepn --&amp;gt; looked
+ looked --&amp;gt; capture --&amp;gt; stepn
+ looked --&amp;gt; halt
+
+ classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa
+ classDef gate fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404
+ classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa
+ classDef out fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa
+ classDef exit fill:#9f1239,stroke:#fecdd3,stroke-width:2px,color:#fff1f2
+ linkStyle 0,1,2,3,4 stroke:#5eead4,stroke-width:2.5px
+ linkStyle 5 stroke:#fb7185,stroke-width:2.5px
+&lt;/pre&gt;
+&lt;p&gt;The run stops at the first failure:&lt;/p&gt;</description></item></channel></rss>
