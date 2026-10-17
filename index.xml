@@ -8,12 +8,7 @@
 &lt;/p&gt;
 &lt;p&gt;Filter by name or by kind. The counts on the chips are what is on this machine.&lt;/p&gt;</description></item><item><title>Commands</title><link>https://termorq-docs.garrardkitchen.com/docs/reference/commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/reference/commands/</guid><description>&lt;p&gt;&lt;code&gt;termorq-cli&lt;/code&gt; is a Pro-only companion tool. Its commands are listed here for Pro builds; the CLI has no edition switch. See the &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/"&gt;Free and Pro feature breakdown&lt;/a&gt; for app features.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;@&lt;/code&gt; opens the commands palette. Type to filter. Entries from &lt;code&gt;commands.yaml&lt;/code&gt; follow these built-ins. &lt;code&gt;@history&lt;/code&gt; is always available and is not a line in that file.&lt;/p&gt;
-&lt;p&gt;The shortcuts dialog lists the same triggers. The shot is the macOS wording.&lt;/p&gt;
-&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
- &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/shortcuts.png" alt="The shortcuts dialog open on the @ triggers" loading="lazy"&gt;
- &lt;figcaption&gt;Cmd&amp;#43;/ opens Shortcuts. The @ triggers and the call flags are the same list as this page.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;/p&gt;</description></item><item><title>Connections</title><link>https://termorq-docs.garrardkitchen.com/docs/ssh/connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/ssh/connections/</guid><description>&lt;p&gt;SSH connections are a Pro feature (&lt;code&gt;ssh.connections&lt;/code&gt; in &lt;code&gt;features.yml&lt;/code&gt;). Termorq speaks SSH itself, through the Rust &lt;code&gt;russh&lt;/code&gt; library, so Windows does not need OpenSSH installed.&lt;/p&gt;
+&lt;p&gt;The palette also lists &lt;strong&gt;Report an AI issue&lt;/strong&gt;, which reports the newest AI response in this tab, and &lt;strong&gt;Open reports folder&lt;/strong&gt;. See &lt;a href="https://termorq-docs.garrardkitchen.com/docs/models/report/"&gt;Report AI content&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Connections</title><link>https://termorq-docs.garrardkitchen.com/docs/ssh/connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/ssh/connections/</guid><description>&lt;p&gt;SSH connections are a Pro feature (&lt;code&gt;ssh.connections&lt;/code&gt; in &lt;code&gt;features.yml&lt;/code&gt;). Termorq speaks SSH itself, through the Rust &lt;code&gt;russh&lt;/code&gt; library, so Windows does not need OpenSSH installed.&lt;/p&gt;
 &lt;h2 id="create-one"&gt;Create one &lt;a href="#create-one" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
 
  
@@ -545,6 +540,10 @@
  &lt;td&gt;&lt;code&gt;network_settings.json&lt;/code&gt;&lt;/td&gt;
  &lt;td&gt;The additional CA certificate setting&lt;/td&gt;
  &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;reports/&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://termorq-docs.garrardkitchen.com/docs/models/report/"&gt;AI content reports&lt;/a&gt;: &lt;code&gt;ai-report-YYYYMMDD-HHMMSS.json&lt;/code&gt; and &lt;code&gt;.md&lt;/code&gt;, UTC time. No API key. A Microsoft Store install keeps this folder under &lt;code&gt;%LOCALAPPDATA%\Packages\&amp;lt;package family&amp;gt;\LocalCache\Roaming\com.garrardkitchen.ai-terminal&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;The keychain service is &lt;code&gt;com.garrardkitchen.ai-terminal&lt;/code&gt;. An AES-256-GCM fallback file lives in this folder when the keychain cannot be used. Do not edit it to plant a token.&lt;/p&gt;</description></item><item><title>Free and Pro feature comparison</title><link>https://termorq-docs.garrardkitchen.com/docs/settings/editions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/settings/editions/</guid><description>&lt;p&gt;Termorq has Free and Pro editions. This table shows which features each edition includes. The edition appears beside the application version in the window header; Free also shows &lt;strong&gt;created by Garrard Kitchen&lt;/strong&gt;. Open &lt;strong&gt;License&lt;/strong&gt; from the left rail to compare plans; the current build is highlighted.&lt;/p&gt;
@@ -553,7 +552,28 @@
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/cli/termorq-cli-025-run-smoke.png" alt="Pro termorq-cli successfully runs the sample Smoke collection" loading="lazy"&gt;
  &lt;figcaption&gt;Pro termorq-cli 0.25.0 output from the sample workspace; the same command shape is used in CI.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;/p&gt;</description></item><item><title>Sample workspace</title><link>https://termorq-docs.garrardkitchen.com/docs/get-started/sample-workspace/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/get-started/sample-workspace/</guid><description>&lt;p&gt;Download &lt;a href="https://termorq-docs.garrardkitchen.com/samples/acme-apis.zip"&gt;acme-apis.zip&lt;/a&gt; and unpack it. The workspace contains no token. Its Users API points to &lt;code&gt;mock://users&lt;/code&gt;, an offline demo host, so calls stay on this machine.&lt;/p&gt;
+&lt;/p&gt;</description></item><item><title>Report AI content</title><link>https://termorq-docs.garrardkitchen.com/docs/models/report/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/models/report/</guid><description>&lt;p&gt;Every AI response in the scrollback can be reported: an &lt;code&gt;@explain&lt;/code&gt; fix, a &lt;code&gt;#&lt;/code&gt; command, a &lt;code&gt;/&lt;/code&gt; skill, a &lt;code&gt;@chat&lt;/code&gt; or &lt;code&gt;@agent&lt;/code&gt; answer, or an interpreted tool result. Reporting is in every edition. The report opens in your own email app, addressed to &lt;code&gt;garrardkitchen@gmail.com&lt;/code&gt;, and a copy is saved on this machine first. Termorq sends nothing itself.&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+ reply[&amp;#34;AI response\nin the scrollback&amp;#34;]:::step
+ form{&amp;#34;Category and\ndetails filled in?&amp;#34;}:::gate
+ saved[(&amp;#34;reports/ai-report-\nYYYYMMDD-HHMMSS\n.json &amp;#43; .md&amp;#34;)]:::store
+ mail([&amp;#34;Your email app\nopens, ready to send&amp;#34;]):::success
+ copy([&amp;#34;Copied to the\nclipboard instead&amp;#34;]):::out
+
+ reply --&amp;gt; form
+ form --&amp;gt; saved
+ saved --&amp;gt; mail
+ saved --&amp;gt; copy
+
+ classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa
+ classDef gate fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404
+ classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa
+ classDef out fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa
+ classDef success fill:#166534,stroke:#86efac,stroke-width:2px,color:#f0fdf4
+ linkStyle 0,1,2 stroke:#5eead4,stroke-width:2.5px
+ linkStyle 3 stroke:#FFC131,stroke-width:2.5px
+&lt;/pre&gt;
+&lt;h2 id="open-the-form"&gt;Open the form &lt;a href="#open-the-form" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;There are four ways in. Each opens the same &lt;strong&gt;Report AI content&lt;/strong&gt; form.&lt;/p&gt;</description></item><item><title>Sample workspace</title><link>https://termorq-docs.garrardkitchen.com/docs/get-started/sample-workspace/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/get-started/sample-workspace/</guid><description>&lt;p&gt;Download &lt;a href="https://termorq-docs.garrardkitchen.com/samples/acme-apis.zip"&gt;acme-apis.zip&lt;/a&gt; and unpack it. The workspace contains no token. Its Users API points to &lt;code&gt;mock://users&lt;/code&gt;, an offline demo host, so calls stay on this machine.&lt;/p&gt;
 &lt;h2 id="open-it-in-termorq"&gt;Open it in Termorq &lt;a href="#open-it-in-termorq" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Open Termorq and type the path to the unzipped folder:&lt;/p&gt;
 
 
