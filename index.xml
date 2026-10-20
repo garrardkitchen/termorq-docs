@@ -328,7 +328,25 @@
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Client credentials are the Azure app-only flow: the app asks Entra for a token with the tenant, the client id, and the secret, then sends that token on the call.&lt;/p&gt;</description></item><item><title>Keyboard</title><link>https://termorq-docs.garrardkitchen.com/docs/reference/keyboard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/reference/keyboard/</guid><description>&lt;p&gt;&lt;strong&gt;Cmd+/&lt;/strong&gt; on macOS, or &lt;strong&gt;Ctrl+/&lt;/strong&gt; on Windows and Linux, opens the shortcuts dialog. The search box at the top has focus, so you can type straight away to filter the keys, &lt;code&gt;@&lt;/code&gt; triggers, and call flags; matches are highlighted. Esc clears the search, then closes the dialog. Press the shortcut again to close it.&lt;/p&gt;
+&lt;p&gt;Client credentials are the Azure app-only flow: the app asks Entra for a token with the tenant, the client id, and the secret, then sends that token on the call.&lt;/p&gt;</description></item><item><title>Forges</title><link>https://termorq-docs.garrardkitchen.com/docs/settings/forges/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/settings/forges/</guid><description>&lt;p&gt;&lt;strong&gt;Settings → Forges&lt;/strong&gt; connects Termorq to GitHub (github.com or GitHub Enterprise Server), GitLab (gitlab.com or a self-managed instance) or Azure DevOps (an organisation and, optionally, a project). Type &lt;code&gt;@create forge&lt;/code&gt; at the prompt to open the same form, or search Settings for &amp;ldquo;forge&amp;rdquo;, &amp;ldquo;gitlab&amp;rdquo; or &amp;ldquo;token&amp;rdquo;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Pick the provider card.&lt;/li&gt;
+&lt;li&gt;Leave &lt;strong&gt;Base URL&lt;/strong&gt; blank for the cloud host, or enter your server, for example &lt;code&gt;https://git.example.com&lt;/code&gt;. For Azure DevOps, type the organisation or paste a &lt;code&gt;https://dev.azure.com/contoso/Project&lt;/code&gt; URL into &lt;strong&gt;Organisation&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Paste a token. The form lists the scopes it needs:
+&lt;ul&gt;
+&lt;li&gt;GitHub: &lt;code&gt;repo&lt;/code&gt; (read) and &lt;code&gt;notifications&lt;/code&gt;. Fine-grained tokens cannot read notifications.&lt;/li&gt;
+&lt;li&gt;GitLab: &lt;code&gt;read_api&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Azure DevOps: Code (Read), Build (Read) and Work Items (Read).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Select &lt;strong&gt;Test connection&lt;/strong&gt;. It shows &lt;strong&gt;Connected as&lt;/strong&gt; your login, or what is wrong, such as a missing scope.&lt;/li&gt;
+&lt;li&gt;Select &lt;strong&gt;Save forge&lt;/strong&gt;. A new connection saves only after a passing test.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/settings-forges-add.png" alt="Settings → Forges with the GitHub card selected, a masked token and a passing connection test" loading="lazy"&gt;
+ &lt;figcaption&gt;Add a forge. Save is enabled once Test connection passes.&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;</description></item><item><title>Keyboard</title><link>https://termorq-docs.garrardkitchen.com/docs/reference/keyboard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/reference/keyboard/</guid><description>&lt;p&gt;&lt;strong&gt;Cmd+/&lt;/strong&gt; on macOS, or &lt;strong&gt;Ctrl+/&lt;/strong&gt; on Windows and Linux, opens the shortcuts dialog. The search box at the top has focus, so you can type straight away to filter the keys, &lt;code&gt;@&lt;/code&gt; triggers, and call flags; matches are highlighted. Esc clears the search, then closes the dialog. Press the shortcut again to close it.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Cmd+,&lt;/strong&gt; on macOS, or &lt;strong&gt;Ctrl+,&lt;/strong&gt; on Windows and Linux, opens Settings with the cursor in its search box. Press it again to go back to the terminal. The footer hint (&lt;strong&gt;⌘/ help&lt;/strong&gt; or &lt;strong&gt;Ctrl+/ help&lt;/strong&gt;) opens the same dialog.&lt;/p&gt;</description></item><item><title>OAuth sign-in</title><link>https://termorq-docs.garrardkitchen.com/docs/mcp/oauth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/mcp/oauth/</guid><description>&lt;p&gt;An HTTP MCP server that answers &lt;strong&gt;401&lt;/strong&gt; is ready for sign-in. You do not fix that in the create form.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/mcp-servers.png" alt="MCP server form with the available transports" loading="lazy"&gt;
