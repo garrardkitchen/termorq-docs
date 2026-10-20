@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The terminal on Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/</link><description>Recent content in The terminal on Termorq</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://termorq-docs.garrardkitchen.com/docs/terminal/index.xml" rel="self" type="application/rss+xml"/><item><title>The prompt</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/the-prompt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/the-prompt/</guid><description>&lt;p&gt;You type in one place, on the line after the latest output. The first characters decide what runs. The accent caret follows the insertion point as you edit the line. The folder is on the footer.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
- &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq command prompt ready for an @ command" loading="lazy"&gt;
- &lt;figcaption&gt;The screenshot shows the interface only; commands run in the installed app.&lt;/figcaption&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq prompt after an @endpoint call, ready for the next command" loading="lazy"&gt;
+ &lt;figcaption&gt;The prompt sits under the last result. The scrollback marks the call with an endpoint pill, its time, and the status.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;pre class="mermaid"&gt;flowchart LR
@@ -76,15 +76,15 @@
 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Settings → Shell&lt;/strong&gt; picks the shell for every tab that has not chosen its own, from the ones installed here.&lt;/p&gt;</description></item><item><title>Tabs and splits</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/tabs-and-splits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/tabs-and-splits/</guid><description>&lt;p&gt;Each tab is its own session: scrollback, folder, history, MCP servers, and OpenAI connection. Switching tabs leaves a running command where it is.&lt;/p&gt;
 &lt;h2 id="add-rename-close"&gt;Add, rename, close &lt;a href="#add-rename-close" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
- &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq terminal window showing a session tab and prompt" loading="lazy"&gt;
- &lt;figcaption&gt;Browser build (`pnpm dev`). The prompt is ready; shell output needs `pnpm tauri dev`.&lt;/figcaption&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq window with three session tabs in the header" loading="lazy"&gt;
+ &lt;figcaption&gt;Session tabs sit in the header, each with its colour dot and ×. &amp;#43; adds a tab.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;+&lt;/strong&gt; adds a tab in the start folder. Right-click for &lt;strong&gt;Rename&lt;/strong&gt; and &lt;strong&gt;Change colour&lt;/strong&gt;. Middle-click, &lt;strong&gt;×&lt;/strong&gt;, or &lt;strong&gt;Close&lt;/strong&gt; removes the tab. Closing the last tab resets it.&lt;/p&gt;</description></item><item><title>Interactive terminal</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/interactive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/interactive/</guid><description>&lt;p&gt;Most lines are non-interactive: the app starts the shell, streams the output, and returns to the prompt. A program that needs a keyboard opens a pseudo-terminal in the tab instead. On Windows that terminal is ConPTY. The screen is drawn with xterm.js.&lt;/p&gt;
 &lt;p&gt;These open a terminal on their own:&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
- &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq terminal window showing the prompt and a cleared session" loading="lazy"&gt;
- &lt;figcaption&gt;Interactive programs open in this terminal area in the installed app.&lt;/figcaption&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq terminal window showing the scrollback, the prompt, and the inspector" loading="lazy"&gt;
+ &lt;figcaption&gt;Interactive programs open in this terminal area, in place of the scrollback.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;</description></item><item><title>History and plain English</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/history/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/history/</guid><description>&lt;h2 id="command-history"&gt;Command history &lt;a href="#command-history" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/cli/termorq-cli-025-run-smoke.png" alt="Pro termorq-cli output from a successful sample collection run" loading="lazy"&gt;

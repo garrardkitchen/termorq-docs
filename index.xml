@@ -176,8 +176,8 @@
 &lt;/table&gt;
 &lt;p&gt;When Settings has environments or customers, the form asks for those too. A new server starts on the header choice. Changing only the environment or the customer does not require another test after the current values have already passed.&lt;/p&gt;</description></item><item><title>The prompt</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/the-prompt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/the-prompt/</guid><description>&lt;p&gt;You type in one place, on the line after the latest output. The first characters decide what runs. The accent caret follows the insertion point as you edit the line. The folder is on the footer.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
- &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq command prompt ready for an @ command" loading="lazy"&gt;
- &lt;figcaption&gt;The screenshot shows the interface only; commands run in the installed app.&lt;/figcaption&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq prompt after an @endpoint call, ready for the next command" loading="lazy"&gt;
+ &lt;figcaption&gt;The prompt sits under the last result. The scrollback marks the call with an endpoint pill, its time, and the status.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;pre class="mermaid"&gt;flowchart LR
@@ -246,8 +246,8 @@
 &lt;/table&gt;
 &lt;p&gt;&lt;code&gt;@&lt;/code&gt; opens the commands palette. &lt;code&gt;/&lt;/code&gt; opens the skills palette. Both filter as you type. In the commands palette, exact and leading name matches appear before other name matches, and all name matches appear before description matches. Built-in &lt;code&gt;@&lt;/code&gt; actions are listed in &lt;a href="https://termorq-docs.garrardkitchen.com/docs/reference/commands/"&gt;Commands&lt;/a&gt;. Entries from &lt;code&gt;commands.yaml&lt;/code&gt; follow them. &lt;code&gt;@history&lt;/code&gt; is always first and is not a YAML entry.&lt;/p&gt;</description></item><item><title>The shelf</title><link>https://termorq-docs.garrardkitchen.com/docs/collections/the-shelf/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/collections/the-shelf/</guid><description>&lt;p&gt;Collections are lines you already run: a shell line, an &lt;code&gt;@endpoint&lt;/code&gt; call, or an &lt;code&gt;@tool&lt;/code&gt; call. &lt;strong&gt;Collections&lt;/strong&gt; in the jump list, or &lt;strong&gt;Cmd+Shift+B&lt;/strong&gt; (&lt;strong&gt;Ctrl+Shift+B&lt;/strong&gt; on Windows and Linux), opens the shelf in the terminal column and hides the prompt. Press the shortcut again, or Esc, to return.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
- &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/collections.png" alt="The Collections shelf before anything is saved" loading="lazy"&gt;
- &lt;figcaption&gt;Collections in the desktop window. The shelf is empty until you collect a line. This shot is the frontend, so the shell underneath is the browser build.&lt;/figcaption&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/collections.png" alt="The Collections shelf with Billing smoke open: a favourite endpoint line with a capture, an endpoint line, and a shell line" loading="lazy"&gt;
+ &lt;figcaption&gt;Collections, with three shelves on the left. Favourites stay at the top; each line has Copy, Run, and ×.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;</description></item><item><title>Ask the model</title><link>https://termorq-docs.garrardkitchen.com/docs/models/ask/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/models/ask/</guid><description>&lt;p&gt;Each of these uses the OpenAI connection selected on the &lt;strong&gt;current tab&lt;/strong&gt;. Nothing is sent when that pill says none.&lt;/p&gt;
 &lt;pre class="mermaid"&gt;flowchart LR
@@ -542,8 +542,8 @@
  &lt;pre tabindex="0"&gt;&lt;code&gt;@workspace open ~/Downloads/acme-apis&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Change the path if you unpacked the sample somewhere else. The Users API connection needs a secret before it can run. For this offline example, any non-empty value works; it is not sent over the network. Enter it in the app so it stays in the OS keychain.&lt;/p&gt;</description></item><item><title>Tabs and splits</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/tabs-and-splits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/tabs-and-splits/</guid><description>&lt;p&gt;Each tab is its own session: scrollback, folder, history, MCP servers, and OpenAI connection. Switching tabs leaves a running command where it is.&lt;/p&gt;
 &lt;h2 id="add-rename-close"&gt;Add, rename, close &lt;a href="#add-rename-close" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
- &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq terminal window showing a session tab and prompt" loading="lazy"&gt;
- &lt;figcaption&gt;Browser build (`pnpm dev`). The prompt is ready; shell output needs `pnpm tauri dev`.&lt;/figcaption&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq window with three session tabs in the header" loading="lazy"&gt;
+ &lt;figcaption&gt;Session tabs sit in the header, each with its colour dot and ×. &amp;#43; adds a tab.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;+&lt;/strong&gt; adds a tab in the start folder. Right-click for &lt;strong&gt;Rename&lt;/strong&gt; and &lt;strong&gt;Change colour&lt;/strong&gt;. Middle-click, &lt;strong&gt;×&lt;/strong&gt;, or &lt;strong&gt;Close&lt;/strong&gt; removes the tab. Closing the last tab resets it.&lt;/p&gt;</description></item><item><title>Tools, resources, and prompts</title><link>https://termorq-docs.garrardkitchen.com/docs/mcp/tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/mcp/tools/</guid><description>&lt;h2 id="tool"&gt;@tool &lt;a href="#tool" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
@@ -556,8 +556,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@tool echo --message=hi&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;@tool&lt;/code&gt; lists the tools on the servers connected to this tab, favourites first within each server, then A→Z. When more than one server is connected, the list names the server after the description. An empty &lt;code&gt;@tool&lt;/code&gt; with an active connection shows &lt;strong&gt;Disconnect&lt;/strong&gt; on the chip.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
- &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/mcp-tools.png" alt="Tool palette explaining that no MCP servers are saved yet" loading="lazy"&gt;
- &lt;figcaption&gt;Connect a saved server before browsing its tools.&lt;/figcaption&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/mcp-tools.png" alt="The @tool palette listing Microsoft Learn tools, with microsoft_docs_search under Favourites" loading="lazy"&gt;
+ &lt;figcaption&gt;@tool on a tab connected to Microsoft Learn. Favourites come first; Collect and the star sit on each row.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;</description></item><item><title>GraphQL and streams</title><link>https://termorq-docs.garrardkitchen.com/docs/http/graphql-and-streams/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/http/graphql-and-streams/</guid><description>&lt;h2 id="graphql"&gt;GraphQL &lt;a href="#graphql" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Tick &lt;strong&gt;GraphQL&lt;/strong&gt; on an endpoint. Its saved body is the query. The call sends &lt;code&gt;POST&lt;/code&gt; with &lt;code&gt;{&amp;quot;query&amp;quot;, &amp;quot;variables&amp;quot;}&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;The call’s body, or &lt;code&gt;--body&lt;/code&gt;, is the variables JSON. A blank body sends &lt;code&gt;{}&lt;/code&gt;.&lt;/p&gt;
@@ -569,8 +569,8 @@
 &lt;/p&gt;</description></item><item><title>Interactive terminal</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/interactive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/interactive/</guid><description>&lt;p&gt;Most lines are non-interactive: the app starts the shell, streams the output, and returns to the prompt. A program that needs a keyboard opens a pseudo-terminal in the tab instead. On Windows that terminal is ConPTY. The screen is drawn with xterm.js.&lt;/p&gt;
 &lt;p&gt;These open a terminal on their own:&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
- &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq terminal window showing the prompt and a cleared session" loading="lazy"&gt;
- &lt;figcaption&gt;Interactive programs open in this terminal area in the installed app.&lt;/figcaption&gt;
+ &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq terminal window showing the scrollback, the prompt, and the inspector" loading="lazy"&gt;
+ &lt;figcaption&gt;Interactive programs open in this terminal area, in place of the scrollback.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;</description></item><item><title>The inspector</title><link>https://termorq-docs.garrardkitchen.com/docs/mcp/inspector/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/mcp/inspector/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@mcp inspect Docs&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
