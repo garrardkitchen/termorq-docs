@@ -13,4 +13,4 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@workspace status
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@workspace save
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@workspace close&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;@workspace&lt;/code&gt; with no verb is status. &lt;strong&gt;Settings → Team workspace → Open folder&lt;/strong&gt; is the same open. &lt;code&gt;workspace&lt;/code&gt; in the &lt;code&gt;@&lt;/code&gt; palette opens the same commands.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;&lt;code&gt;@workspace&lt;/code&gt; with no verb is status. &lt;strong&gt;Settings → Team workspace → Open folder&lt;/strong&gt; is the same open. &lt;strong&gt;workspace&lt;/strong&gt; in the command list opens the same commands.&lt;/p&gt;</description></item></channel></rss>
