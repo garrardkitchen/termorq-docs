@@ -27,6 +27,7 @@
  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;When Settings has environments or customers, the form asks for those too. A new server starts on the header choice. Changing only the environment or the customer does not require another test after the current values have already passed.&lt;/p&gt;</description></item><item><title>OAuth sign-in</title><link>https://termorq-docs.garrardkitchen.com/docs/mcp/oauth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/mcp/oauth/</guid><description>&lt;p&gt;An HTTP MCP server that answers &lt;strong&gt;401&lt;/strong&gt; is ready for sign-in. You do not fix that in the create form.&lt;/p&gt;
+&lt;p&gt;With &lt;strong&gt;Azure client credentials&lt;/strong&gt;, a 401 fails the test because the server rejected an app-only token. See &lt;a href="https://termorq-docs.garrardkitchen.com/docs/mcp/servers/#azure-scopes-and-rejected-tokens"&gt;Azure scopes and rejected tokens&lt;/a&gt;, including Entra error &lt;code&gt;AADSTS501461&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/mcp-servers.png" alt="MCP server form with the available transports" loading="lazy"&gt;
  &lt;figcaption&gt;OAuth sign-in starts after a saved HTTP server responds with 401.&lt;/figcaption&gt;
