@@ -42,6 +42,14 @@
  &lt;td&gt;The shelf. Older &lt;code&gt;localStorage&lt;/code&gt; data is moved here once&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;workflows/user/&amp;lt;id&amp;gt;.yml&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;A workflow you saved. Included workflows ship read-only with the app&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;workflows/runs/&amp;lt;workflow id&amp;gt;/&amp;lt;run id&amp;gt;/&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;One run: &lt;code&gt;run.json&lt;/code&gt;, masked block logs, and &lt;code&gt;files/&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
  &lt;td&gt;&lt;code&gt;command_history.json&lt;/code&gt;&lt;/td&gt;
  &lt;td&gt;The last 500 commands and their times&lt;/td&gt;
  &lt;/tr&gt;

@@ -13,5 +13,36 @@
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/cli/termorq-cli-025-run-smoke.png" alt="Pro termorq-cli successfully runs the sample Smoke collection" loading="lazy"&gt;
  &lt;figcaption&gt;Pro termorq-cli 0.25.0 output from the sample workspace; the same command shape is used in CI.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;/p&gt;</description></item><item><title>Web Check</title><link>https://termorq-docs.garrardkitchen.com/docs/cli/web-check/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/cli/web-check/</guid><description>&lt;p&gt;Web Check is a Pro feature, powered by the Pro-only &lt;code&gt;termorq-cli&lt;/code&gt;. In the installed Windows app, open Termorq&amp;rsquo;s notification-area icon and choose &lt;strong&gt;Start Web Check&lt;/strong&gt;. On macOS, use the menu-bar or Dock menu. Choose &lt;strong&gt;Show Web Check output&lt;/strong&gt; to open the local URL and pairing code, then enter that code in the browser.&lt;/p&gt;
+&lt;/p&gt;</description></item><item><title>Run a workflow</title><link>https://termorq-docs.garrardkitchen.com/docs/cli/workflow/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/cli/workflow/</guid><description>&lt;p&gt;&lt;code&gt;termorq-cli workflow&lt;/code&gt; is Pro. A Free binary omits these lines from &lt;code&gt;--help&lt;/code&gt; and refuses the command with the same Pro sentence as the app. There is no edition flag.&lt;/p&gt;
+&lt;p&gt;The path after &lt;code&gt;--workspace&lt;/code&gt; is absolute or starts with &lt;code&gt;~&lt;/code&gt;. The commands below use a sample checkout at &lt;code&gt;~/src/acme-apis&lt;/code&gt;.&lt;/p&gt;
+
+
+ 
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;termorq-cli workflow list
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;termorq-cli workflow list --workspace ~/src/acme-apis
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;termorq-cli workflow run refresh-acme-users
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;termorq-cli workflow runs refresh-acme-users&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Command&lt;/th&gt;
+ &lt;th&gt;What it prints&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;workflow list&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Each workflow&amp;rsquo;s name, id, and source: included, yours, or workspace&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;workflow run &amp;lt;id&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Starts that workflow and waits in this process. The desktop app does not wait&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;workflow runs &amp;lt;id&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Each run directory under &lt;code&gt;workflows/runs/&amp;lt;id&amp;gt;/&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;A file with an unknown property prints the same sentence as &lt;strong&gt;Save&lt;/strong&gt; on the page, and &lt;code&gt;workflow run&lt;/code&gt; does not start:&lt;/p&gt;</description></item><item><title>Web Check</title><link>https://termorq-docs.garrardkitchen.com/docs/cli/web-check/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/cli/web-check/</guid><description>&lt;p&gt;Web Check is a Pro feature, powered by the Pro-only &lt;code&gt;termorq-cli&lt;/code&gt;. In the installed Windows app, open Termorq&amp;rsquo;s notification-area icon and choose &lt;strong&gt;Start Web Check&lt;/strong&gt;. On macOS, use the menu-bar or Dock menu. Choose &lt;strong&gt;Show Web Check output&lt;/strong&gt; to open the local URL and pairing code, then enter that code in the browser.&lt;/p&gt;
 &lt;p&gt;The tray menu starts with the &lt;a href="https://termorq-docs.garrardkitchen.com/docs/terminal/recording/#from-the-tray-pro"&gt;recording rows&lt;/a&gt; (&lt;strong&gt;Start recording&lt;/strong&gt; or &lt;strong&gt;Stop recording&lt;/strong&gt; and &lt;strong&gt;Cancel recording&lt;/strong&gt;, then &lt;strong&gt;Open recording…&lt;/strong&gt;), then a &lt;strong&gt;Web Check&lt;/strong&gt; submenu (&lt;strong&gt;Start Web Check&lt;/strong&gt;, &lt;strong&gt;Show Web Check output&lt;/strong&gt;, &lt;strong&gt;Stop Web Check&lt;/strong&gt;, &lt;strong&gt;Open Web Check URL&lt;/strong&gt;). On Windows and macOS a &lt;strong&gt;Copy&lt;/strong&gt; submenu, after a divider, copies the URL, pairing code, data folder path, and source folder path. &lt;strong&gt;Open docs (help)&lt;/strong&gt; opens this guide. On macOS click the Termorq icon in the menu bar to open the menu; on Windows right-click the notification-area icon. &lt;strong&gt;Open Web Check URL&lt;/strong&gt; and &lt;strong&gt;Copy Web Check URL&lt;/strong&gt; need Web Check running.&lt;/p&gt;</description></item></channel></rss>
