@@ -8,6 +8,7 @@ MCP</button><div class="sidebar-submenu d-block"><ul><li class=no-icon><a class=
 SSH</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/ssh/connections/>Connections</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/ssh/sessions/>Sessions and files</a></li></ul></div></li><li><a class=sidebar-root-link href=https://termorq-docs.garrardkitchen.com/docs/forges/>Forges</a></li><li class="sidebar-dropdown no-icon"><button class=btn>
 Models</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/models/connections/>Model connections</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/models/ask/>Ask the model</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/models/skills/>Agent Skills</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/models/report/>Report AI content</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
 Library</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/library/browse/>Browse and edit</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/library/share/>Share a file</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
+Notes</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/notes/the-page/>Notes and Obsidian</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
 Team workspace</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/workspace/team-folder/>Open, save, status, close</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
 Secrets</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/secrets/on-this-machine/>On this machine</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
 Termorq CLI</button><div class=sidebar-submenu><ul><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/cli/run-a-collection/>Run a collection</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/cli/secrets/>Secrets and termorq-cli</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/cli/pipelines/>Pipelines</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/cli/workflow/>Run a workflow</a></li><li class=no-icon><a class=sidebar-nested-link href=https://termorq-docs.garrardkitchen.com/docs/cli/web-check/>Web Check</a></li></ul></div></li><li class="sidebar-dropdown no-icon"><button class=btn>
@@ -639,6 +640,20 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
     
@@ -729,6 +744,15 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
     index.add(
             {
                 id:  9 ,
+                href: "\/docs\/notes\/the-page\/",
+                title: "Notes and Obsidian",
+                description: "Write Markdown, organize folders, and work with selected Obsidian vaults.",
+                content: "Open Notes from the app rail or press Ctrl+Shift+N. On macOS, press Cmd+Shift+N. Notes fills the full window width. Choose Terminal in the Notes header to return to the terminal. Pressing Esc does not close Notes; Esc can still dismiss a Notes dialog or menu.\nThe source tabs run across the top of Notes. Choose Local notes or an enabled Obsidian vault to switch sources. Each source remembers its own open folder, note, filters, and view. The left sidebar stacks folders above the file list; drag its divider to resize it, or focus the divider and press the arrow keys. The sidebar width is remembered when you leave Notes.\nLocal notes live in Termorq’s application-data folder. In Settings → Notes and Obsidian, use Copy path beside the local notes folder to copy its full path. To connect an Obsidian vault, select its checkbox; the selection saves immediately. Termorq checks Obsidian’s local vault list when it can. Choose Add vault folder to add a vault the list did not find, including a moved or portable vault.\nVault discovery is best-effort. Obsidian’s vault list is an internal file format, so it can change. Termorq reads it without editing the registry or the vault’s .obsidian settings. A vault must be enabled before it appears as a Notes source. Unavailable vault folders are shown in Settings so you can reselect them.\nVault notes are the Markdown files in that folder. Termorq writes note tags to the note’s YAML tags frontmatter and leaves other frontmatter fields in place. Folder tags, folder order, source selection, and view preferences stay in Termorq’s application data.\nOrganize and find notes linkChoose All folders to return to the source root, then choose New folder to create a top-level folder. New folder and New note create items inside the selected folder. Use the folder tree to expand nested folders. In Local notes, drag a folder by its grip. The top and bottom zones show an insertion line for placing it before or after a sibling; the center zone shows Move into and nests it inside that folder. Dropping onto All folders moves it to the root. Obsidian vault folders stay in place and cannot be dragged or reordered. Drag a note by the grip beside its name in the folder tree or note list to move it into a folder; the center of a folder is the drop target. Use the editor’s Move to… control to move a note between sources. Use the note’s actions to rename it or put it in Termorq’s recoverable Trash.\nSelect the # action beside a note or folder to edit its tags. Type a tag and press Enter to add it, or select a suggested tag to toggle it. Tags keep their consistent, theme-aware colours beside notes and folders. On a note, Save tags updates the Markdown frontmatter. Folder tags are kept in Termorq’s app data. Folder tags are inherited when searching notes below that folder.\nSwitch between List and Files to change how notes are shown. The file list shows only notes directly inside the selected folder; choose a nested folder to see its notes. Search checks note title, filename, path, and tags within that folder. The tag filter narrows results to a tag or partial tag. Each source remembers its selected folder and note, list or files view, raw or preview mode, search, and tag filter when you leave Notes and return.\nEdit and preview Markdown linkChoose Raw to edit Markdown or Preview to render it. YAML frontmatter at the start of a note stays in Raw and on disk, but is omitted from Preview. Edits save automatically. The editor shows when a save is in progress or when the note is saved. GitHub Flavored Markdown tables render with bold headers, light body text, and alternating row colours; task lists and fenced code blocks render too. Raw HTML is not rendered.\nGitHub alert blockquotes render as titled, colour-coded callouts with a matching icon: NOTE, TIP, IMPORTANT, WARNING, and CAUTION. INFO is accepted as an alias for NOTE.\nObsidian [[wikilinks]] open matching notes in the current source. A note’s backlinks list the other notes that link to it. If Obsidian or another editor changes the open note, Notes offers to reload the file or save your current edits as a copy.\nAdd screenshots and images linkOpen a note, then select the capture icon to choose a screen or window in the system picker. Termorq saves the captured image under the note’s attachments folder and inserts a relative Markdown image link. Cancel the picker to return without adding an image. The adjacent clipboard button pastes an image, and an image copied from a screenshot tool can also be pasted with Ctrl+V or Cmd+V while editing.\nPNG, JPEG, GIF, and WebP images up to 5 MB are accepted. The image stays with the note when you move the note between sources.\nRelated pages link Keyboard shortcuts Preferences and integrations Free and Pro editions "
+            }
+        );
+    index.add(
+            {
+                id:  10 ,
                 href: "\/docs\/secrets\/on-this-machine\/",
                 title: "On this machine",
                 description: "The keychain, macOS approval recovery, vault references, masking, and vulnerability reporting.",
@@ -737,7 +761,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  10 ,
+                id:  11 ,
                 href: "\/docs\/workspace\/team-folder\/",
                 title: "Open, save, status, close",
                 description: "Merge .ai-terminal/ by name, write it back without secrets, and commit the diff yourself.",
@@ -746,7 +770,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  11 ,
+                id:  12 ,
                 href: "\/docs\/settings\/preferences\/",
                 title: "Preferences",
                 description: "Configure your profile, workspace, appearance, terminal, workflows, AI, and recording preferences.",
@@ -755,7 +779,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  12 ,
+                id:  13 ,
                 href: "\/docs\/cli\/run-a-collection\/",
                 title: "Run a collection",
                 description: "Pro-only termorq-cli commands, from list and show through check, call, and run, with sample output.",
@@ -764,7 +788,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  13 ,
+                id:  14 ,
                 href: "\/docs\/mcp\/servers\/",
                 title: "Servers",
                 description: "Create an HTTP, Azure, or stdio server, test it, and connect it to this tab.",
@@ -773,7 +797,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  14 ,
+                id:  15 ,
                 href: "\/docs\/terminal\/the-prompt\/",
                 title: "The prompt",
                 description: "One line for a shell, an endpoint, a tool, a skill, or a model. How the scrollback labels each one.",
@@ -782,7 +806,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  15 ,
+                id:  16 ,
                 href: "\/docs\/collections\/the-shelf\/",
                 title: "The shelf",
                 description: "Collect a line, favourite it, reorder it, copy it, or run it. Up to 50 collections.",
@@ -791,7 +815,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  16 ,
+                id:  17 ,
                 href: "\/docs\/workflows\/session-capture\/",
                 title: "Capture a session as a Workflow",
                 description: "Capture shell, saved API and MCP actions, parameterize request inputs, and review an editable Workflow draft.",
@@ -800,7 +824,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  17 ,
+                id:  18 ,
                 href: "\/docs\/models\/ask\/",
                 title: "Ask the model",
                 description: "@chat, the Agent toggle, @explain, a # line, / skills, and @agent with an approval on every call.",
@@ -809,7 +833,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  18 ,
+                id:  19 ,
                 href: "\/docs\/http\/auth\/",
                 title: "Auth",
                 description: "None, API key, bearer, basic, client credentials, browser OAuth, and device code.",
@@ -818,7 +842,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  19 ,
+                id:  20 ,
                 href: "\/docs\/settings\/forges\/",
                 title: "Forges",
                 description: "Connect GitHub, GitLab or Azure DevOps with a read-only token kept in the OS keychain.",
@@ -827,16 +851,16 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  20 ,
+                id:  21 ,
                 href: "\/docs\/reference\/keyboard\/",
                 title: "Keyboard",
                 description: "The shortcuts dialog, macOS and Windows keys, and what Esc closes first.",
-                content: "Cmd+/ on macOS, or Ctrl+/ on Windows and Linux, opens the shortcuts dialog. The search box at the top has focus, so you can type straight away to filter the keys, @ triggers, and call flags; matches are highlighted. Esc clears the search, then closes the dialog. Press the shortcut again to close it.\nCmd+, on macOS, or Ctrl+, on Windows and Linux, opens Settings with the cursor in its search box. Press it again to go back to the terminal. The footer hint (⌘/ help or Ctrl+/ help) opens the same dialog.\nShortcuts dialog from the browser build, filtered to session capture; Tauri shell integration requires pnpm tauri dev. Windows and Linux show Ctrl instead of Cmd. The labels below are the macOS ones from that dialog. Where a row says Cmd, Windows and Linux use Ctrl for that shortcut, except Ctrl+C, Ctrl+Tab, Ctrl+wheel, and Ctrl+0, which stay Ctrl on every platform. Ctrl+Shift+C copies inside the interactive terminal. On macOS the normal copy shortcut is Cmd+C. Each chord belongs to one action. AltGr types a character and does not run a shortcut. There is no shortcut that only moves focus between the composer and the terminal. The prompt leaves focus in a field or a dialog.\nKeys link Key Action Cmd+/ Open this dialog. Press again to close it Ctrl+J Open the jump list over the terminal, clear of the command line. Press again to close it. Esc clears the filter, then closes it Ctrl+Shift+J Show or hide the inspector. Hide on the inspector collapses it. Inspector on the footer opens it again. The same keys on macOS, Windows, and Linux. Drag the bar on its left edge to resize it / Skills list in the prompt block @ Commands list in the prompt block. The list matches command names, and the letters you typed are underlined Cmd+Shift+F While that list is open, match names fuzzily (letters in order, such as hst for history). Press again to match the typed text as a block. Windows and Linux: Ctrl+Shift+F ↑ / ↓ Move in the command list, the skills list, or a page such as @work. On the prompt, with those closed, cycle command history Tab Accept ghost text, or complete a path or command. Tab again cycles matches. In @endpoint, Tab on an API folder opens it → At the end of the line, accept ghost text Enter Run the line, or choose the highlighted row. On an endpoint result, in @endpoint or the Library’s Endpoints search, Enter opens the call form and does not send. With Settings → Confirm POST calls or Confirm DELETE calls on (the default), a matching call asks Send POST to /path? first. Enter there sends, and Esc cancels Enter (call form) Call, the same as the Call button, from any single-line field. The form opens with focus in its first field, or on Call when the only field is the body. Applies to endpoint and MCP tool call forms Cmd+Enter (call form) Call from a multi-line field such as the request body (Ctrl+Enter on Windows and Linux). Plain Enter there adds a new line Esc Close the top layer: a dropdown, a menu, a form, or a page. On the command list or the skills list, Esc closes the list and keeps the text. On the prompt, cancel an armed skill or clear the line Ctrl+R Fuzzy search command history (Ctrl on every platform). ↑ ↓ move, Enter inserts or runs, Tab switches between this tab and all tabs, Esc cancels Cmd+L Clear the scrollback Ctrl+C Cancel the running command and its process group, a stream, a sign-in, or an MCP tool call, or clear the line. With text selected, copy it Cmd+C Copy the selected text Cmd+Shift+B Collections. Press again to return to the terminal Cmd+Shift+G Workflows (Pro). Press again to close. A draft that is not saved asks you to stay, discard, or save. See Build a workflow Cmd+Shift+E Execution trace (Pro). Press again to close. Select an event to inspect its operation and redacted parameters in Input, with its result in Output. Ask-mode user text appears with detected secrets scrubbed; prior chat context, API response bodies, MCP result content, and model responses are omitted. Windows and Linux: Ctrl+Shift+E. See Commands Cmd+Option+R Start Pro session capture for this tab, or show the captured action list and ask before finishing. The footer pill shows active status and count. Windows and Linux: Ctrl+Alt+R or Ctrl+Shift+R (use Ctrl+Shift+R where AltGr occupies Ctrl+Alt). See Capture a session as a Workflow Cmd+Shift+L Library Cmd+Shift+O Todos: what your forge watchers found. Press again to return to the terminal. See Todos and watchers Cmd+Shift+K Your forge work: reviews, your pull requests and assigned issues (@work). Press again to close it. See Forges Cmd+Shift+Space (global, when enabled) Show the drop-down window, or hide it when it is focused. Change it in Settings → Drop-down window Ctrl+Tab · Ctrl+Shift+Tab Next or previous tab, when the command list, the skills list, and dialogs are closed Ctrl+wheel Output font size, 10–24px Ctrl+0 Reset the output font to 14px Cmd+F Search this tab’s scrollback. Enter and Shift+Enter step through matches. Aa matches case. A JSON response has its own magnifying glass Cmd+\\ Split with the next tab. Press again for one pane Cmd+Option+B Type into both split panes at once (Ctrl+Alt+B on Windows and Linux). Press again to stop Cmd+Option+Shift+B Type into every open SSH tab at once (Ctrl+Alt+Shift+B). Press again to stop. Pro Cmd+Option+Shift+R Discard active session capture on this tab, or cancel an asciinema recording (Pro). Windows and Linux: Ctrl+Alt+Shift+R Middle-click a tab Close that tab. The last tab resets Drop a .md file on the window Open it as a Markdown runbook (same as @md). Pro Right-click a tab Rename, colour, shell, split, export as Markdown, start or stop recording, or close An AI response has Copy and Report buttons at its top right. They show on hover and when one has keyboard focus, so Tab reaches them without a mouse. Report opens Report AI content. That form adds no shortcut of its own. Esc closes it, and the shortcuts above do nothing while it is open.\nInside an interactive terminal, keys go to the program. Ctrl+J still opens the jump list, and Ctrl+Shift+J still shows or hides the inspector. Ctrl+Shift+C copies and Ctrl+Shift+V pastes. End session stops it.\nForge palettes link@work fills the terminal. Arrows move, Tab moves between the query box and the list, Enter opens a pull request in the Inspector. Clicking an issue or work item selects the row, and Open on that row opens it in the browser. c checks out the branch, s starts work on an issue, o opens the selected row in the browser, y copies the link, r refreshes and Esc closes. In the pull request’s file list, ↑/↓ (or k/j), Page Up/Page Down, Home and End move between files, and Esc restores an expanded diff. See Forges.\nAfter cd into a repository, the runbooks strip and @run take 1–9 to run a task and Tab to edit it first; Esc dismisses. See Repo runbooks.\nPrintable page linkThis page is the cheatsheet. Print it from the browser. The dialog in the app is the same list, with the keys for the machine you are on.\nRelated pages link Commands The prompt "
+                content: "Cmd+/ on macOS, or Ctrl+/ on Windows and Linux, opens the shortcuts dialog. The search box at the top has focus, so you can type straight away to filter the keys, @ triggers, and call flags; matches are highlighted. Esc clears the search, then closes the dialog. Press the shortcut again to close it.\nCmd+, on macOS, or Ctrl+, on Windows and Linux, opens Settings with the cursor in its search box. Press it again to go back to the terminal. The footer hint (⌘/ help or Ctrl+/ help) opens the same dialog.\nShortcuts dialog from the browser build, filtered to session capture; Tauri shell integration requires pnpm tauri dev. Windows and Linux show Ctrl instead of Cmd. The labels below are the macOS ones from that dialog. Where a row says Cmd, Windows and Linux use Ctrl for that shortcut, except Ctrl+C, Ctrl+Tab, Ctrl+wheel, and Ctrl+0, which stay Ctrl on every platform. Ctrl+Shift+C copies inside the interactive terminal. On macOS the normal copy shortcut is Cmd+C. Each chord belongs to one action. AltGr types a character and does not run a shortcut. There is no shortcut that only moves focus between the composer and the terminal. The prompt leaves focus in a field or a dialog.\nKeys link Key Action Cmd+/ Open this dialog. Press again to close it Ctrl+J Open the jump list over the terminal, clear of the command line. Press again to close it. Esc clears the filter, then closes it Ctrl+Shift+J Show or hide the inspector. Hide on the inspector collapses it. Inspector on the footer opens it again. The same keys on macOS, Windows, and Linux. Drag the bar on its left edge to resize it / Skills list in the prompt block @ Commands list in the prompt block. The list matches command names, and the letters you typed are underlined Cmd+Shift+F While that list is open, match names fuzzily (letters in order, such as hst for history). Press again to match the typed text as a block. Windows and Linux: Ctrl+Shift+F ↑ / ↓ Move in the command list, the skills list, or a page such as @work. On the prompt, with those closed, cycle command history Tab Accept ghost text, or complete a path or command. Tab again cycles matches. In @endpoint, Tab on an API folder opens it → At the end of the line, accept ghost text Enter Run the line, or choose the highlighted row. On an endpoint result, in @endpoint or the Library’s Endpoints search, Enter opens the call form and does not send. With Settings → Confirm POST calls or Confirm DELETE calls on (the default), a matching call asks Send POST to /path? first. Enter there sends, and Esc cancels Enter (call form) Call, the same as the Call button, from any single-line field. The form opens with focus in its first field, or on Call when the only field is the body. Applies to endpoint and MCP tool call forms Cmd+Enter (call form) Call from a multi-line field such as the request body (Ctrl+Enter on Windows and Linux). Plain Enter there adds a new line Esc Close the top layer: a dropdown, a menu, a form, or a page. Notes stays open; Esc only dismisses a Notes dialog or menu. On the command list or the skills list, Esc closes the list and keeps the text. On the prompt, cancel an armed skill or clear the line Ctrl+R Fuzzy search command history (Ctrl on every platform). ↑ ↓ move, Enter inserts or runs, Tab switches between this tab and all tabs, Esc cancels Cmd+L Clear the scrollback Ctrl+C Cancel the running command and its process group, a stream, a sign-in, or an MCP tool call, or clear the line. With text selected, copy it Cmd+C Copy the selected text Cmd+Shift+B Collections. Press again to return to the terminal Cmd+Shift+N Notes. Press again to return to the terminal. Esc leaves Notes open. Windows and Linux: Ctrl+Shift+N. See Notes and Obsidian Cmd+Shift+G Workflows (Pro). Press again to close. A draft that is not saved asks you to stay, discard, or save. See Build a workflow Cmd+Shift+E Execution trace (Pro). Press again to close. Select an event to inspect its operation and redacted parameters in Input, with its result in Output. Ask-mode user text appears with detected secrets scrubbed; prior chat context, API response bodies, MCP result content, and model responses are omitted. Windows and Linux: Ctrl+Shift+E. See Commands Cmd+Option+R Start Pro session capture for this tab, or show the captured action list and ask before finishing. The footer pill shows active status and count. Windows and Linux: Ctrl+Alt+R or Ctrl+Shift+R (use Ctrl+Shift+R where AltGr occupies Ctrl+Alt). See Capture a session as a Workflow Cmd+Shift+L Library Cmd+Shift+O Todos: what your forge watchers found. Press again to return to the terminal. See Todos and watchers Cmd+Shift+K Your forge work: reviews, your pull requests and assigned issues (@work). Press again to close it. See Forges Cmd+Shift+Space (global, when enabled) Show the drop-down window, or hide it when it is focused. Change it in Settings → Drop-down window Ctrl+Tab · Ctrl+Shift+Tab Next or previous tab, when the command list, the skills list, and dialogs are closed Ctrl+wheel Output font size, 10–24px Ctrl+0 Reset the output font to 14px Cmd+F Search this tab’s scrollback. Enter and Shift+Enter step through matches. Aa matches case. A JSON response has its own magnifying glass Cmd+\\ Split with the next tab. Press again for one pane Cmd+Option+B Type into both split panes at once (Ctrl+Alt+B on Windows and Linux). Press again to stop Cmd+Option+Shift+B Type into every open SSH tab at once (Ctrl+Alt+Shift+B). Press again to stop. Pro Cmd+Option+Shift+R Discard active session capture on this tab, or cancel an asciinema recording (Pro). Windows and Linux: Ctrl+Alt+Shift+R Middle-click a tab Close that tab. The last tab resets Drop a .md file on the window Open it as a Markdown runbook (same as @md). Pro Right-click a tab Rename, colour, shell, split, export as Markdown, start or stop recording, or close An AI response has Copy and Report buttons at its top right. They show on hover and when one has keyboard focus, so Tab reaches them without a mouse. Report opens Report AI content. That form adds no shortcut of its own. Esc closes it, and the shortcuts above do nothing while it is open.\nInside an interactive terminal, keys go to the program. Ctrl+J still opens the jump list, and Ctrl+Shift+J still shows or hides the inspector. Ctrl+Shift+C copies and Ctrl+Shift+V pastes. End session stops it.\nForge palettes link@work fills the terminal. Arrows move, Tab moves between the query box and the list, Enter opens a pull request in the Inspector. Clicking an issue or work item selects the row, and Open on that row opens it in the browser. c checks out the branch, s starts work on an issue, o opens the selected row in the browser, y copies the link, r refreshes and Esc closes. In the pull request’s file list, ↑/↓ (or k/j), Page Up/Page Down, Home and End move between files, and Esc restores an expanded diff. See Forges.\nAfter cd into a repository, the runbooks strip and @run take 1–9 to run a task and Tab to edit it first; Esc dismisses. See Repo runbooks.\nPrintable page linkThis page is the cheatsheet. Print it from the browser. The dialog in the app is the same list, with the keys for the machine you are on.\nRelated pages link Commands The prompt "
             }
         );
     index.add(
             {
-                id:  21 ,
+                id:  22 ,
                 href: "\/docs\/workflows\/node-types\/",
                 title: "Node types and code languages",
                 description: "Choose a workflow block, understand its inputs and outputs, and check which code runtimes it needs.",
@@ -845,7 +869,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  22 ,
+                id:  23 ,
                 href: "\/docs\/mcp\/oauth\/",
                 title: "OAuth sign-in",
                 description: "Browser sign-in for an HTTP MCP server, PKCE, and tokens that stay in memory.",
@@ -854,7 +878,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  23 ,
+                id:  24 ,
                 href: "\/docs\/collections\/runbooks\/",
                 title: "Run as a runbook",
                 description: "Favourites first, captures into the next line, and a stop at the first failure.",
@@ -863,7 +887,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  24 ,
+                id:  25 ,
                 href: "\/docs\/cli\/secrets\/",
                 title: "Secrets and termorq-cli",
                 description: "Pro-only termorq-cli secret handling, output scrubbing, and execution safeguards.",
@@ -872,7 +896,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  25 ,
+                id:  26 ,
                 href: "\/docs\/ssh\/sessions\/",
                 title: "Sessions and files",
                 description: "Open a host in a tab, reconnect on drop, browse and transfer remote files over SFTP, and forward local ports.",
@@ -881,7 +905,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  26 ,
+                id:  27 ,
                 href: "\/docs\/library\/share\/",
                 title: "Share a file",
                 description: ".aitcol, .aitmcp, .aitapi, and an encrypted .aitbak of everything.",
@@ -890,7 +914,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  27 ,
+                id:  28 ,
                 href: "\/docs\/terminal\/shells\/",
                 title: "Shells",
                 description: "The default shell, a shell for one tab, the start folder, and what carries over to the next line.",
@@ -899,7 +923,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  28 ,
+                id:  29 ,
                 href: "\/docs\/terminal\/",
                 title: "The terminal",
                 description: "The prompt, name-first command search, shells, tabs, splits, history, find, export, Markdown runbooks, and repo runbooks.",
@@ -908,7 +932,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  29 ,
+                id:  30 ,
                 href: "\/docs\/get-started\/the-window\/",
                 title: "The window",
                 description: "The header, session tabs, prompt, footer, inspector, and where the version comes from.",
@@ -917,7 +941,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  30 ,
+                id:  31 ,
                 href: "\/docs\/settings\/todos\/",
                 title: "Todos and watchers",
                 description: "Watchers check your forges while Termorq is open and add review requests, approvals, failed pipelines and assignments to Todos.",
@@ -926,7 +950,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  31 ,
+                id:  32 ,
                 href: "\/docs\/settings\/ci\/",
                 title: "CI status, logs and re-run",
                 description: "See the latest CI run for the branch you are on, open a job's log in a tab, re-run failed jobs, and ask your AI connection why a job failed.",
@@ -935,7 +959,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  32 ,
+                id:  33 ,
                 href: "\/docs\/settings\/start-ticket\/",
                 title: "Start work from a ticket",
                 description: "Turn a GitHub issue, GitLab issue or Azure DevOps work item into a branch from the remote default branch, with commit messages that link back to the ticket.",
@@ -944,7 +968,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  33 ,
+                id:  34 ,
                 href: "\/docs\/models\/skills\/",
                 title: "Agent Skills",
                 description: "Reuse local skill instructions across Ask, workflows, and explanations.",
@@ -953,7 +977,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  34 ,
+                id:  35 ,
                 href: "\/docs\/http\/calling\/",
                 title: "Calling an endpoint",
                 description: "Create an endpoint, then call it with a name, --query, --body, and --set.",
@@ -962,7 +986,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  35 ,
+                id:  36 ,
                 href: "\/docs\/workflows\/code-examples\/",
                 title: "Code and block examples",
                 description: "Read workflow input and publish output in all seven code languages, then connect HTTP, MCP, AI, decisions, and loops.",
@@ -971,7 +995,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  36 ,
+                id:  37 ,
                 href: "\/docs\/collections\/",
                 title: "Collections",
                 description: "A shelf of lines you already run, and the same lines as a runbook.",
@@ -980,7 +1004,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  37 ,
+                id:  38 ,
                 href: "\/docs\/reference\/files\/",
                 title: "Files",
                 description: "The app data folder, the team workspace, transfer files, and the localStorage keys.",
@@ -989,16 +1013,16 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  38 ,
+                id:  39 ,
                 href: "\/docs\/settings\/editions\/",
                 title: "Free and Pro feature comparison",
                 description: "Compare the features included in the Free and Pro Termorq editions.",
-                content: "Termorq has Free and Pro editions. This table shows which features each edition includes. The edition is the FREE or PRO pill at the right of the header. Free also shows created by Garrard Kitchen on the footer. Open License from the jump list (Ctrl+J) to compare plans; the current build is highlighted.\nThe root features.yml manifest is the source of this feature list and the app’s feature availability. Every new feature must have an explicit plan assignment there.\nFeature What it includes Free Pro macOS Keychain approval Open the terminal without password dialogs from background credentials, approve access from an explicit connection or run action, and retry paused workflow credentials. ✓ ✓ Terminal, tabs and split panes Run shell commands in persistent terminal tabs and split panes. ✓ ✓ Choose a shell for a new tab Open a new tab directly with the saved default shell or another installed shell, without changing the saved default. ✓ ✓ Reorder tabs Drag tabs in the tab row or move them with Ctrl+Shift+PageUp and PageDown. ✓ ✓ Notify when long commands finish Desktop notification with the exit status when a long command finishes out of view. ✓ ✓ Clickable links and paths in output Ctrl or Cmd+click URLs and file paths in output to open or reveal them. ✓ ✓ Pin tabs Keep tabs compact at the left with no close button until unpinned. ✓ ✓ Maximise a tab Fill the window with the active tab’s output and prompt, and restore it. ✓ ✓ Response inspector Show a tool or endpoint response beside the terminal, hide it, and drag the divider. ✓ ✓ Back to the top of an output A Top button over a command’s output scrolls to where it started. ✓ ✓ Markdown runbooks Open a Markdown file with coloured code blocks and run shell, PowerShell, Python, JavaScript, TypeScript, or C# blocks with streamed output. A block runs in the file’s directory when the file has one. — ✓ Confirm closing used tabs Ask before closing a tab that has run a command, with a setting to stop asking. ✓ ✓ System usage in the tab row CPU and memory sparklines and free disk space for the tab’s local folder. A WSL tab does not sample a Linux path as this computer’s disk. An SSH tab uses the local folder. ✓ ✓ Header context visibility Show or hide the Environment and Company selectors in the app header. ✓ ✓ Inline images in output Show iTerm2 and Sixel images in output and images in API and MCP results, capped and sanitised. ✓ ✓ Fuzzy history search Ctrl+R searches this tab’s or every tab’s history with fzf-style ranking and highlighted matches. ✓ ✓ Highlight and alert rules Colour output that matches saved text or regex patterns, with optional desktop notifications. Free applies three rules. ✓ ✓ More than three highlight and alert rules Keep up to 50 highlight and alert rules instead of three. — ✓ Type into both split panes Send keys and commands to both split panes at once. An @ line, a / line, and a # request stay on this tab. ✓ ✓ Type into all SSH tabs Send keys and commands to every open SSH tab at once. An @ line, a / line, and a # request stay on this tab. — ✓ Record and replay a tab session Record a tab as an asciinema v2 .cast file with secrets masked, replay it in the app and export it. — ✓ Drop-down window hotkey A global shortcut slides the window down from the top of the screen and hides it on the next press. ✓ ✓ WSL distribution per tab On Windows, enable WSL in Settings → Experimental to show it as a shell, choose a distribution per tab, and see the tab’s shell in its info bar. Off by default. ✓ ✓ SSH connections Save SSH hosts, open them in tabs, browse and transfer remote files over SFTP, and forward local ports. A file dropped on the SSH terminal is not typed into the session. — ✓ Saved APIs and endpoints Create, import, call and check saved HTTP endpoints. An endpoint runs on this computer, the invoking tab, or a named WSL distribution and user. A blank user is that distribution’s default. A collection run and Web Check stop instead of sending a WSL target from this computer. A WSL call sends the Settings CA and does not use a client certificate. @signout forgets the active tab’s target. A WSL call does not resolve a vault reference on this computer. ✓ ✓ MCP connections and tools Connect to MCP servers and inspect or call their tools. A new server runs on this computer. A stored WSL distribution is not replaced by this computer, and the sign-in browser stays on this computer. @mcp signout forgets one target and leaves the shared client. ✓ ✓ MCP access token diagnostics Inspect and copy MCP access tokens with their issuer, tenant, expiry, audience, roles and customer_id in session-only network logs. ✓ ✓ Endpoint access token diagnostics Inspect and copy saved endpoint OAuth access tokens with their issuer, tenant, expiry, audience, roles and customer_id in session-only network logs. ✓ ✓ OpenAI-compatible connections and model features Use model connections, skills, chat, and model-assisted interpretation. — ✓ AI Agent tool use Let the model propose API and MCP calls for your approval. Each proposal names where that call runs. — ✓ Skills across AI features Discover local Agent Skills folders, apply saved defaults and automatic activation across Ask, workflows, and explanations, and inspect which instructions each request included. — ✓ Report inappropriate AI content Report an AI response from its flag, the commands palette or @report. The report opens in your email app and a copy is saved. ✓ ✓ Collections Save, organize, import, and export reusable command lines. ✓ ✓ Run collections as runbooks Run saved collection lines in order in the current tab. A failure stops the run before the next line, and an endpoint line keeps that saved endpoint. — ✓ Team workspace Share API, MCP, endpoint, and collection definitions through a git folder. — ✓ Product support, feature requests and experimental early access Access product support, submit feature requests, and get early access to experimental features. — ✓ Web Check monitoring Schedule saved API and MCP checks, inspect their history, and copy pairing details and folder paths from the Windows tray menu. — ✓ Appearance and diagnostics Manage themes, shell preferences, and diagnostics. ✓ ✓ Encrypted backup and secret handling Protect local data and move it between installations. ✓ ✓ Forge connections Connect GitHub, GitHub Enterprise Server, GitLab (including self-managed), or Azure DevOps with a token kept in the OS keychain, and test it. List your assigned work, review requests and pull requests with @work (Ctrl+Shift+K, Cmd+Shift+K on macOS), open a pull request’s detail and check out its branch. The detail keeps reviewers, checks and changed files, and adds the description, people’s comments, the commits, and a Datadog section while Datadog still has open feedback. Free connects one forge. ✓ ✓ More than one forge connection Connect GitHub, GitLab and Azure DevOps together, with any number of hosts, instead of one connection. — ✓ Forge watchers and Todos Watch for review requests, approvals, your pull requests, failed or finished pipelines on your branches, and assignments, and collect them on the Todos page with desktop notifications, quiet hours, snooze and done. GitLab rows show a High, Medium or Low pill while Datadog still has open feedback, and Todos can filter by that level. Free watches its one forge connection. ✓ ✓ CI status, job logs and re-run Show the latest CI run for the current tab’s branch on GitHub Actions, GitLab pipelines or Azure DevOps builds, open a job’s log in a read-only tab, and re-run failed jobs when the connection allows write actions. ✓ ✓ Start work from a ticket From a GitHub issue, GitLab issue or Azure DevOps work item, suggest a branch name, create it from the remote default branch in a local clone, remember the ticket in the tab for commit messages, and optionally assign it to you and move it to In progress when the connection allows write actions. Open tabs contribute their folder on this computer, not an SSH remote path. ✓ ✓ Explain a failed CI job Send the last 60 lines of a failed job’s log, with secrets masked, to your own AI connection and show the likely cause and a suggested fix. — ✓ Repo runbooks Find the tasks a repository already defines (package.json scripts, Cargo.toml, .termorq runbooks, Makefile targets and justfile recipes) and run one from @run or the repo chip, asking first the first time per repository, for anything destructive and for anything marked confirm. A task uses the tab’s host folder and does not run in a taken-over terminal. ✓ ✓ Explain a failed command When a shell command fails, send the command, its exit code and the last 40 lines of output, with secrets masked, to your own AI connection and show the likely cause and a suggested fix to put in the prompt. A persistent shell sends the combined terminal text in the order it was received, with that command’s exit status, and leaves out later app output. The fix is placed in the prompt and is not run. — ✓ Run a command on a watcher trigger When a watcher finds something new, ask, then run a chosen command in a new tab at the repository’s local checkout. — ✓ Workflows Enable Workflows in Settings → Experimental (off by default; Pro). Build a workflow in the app workspace or in YAML, choose one active automatic trigger per workflow while keeping each trigger type’s saved settings, and navigate the React Flow canvas with node reordering, connectable decision routes, disconnectable wires, pan, zoom, fit-to-view, auto-arrange the main flow left to right with decision targets centered between their decision and following nodes, vertically balanced around the decision, with saved node positions, and a minimap for larger workflows. The right properties inspector has Settings, Input, Code, Schema, and Output tabs. Set each node’s name and enabled state in Settings; the Input tab lists upstream data with datatype pills. Disconnecting a node’s last explicit incoming route disables it so it cannot run through implicit file order; disconnected decision routes fall through to the next block. Open a code block in a dedicated step editor with upstream input, JSON or text test input, parameters, single-step execution output, and settings panels, and edit syntax-coloured code with line numbers and Bash examples. Run code, HTTP, MCP, and OpenAI-compatible model blocks from triggers, decisions, and loops, pass each block’s declared properties forward, disable individual nodes, copy existing workflows with triggers disarmed, export one workflow as YAML or select several workflows for a versioned bundle with optional password encryption, import one or multiple workflow files as independent copies with triggers paused, and review, pause, edit, or delete runs. Workflow rows show combined definition and run-file size alongside their summary and actions on one desktop row, with Copy available and Delete revealed on hover or focus. Resize the code editor, properties panel, and run history/detail split to fit the work. Included workflows ship read-only. Each run keeps its record and the files it creates in its own folder. The HTTP listener displays its x-api-key in Triggers after the workflow is saved and checks that key on requests, and a Telegram bot can start a run from an allowlisted chat with an optional slash-insensitive command filter and visible polling status. Secrets stay in the OS keychain. — ✓ Session capture to Workflow Capture Ask-mode AI prompts and structured shell, saved API and MCP actions with secrets scrubbed; show active status and captured actions, confirm before finishing, parameterize inputs, and open non-empty captures as editable Workflow drafts. — ✓ Unified execution trace Search redacted shell, API, MCP, model, workflow, runbook, command, and connected CI activity in one session-local timeline. — ✓ Reporting AI content is in every edition, because the Microsoft Store asks every product with generative AI to give users a way to report inappropriate content. See Report AI content.\nChoose Free or Pro from Microsoft Store. Store manages installation and updates for both editions. Pro also includes the termorq-cli runner for headless collections, pipelines, and Web Check tray controls.\nTermorq Free Termorq Pro Paid termorq-cli is a Pro-only companion to the desktop app. It has no edition flag or runtime switch; its available commands follow the build edition.\nRelated pages link Preferences Pro termorq-cli "
+                content: "Termorq has Free and Pro editions. This table shows which features each edition includes. The edition is the FREE or PRO pill at the right of the header. Free also shows created by Garrard Kitchen on the footer. Open License from the jump list (Ctrl+J) to compare plans; the current build is highlighted.\nThe root features.yml manifest is the source of this feature list and the app’s feature availability. Every new feature must have an explicit plan assignment there.\nFeature What it includes Free Pro macOS Keychain approval Open the terminal without password dialogs from background credentials, approve access from an explicit connection or run action, and retry paused workflow credentials. ✓ ✓ Terminal, tabs and split panes Run shell commands in persistent terminal tabs and split panes. ✓ ✓ Choose a shell for a new tab Open a new tab directly with the saved default shell or another installed shell, without changing the saved default. ✓ ✓ Reorder tabs Drag tabs in the tab row or move them with Ctrl+Shift+PageUp and PageDown. ✓ ✓ Notify when long commands finish Desktop notification with the exit status when a long command finishes out of view. ✓ ✓ Clickable links and paths in output Ctrl or Cmd+click URLs and file paths in output to open or reveal them. ✓ ✓ Pin tabs Keep tabs compact at the left with no close button until unpinned. ✓ ✓ Maximise a tab Fill the window with the active tab’s output and prompt, and restore it. ✓ ✓ Response inspector Show a tool or endpoint response beside the terminal, hide it, and drag the divider. ✓ ✓ Back to the top of an output A Top button over a command’s output scrolls to where it started. ✓ ✓ Markdown runbooks Open a Markdown file with coloured code blocks and run shell, PowerShell, Python, JavaScript, TypeScript, or C# blocks with streamed output. A block runs in the file’s directory when the file has one. — ✓ Confirm closing used tabs Ask before closing a tab that has run a command, with a setting to stop asking. ✓ ✓ System usage in the tab row CPU and memory sparklines and free disk space for the tab’s local folder. A WSL tab does not sample a Linux path as this computer’s disk. An SSH tab uses the local folder. ✓ ✓ Header context visibility Show or hide the Environment and Company selectors in the app header. ✓ ✓ Inline images in output Show iTerm2 and Sixel images in output and images in API and MCP results, capped and sanitised. ✓ ✓ Fuzzy history search Ctrl+R searches this tab’s or every tab’s history with fzf-style ranking and highlighted matches. ✓ ✓ Highlight and alert rules Colour output that matches saved text or regex patterns, with optional desktop notifications. Free applies three rules. ✓ ✓ More than three highlight and alert rules Keep up to 50 highlight and alert rules instead of three. — ✓ Type into both split panes Send keys and commands to both split panes at once. An @ line, a / line, and a # request stay on this tab. ✓ ✓ Type into all SSH tabs Send keys and commands to every open SSH tab at once. An @ line, a / line, and a # request stay on this tab. — ✓ Record and replay a tab session Record a tab as an asciinema v2 .cast file with secrets masked, replay it in the app and export it. — ✓ Drop-down window hotkey A global shortcut slides the window down from the top of the screen and hides it on the next press. ✓ ✓ WSL distribution per tab On Windows, enable WSL in Settings → Experimental to show it as a shell, choose a distribution per tab, and see the tab’s shell in its info bar. Off by default. ✓ ✓ SSH connections Save SSH hosts, open them in tabs, browse and transfer remote files over SFTP, and forward local ports. A file dropped on the SSH terminal is not typed into the session. — ✓ Saved APIs and endpoints Create, import, call and check saved HTTP endpoints. An endpoint runs on this computer, the invoking tab, or a named WSL distribution and user. A blank user is that distribution’s default. A collection run and Web Check stop instead of sending a WSL target from this computer. A WSL call sends the Settings CA and does not use a client certificate. @signout forgets the active tab’s target. A WSL call does not resolve a vault reference on this computer. ✓ ✓ MCP connections and tools Connect to MCP servers and inspect or call their tools. A new server runs on this computer. A stored WSL distribution is not replaced by this computer, and the sign-in browser stays on this computer. @mcp signout forgets one target and leaves the shared client. ✓ ✓ MCP access token diagnostics Inspect and copy MCP access tokens with their issuer, tenant, expiry, audience, roles and customer_id in session-only network logs. ✓ ✓ Endpoint access token diagnostics Inspect and copy saved endpoint OAuth access tokens with their issuer, tenant, expiry, audience, roles and customer_id in session-only network logs. ✓ ✓ OpenAI-compatible connections and model features Use model connections, skills, chat, and model-assisted interpretation. — ✓ AI Agent tool use Let the model propose API and MCP calls for your approval. Each proposal names where that call runs. — ✓ Skills across AI features Discover local Agent Skills folders, apply saved defaults and automatic activation across Ask, workflows, and explanations, and inspect which instructions each request included. — ✓ Report inappropriate AI content Report an AI response from its flag, the commands palette or @report. The report opens in your email app and a copy is saved. ✓ ✓ Collections Save, organize, import, and export reusable command lines. ✓ ✓ Markdown Notes Write local Markdown notes, select Obsidian vaults, organize nested folders, tag and search, preview GFM, and paste or capture screenshots. ✓ ✓ Run collections as runbooks Run saved collection lines in order in the current tab. A failure stops the run before the next line, and an endpoint line keeps that saved endpoint. — ✓ Team workspace Share API, MCP, endpoint, and collection definitions through a git folder. — ✓ Product support, feature requests and experimental early access Access product support, submit feature requests, and get early access to experimental features. — ✓ Web Check monitoring Schedule saved API and MCP checks, inspect their history, and copy pairing details and folder paths from the Windows tray menu. — ✓ Appearance and diagnostics Manage themes, shell preferences, and diagnostics. ✓ ✓ Encrypted backup and secret handling Protect local data and move it between installations. ✓ ✓ Forge connections Connect GitHub, GitHub Enterprise Server, GitLab (including self-managed), or Azure DevOps with a token kept in the OS keychain, and test it. List your assigned work, review requests and pull requests with @work (Ctrl+Shift+K, Cmd+Shift+K on macOS), open a pull request’s detail and check out its branch. The detail keeps reviewers, checks and changed files, and adds the description, people’s comments, the commits, and a Datadog section while Datadog still has open feedback. Free connects one forge. ✓ ✓ More than one forge connection Connect GitHub, GitLab and Azure DevOps together, with any number of hosts, instead of one connection. — ✓ Forge watchers and Todos Watch for review requests, approvals, your pull requests, failed or finished pipelines on your branches, and assignments, and collect them on the Todos page with desktop notifications, quiet hours, snooze and done. GitLab rows show a High, Medium or Low pill while Datadog still has open feedback, and Todos can filter by that level. Free watches its one forge connection. ✓ ✓ CI status, job logs and re-run Show the latest CI run for the current tab’s branch on GitHub Actions, GitLab pipelines or Azure DevOps builds, open a job’s log in a read-only tab, and re-run failed jobs when the connection allows write actions. ✓ ✓ Start work from a ticket From a GitHub issue, GitLab issue or Azure DevOps work item, suggest a branch name, create it from the remote default branch in a local clone, remember the ticket in the tab for commit messages, and optionally assign it to you and move it to In progress when the connection allows write actions. Open tabs contribute their folder on this computer, not an SSH remote path. ✓ ✓ Explain a failed CI job Send the last 60 lines of a failed job’s log, with secrets masked, to your own AI connection and show the likely cause and a suggested fix. — ✓ Repo runbooks Find the tasks a repository already defines (package.json scripts, Cargo.toml, .termorq runbooks, Makefile targets and justfile recipes) and run one from @run or the repo chip, asking first the first time per repository, for anything destructive and for anything marked confirm. A task uses the tab’s host folder and does not run in a taken-over terminal. ✓ ✓ Explain a failed command When a shell command fails, send the command, its exit code and the last 40 lines of output, with secrets masked, to your own AI connection and show the likely cause and a suggested fix to put in the prompt. A persistent shell sends the combined terminal text in the order it was received, with that command’s exit status, and leaves out later app output. The fix is placed in the prompt and is not run. — ✓ Run a command on a watcher trigger When a watcher finds something new, ask, then run a chosen command in a new tab at the repository’s local checkout. — ✓ Workflows Enable Workflows in Settings → Experimental (off by default; Pro). Build a workflow in the app workspace or in YAML, choose one active automatic trigger per workflow while keeping each trigger type’s saved settings, and navigate the React Flow canvas with node reordering, connectable decision routes, disconnectable wires, pan, zoom, fit-to-view, auto-arrange the main flow left to right with decision targets centered between their decision and following nodes, vertically balanced around the decision, with saved node positions, and a minimap for larger workflows. The right properties inspector has Settings, Input, Code, Schema, and Output tabs. Set each node’s name and enabled state in Settings; the Input tab lists upstream data with datatype pills. Disconnecting a node’s last explicit incoming route disables it so it cannot run through implicit file order; disconnected decision routes fall through to the next block. Open a code block in a dedicated step editor with upstream input, JSON or text test input, parameters, single-step execution output, and settings panels, and edit syntax-coloured code with line numbers and Bash examples. Run code, HTTP, MCP, and OpenAI-compatible model blocks from triggers, decisions, and loops, pass each block’s declared properties forward, disable individual nodes, copy existing workflows with triggers disarmed, export one workflow as YAML or select several workflows for a versioned bundle with optional password encryption, import one or multiple workflow files as independent copies with triggers paused, and review, pause, edit, or delete runs. Workflow rows show combined definition and run-file size alongside their summary and actions on one desktop row, with Copy available and Delete revealed on hover or focus. Resize the code editor, properties panel, and run history/detail split to fit the work. Included workflows ship read-only. Each run keeps its record and the files it creates in its own folder. The HTTP listener displays its x-api-key in Triggers after the workflow is saved and checks that key on requests, and a Telegram bot can start a run from an allowlisted chat with an optional slash-insensitive command filter and visible polling status. Secrets stay in the OS keychain. — ✓ Session capture to Workflow Capture Ask-mode AI prompts and structured shell, saved API and MCP actions with secrets scrubbed; show active status and captured actions, confirm before finishing, parameterize inputs, and open non-empty captures as editable Workflow drafts. — ✓ Unified execution trace Search redacted shell, API, MCP, model, workflow, runbook, command, and connected CI activity in one session-local timeline. — ✓ Reporting AI content is in every edition, because the Microsoft Store asks every product with generative AI to give users a way to report inappropriate content. See Report AI content.\nChoose Free or Pro from Microsoft Store. Store manages installation and updates for both editions. Pro also includes the termorq-cli runner for headless collections, pipelines, and Web Check tray controls.\nTermorq Free Termorq Pro Paid termorq-cli is a Pro-only companion to the desktop app. It has no edition flag or runtime switch; its available commands follow the build edition.\nRelated pages link Preferences Pro termorq-cli "
             }
         );
     index.add(
             {
-                id:  39 ,
+                id:  40 ,
                 href: "\/docs\/cli\/pipelines\/",
                 title: "Pipelines",
                 description: "Run the Pro-only termorq-cli in GitHub Actions, GitLab CI, and Azure DevOps, and publish JUnit.",
@@ -1007,7 +1031,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  40 ,
+                id:  41 ,
                 href: "\/docs\/models\/report\/",
                 title: "Report AI content",
                 description: "Report an AI response that was harmful, offensive or wrong. The flag on the response, the command list, or @report. Every edition.",
@@ -1016,7 +1040,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  41 ,
+                id:  42 ,
                 href: "\/docs\/get-started\/sample-workspace\/",
                 title: "Sample workspace",
                 description: "Download an offline sample workspace to open in Termorq and explore saved API calls.",
@@ -1025,7 +1049,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  42 ,
+                id:  43 ,
                 href: "\/docs\/terminal\/tabs-and-splits\/",
                 title: "Tabs and splits",
                 description: "Several sessions, two panes, and what each half keeps while you switch.",
@@ -1034,7 +1058,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  43 ,
+                id:  44 ,
                 href: "\/docs\/mcp\/tools\/",
                 title: "Tools, resources, and prompts",
                 description: "Call a tool with flags, read a resource, fill a prompt, and cancel a long call.",
@@ -1043,7 +1067,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  44 ,
+                id:  45 ,
                 href: "\/docs\/cli\/workflow\/",
                 title: "Run a workflow",
                 description: "List, check, and run a saved workflow from termorq-cli without opening the window.",
@@ -1052,7 +1076,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  45 ,
+                id:  46 ,
                 href: "\/docs\/workflows\/",
                 title: "Workflows",
                 description: "Capture shell, API and MCP sessions as draft workflows, set each workflow's name, folder, block timeout, and Markdown description in Settings, then build workflows on a React Flow canvas with freely movable nodes, auto-arrange the main flow left to right with decision targets centered between the decision and following node, pan, zoom, and a minimap for larger flows. Workflow names must be unique, and descriptions expand from the workflow list. Dedicated step editors copy outputs, and Runs copies each block's input and output. Drag output connectors to connect nodes or add new ones; use decision When/Else handles for routed nodes and configure conditions and targets in the right inspector, which has Settings, Input, Code, Schema, and Output tabs in that order.",
@@ -1061,7 +1085,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  46 ,
+                id:  47 ,
                 href: "\/docs\/http\/graphql-and-streams\/",
                 title: "GraphQL and streams",
                 description: "A GraphQL body, server-sent events, and a WebSocket on a saved endpoint.",
@@ -1070,7 +1094,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  47 ,
+                id:  48 ,
                 href: "\/docs\/http\/",
                 title: "HTTP APIs",
                 description: "Connections, endpoints, auth, GraphQL, streams, and import and export.",
@@ -1079,7 +1103,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  48 ,
+                id:  49 ,
                 href: "\/docs\/terminal\/interactive\/",
                 title: "Interactive terminal",
                 description: "Editors, ssh, sudo, and REPLs open a real terminal inside the tab.",
@@ -1088,7 +1112,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  49 ,
+                id:  50 ,
                 href: "\/docs\/mcp\/inspector\/",
                 title: "The inspector",
                 description: "Capabilities, tools, resources, prompts, a JSON-RPC log, and ping.",
@@ -1097,7 +1121,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  50 ,
+                id:  51 ,
                 href: "\/docs\/workflows\/triggers\/",
                 title: "Triggers, runs, and notices",
                 description: "Start a workflow on a schedule, from HTTP or Telegram, and read each run in its own folder.",
@@ -1106,7 +1130,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  51 ,
+                id:  52 ,
                 href: "\/docs\/cli\/web-check\/",
                 title: "Web Check",
                 description: "Schedule saved HTTP endpoints and MCP tools, then inspect availability in a local browser.",
@@ -1115,7 +1139,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  52 ,
+                id:  53 ,
                 href: "\/docs\/terminal\/history\/",
                 title: "History and plain English",
                 description: "Up and down, @history, ghost text, and a",
@@ -1124,7 +1148,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  53 ,
+                id:  54 ,
                 href: "\/docs\/http\/import-and-export\/",
                 title: "Import and export",
                 description: "OpenAPI, Postman, Insomnia, curl, and the encrypted .aitapi file.",
@@ -1133,7 +1157,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  54 ,
+                id:  55 ,
                 href: "\/docs\/mcp\/",
                 title: "MCP",
                 description: "HTTP, Azure, and stdio servers, Azure scope troubleshooting, tools, resources, prompts, and the inspector.",
@@ -1142,7 +1166,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  55 ,
+                id:  56 ,
                 href: "\/docs\/ssh\/",
                 title: "SSH",
                 description: "Saved SSH hosts, sessions in tabs, the remote file panel, and local port forwards (Pro).",
@@ -1151,7 +1175,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  56 ,
+                id:  57 ,
                 href: "\/docs\/forges\/",
                 title: "Forges",
                 description: "GitHub, GitLab and Azure DevOps in the terminal. Your work, reviews, Todos, CI runs and logs, branches from tickets, repo runbooks, and Explain when something fails.",
@@ -1160,7 +1184,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  57 ,
+                id:  58 ,
                 href: "\/docs\/terminal\/find-and-export\/",
                 title: "Find and export",
                 description: "Search the scrollback or one MCP or endpoint response, and save the tab as Markdown with secrets masked.",
@@ -1169,7 +1193,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  58 ,
+                id:  59 ,
                 href: "\/docs\/models\/",
                 title: "Models",
                 description: "Azure OpenAI, OpenAI, or a local server. Chat, explain, and agent mode.",
@@ -1178,7 +1202,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  59 ,
+                id:  60 ,
                 href: "\/docs\/terminal\/dropdown-window\/",
                 title: "Drop-down window",
                 description: "A global shortcut that slides Termorq down from the top of the screen and slides it back up again.",
@@ -1187,7 +1211,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  60 ,
+                id:  61 ,
                 href: "\/docs\/library\/",
                 title: "Library",
                 description: "One list of everything saved, plus encrypted export and import.",
@@ -1196,7 +1220,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  61 ,
+                id:  62 ,
                 href: "\/docs\/terminal\/markdown-runbooks\/",
                 title: "Markdown runbooks",
                 description: "Open a Markdown file, read it with coloured code, and run its shell, PowerShell, Python, JavaScript, TypeScript, and C# blocks with live output.",
@@ -1205,7 +1229,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  62 ,
+                id:  63 ,
                 href: "\/docs\/terminal\/repo-runbooks\/",
                 title: "Repo runbooks",
                 description: "Run the tasks a repository already defines (package.json scripts, Cargo, .termorq runbooks, Makefile targets and justfile recipes) from @run or the repo chip, and explain a failed command.",
@@ -1214,7 +1238,16 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  63 ,
+                id:  64 ,
+                href: "\/docs\/notes\/",
+                title: "Notes",
+                description: "Markdown notes, nested folders, tags, and selected Obsidian vaults.",
+                content: ""
+            }
+        );
+    index.add(
+            {
+                id:  65 ,
                 href: "\/docs\/terminal\/recording\/",
                 title: "Recording and replay",
                 description: "Record a tab as an asciinema .cast with secrets masked, replay it in the app, and export it (Pro).",
@@ -1223,7 +1256,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  64 ,
+                id:  66 ,
                 href: "\/docs\/terminal\/inline-images\/",
                 title: "Inline images",
                 description: "Images in shell output, interactive terminals, and API and MCP results, and the limits that keep them safe.",
@@ -1232,7 +1265,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  65 ,
+                id:  67 ,
                 href: "\/docs\/workspace\/",
                 title: "Team workspace",
                 description: "Share definitions in git. Secrets stay on each machine. You commit.",
@@ -1241,7 +1274,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  66 ,
+                id:  68 ,
                 href: "\/docs\/secrets\/",
                 title: "Secrets",
                 description: "Keychain, macOS approval recovery, vault references, masking, and vulnerability reporting.",
@@ -1250,7 +1283,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  67 ,
+                id:  69 ,
                 href: "\/docs\/cli\/",
                 title: "Termorq CLI",
                 description: "Run saved collections and workflows, or schedule and recover local Web Check monitoring.",
@@ -1259,7 +1292,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  68 ,
+                id:  70 ,
                 href: "\/docs\/settings\/",
                 title: "Settings",
                 description: "Preferences, editions, environments, customers, and session-only MCP and endpoint access token diagnostics including roles and customer_id.",
@@ -1268,7 +1301,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  69 ,
+                id:  71 ,
                 href: "\/docs\/reference\/",
                 title: "Reference",
                 description: "Every @ trigger, the keyboard, the files, and where each secret lives.",
@@ -1277,7 +1310,7 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  70 ,
+                id:  72 ,
                 href: "\/docs\/azure\/",
                 title: "One Azure path",
                 description: "Key Vault, Entra client credentials, Azure OpenAI, and the Azure DevOps pipeline, as one path.",
@@ -1286,11 +1319,11 @@ Table of Contents</button><nav id=toc-mobile><ul class=dropdown-menu><li><a href
         );
     index.add(
             {
-                id:  71 ,
+                id:  73 ,
                 href: "\/docs\/guide-map\/",
                 title: "Guide map",
                 description: "Every chapter, in the order a reader meets it.",
-                content: "The sidebar is this list. Each group below is a chapter.\nPro Web Check running against local-only demo fixtures. Get started linkInstall and run, build a local release, the window and its colour schemes, and the sample workspace you can run offline.\nThe terminal linkThe prompt and command search including a multiline shell command and coloured shell output with an elapsed time, shells including an exported shell variable in an API credential or an MCP stdio environment row that the prompt does not read as you type, a call that stops before it is sent when that name is missing, and a separate value for each tab and WSL distribution that is dropped from history, exports, recordings, notifications, persisted tabs, trace, and model text, tabs and splits including opening a tab with a chosen shell, a # request that stays on this tab, and disk space from the local folder, the interactive terminal including captured output dropped when you take over a running command and Termorq commands during a program, history, find and export, inline images including a persistent shell command that keeps a TIFF, a clickable path, and one notification for a finished line, and a file dropped on an SSH terminal that is not typed into the session, Markdown runbooks including a block that runs in the file’s directory when the file has one, repo runbooks and Explain a failed command including a task that uses the tab’s host folder, recording and replay including a normal persistent-shell command, with an interactive session left as a gap note, and the drop-down window.\nCollections and runbooks linkThe shelf and run as a runbook, including captures, checks, @diff, one submission per line, and an endpoint line that keeps that saved endpoint.\nWorkflows linkBuild a workflow on the React Flow canvas, set a unique workflow name, folder, timeout and Markdown description in its Settings tab, expand formatted descriptions in the workflow list, move and reorder nodes, auto-arrange the main flow left to right with decision targets centered between the decision and following node, save the canvas layout in workflow YAML, drag output connectors onto empty canvas space to add typed nodes, configure node properties in the right inspector, whose tabs are Settings, Input, Code, Schema, and Output, drag decision When/Else handles to add or connect routed nodes, disconnect routes and disable newly orphaned nodes, pan and zoom across the design surface, use the minimap for larger workflows, copy step output and run inputs or outputs, copy and import/export workflows, review triggers, runs, and notices, or work in YAML. Pro. @flow and Ctrl+Shift+G (Cmd+Shift+G). termorq-cli workflow runs one without the window.\nCapture a session as a Workflow with @capture, Ctrl+Alt+R, or the Windows/Linux Ctrl+Shift+R fallback to turn shell, saved API and MCP actions into a redacted, parameterized draft, leaving a persistent-shell command that depends on unsaved shell state in the review list with a prerequisite.\nNode types and code languages explains each block, when to use it, runtime requirements, and the TERMORQ_INPUT contract. Each code block is its own process. Code and block examples provides input/output snippets in all seven languages and YAML examples for the runnable block types.\nHTTP APIs linkConnections including a WSL call that does not use a client certificate and sends the Settings CA, auth including a sign-out that forgets the active tab’s target, calling including a Shell environment name in a path, query, header, or body that stops the call before it is sent when that name is missing, and an execution target of this computer, the invoking tab, or a named WSL distribution and user, where a collection run or Web Check stops instead of sending a WSL target from this computer, GraphQL and streams including a stream that stops before it opens when a shell name is missing, and import and export.\nMCP linkServers including a startup connection that waits for the first tab’s shell names, a connect, test, or tool search that does not start a stdio server when a shell name is missing, and a stored WSL target that is not replaced by this computer, Azure scopes and rejected tokens, OAuth, tools, resources, and prompts, and the inspector.\nSSH linkConnections: create, import from ~/.ssh/config, host keys. Sessions and files: tabs, reconnect, the remote file panel, a file dropped on the SSH terminal that is not typed into the session, and port forwards. Pro.\nForges linkGitHub, GitLab and Azure DevOps in the terminal: connect a forge (@create forge), private GitHub repositories, your work with @work (Ctrl+Shift+K) and pull request detail, Todos and watchers (@todo, Ctrl+Shift+O, Datadog on GitLab), CI status, logs and re-run with Pro Explain failure, start work from a ticket, and repo runbooks (@run), including Explain for a failed persistent-shell command.\nModels linkConnections and ask the model: @chat, Command and Ask, @explain, #, and @agent, including an approved endpoint call that uses this tab’s shell names, and a proposal that names where that call runs, and a persistent-shell failure explained from its exit status and combined terminal text, with the fix left in the prompt. Report AI content: the Report flag, @report, and the saved copy. Every edition.\nAgent Skills: local instruction packs, common and per-area defaults, workflow node bindings, and visible use records. Pro.\nLibrary and sharing linkBrowse and edit and share a file.\nTeam workspace linkOpen, save, status, close. The app never commits.\nSecrets linkOn this machine: keychain, macOS approval recovery, akv://, op://, a WSL endpoint call that does not resolve those references on this computer, masking, and vulnerability reports. Pro secrets and termorq-cli covers headless runs without password dialogs.\nTermorq CLI linkPro termorq-cli: run a collection, run a workflow, secrets, and pipelines. Web Check schedules API and MCP availability checks, started from the Pro Windows tray or macOS Dock and menu-bar controls. A WSL endpoint target stops the check instead of calling this computer. Its blocked-schedule recovery covers credential approval, retry and changed-target review.\nSettings and editions linkFree and Pro feature comparison, preferences including header context visibility and MCP and endpoint access token details in logs, and the forge settings: Forges, Todos and watchers, CI and Start work.\nReference linkCommands including the Pro execution trace (@trace, Ctrl+Shift+E), the keyboard including AltGr left as typing, no focus-only shortcut, and focus staying in a field, and files.\nOne Azure path linkKey Vault, Entra, Azure OpenAI, and Azure DevOps on a single page.\nStill outside this site link Release notes generated from GitHub Releases, next to the version in the header. The version menu can wait until more than one release is documented here. Search is already on (FlexSearch). Short recordings of split panes and streaming output. The screenshots are still frames from the current Termorq interface, Web Check against local-only HTTP fixtures, and Pro termorq-cli transcripts against the sample workspace. Related pages link Install and run Run a collection "
+                content: "The sidebar is this list. Each group below is a chapter.\nPro Web Check running against local-only demo fixtures. Get started linkInstall and run, build a local release, the window and its colour schemes, and the sample workspace you can run offline.\nThe terminal linkThe prompt and command search including a multiline shell command and coloured shell output with an elapsed time, shells including an exported shell variable in an API credential or an MCP stdio environment row that the prompt does not read as you type, a call that stops before it is sent when that name is missing, and a separate value for each tab and WSL distribution that is dropped from history, exports, recordings, notifications, persisted tabs, trace, and model text, tabs and splits including opening a tab with a chosen shell, a # request that stays on this tab, and disk space from the local folder, the interactive terminal including captured output dropped when you take over a running command and Termorq commands during a program, history, find and export, inline images including a persistent shell command that keeps a TIFF, a clickable path, and one notification for a finished line, and a file dropped on an SSH terminal that is not typed into the session, Markdown runbooks including a block that runs in the file’s directory when the file has one, repo runbooks and Explain a failed command including a task that uses the tab’s host folder, recording and replay including a normal persistent-shell command, with an interactive session left as a gap note, and the drop-down window.\nCollections and runbooks linkThe shelf and run as a runbook, including captures, checks, @diff, one submission per line, and an endpoint line that keeps that saved endpoint.\nWorkflows linkBuild a workflow on the React Flow canvas, set a unique workflow name, folder, timeout and Markdown description in its Settings tab, expand formatted descriptions in the workflow list, move and reorder nodes, auto-arrange the main flow left to right with decision targets centered between the decision and following node, save the canvas layout in workflow YAML, drag output connectors onto empty canvas space to add typed nodes, configure node properties in the right inspector, whose tabs are Settings, Input, Code, Schema, and Output, drag decision When/Else handles to add or connect routed nodes, disconnect routes and disable newly orphaned nodes, pan and zoom across the design surface, use the minimap for larger workflows, copy step output and run inputs or outputs, copy and import/export workflows, review triggers, runs, and notices, or work in YAML. Pro. @flow and Ctrl+Shift+G (Cmd+Shift+G). termorq-cli workflow runs one without the window.\nCapture a session as a Workflow with @capture, Ctrl+Alt+R, or the Windows/Linux Ctrl+Shift+R fallback to turn shell, saved API and MCP actions into a redacted, parameterized draft, leaving a persistent-shell command that depends on unsaved shell state in the review list with a prerequisite.\nNode types and code languages explains each block, when to use it, runtime requirements, and the TERMORQ_INPUT contract. Each code block is its own process. Code and block examples provides input/output snippets in all seven languages and YAML examples for the runnable block types.\nHTTP APIs linkConnections including a WSL call that does not use a client certificate and sends the Settings CA, auth including a sign-out that forgets the active tab’s target, calling including a Shell environment name in a path, query, header, or body that stops the call before it is sent when that name is missing, and an execution target of this computer, the invoking tab, or a named WSL distribution and user, where a collection run or Web Check stops instead of sending a WSL target from this computer, GraphQL and streams including a stream that stops before it opens when a shell name is missing, and import and export.\nMCP linkServers including a startup connection that waits for the first tab’s shell names, a connect, test, or tool search that does not start a stdio server when a shell name is missing, and a stored WSL target that is not replaced by this computer, Azure scopes and rejected tokens, OAuth, tools, resources, and prompts, and the inspector.\nSSH linkConnections: create, import from ~/.ssh/config, host keys. Sessions and files: tabs, reconnect, the remote file panel, a file dropped on the SSH terminal that is not typed into the session, and port forwards. Pro.\nForges linkGitHub, GitLab and Azure DevOps in the terminal: connect a forge (@create forge), private GitHub repositories, your work with @work (Ctrl+Shift+K) and pull request detail, Todos and watchers (@todo, Ctrl+Shift+O, Datadog on GitLab), CI status, logs and re-run with Pro Explain failure, start work from a ticket, and repo runbooks (@run), including Explain for a failed persistent-shell command.\nModels linkConnections and ask the model: @chat, Command and Ask, @explain, #, and @agent, including an approved endpoint call that uses this tab’s shell names, and a proposal that names where that call runs, and a persistent-shell failure explained from its exit status and combined terminal text, with the fix left in the prompt. Report AI content: the Report flag, @report, and the saved copy. Every edition.\nAgent Skills: local instruction packs, common and per-area defaults, workflow node bindings, and visible use records. Pro.\nLibrary and sharing linkBrowse and edit and share a file.\nNotes linkMarkdown Notes and Obsidian: source tabs, a resizable folder and file sidebar, nested folders, tags, search, raw and preview editing, screenshots, and selected vaults.\nTeam workspace linkOpen, save, status, close. The app never commits.\nSecrets linkOn this machine: keychain, macOS approval recovery, akv://, op://, a WSL endpoint call that does not resolve those references on this computer, masking, and vulnerability reports. Pro secrets and termorq-cli covers headless runs without password dialogs.\nTermorq CLI linkPro termorq-cli: run a collection, run a workflow, secrets, and pipelines. Web Check schedules API and MCP availability checks, started from the Pro Windows tray or macOS Dock and menu-bar controls. A WSL endpoint target stops the check instead of calling this computer. Its blocked-schedule recovery covers credential approval, retry and changed-target review.\nSettings and editions linkFree and Pro feature comparison, preferences including header context visibility and MCP and endpoint access token details in logs, Notes and Obsidian vault selection, and the forge settings: Forges, Todos and watchers, CI and Start work.\nReference linkCommands including the Pro execution trace (@trace, Ctrl+Shift+E), the keyboard including AltGr left as typing, no focus-only shortcut, and focus staying in a field, and files.\nOne Azure path linkKey Vault, Entra, Azure OpenAI, and Azure DevOps on a single page.\nStill outside this site link Release notes generated from GitHub Releases, next to the version in the header. The version menu can wait until more than one release is documented here. Search is already on (FlexSearch). Short recordings of split panes and streaming output. The screenshots are still frames from the current Termorq interface, Web Check against local-only HTTP fixtures, and Pro termorq-cli transcripts against the sample workspace. Related pages link Install and run Run a collection "
             }
         );
     search.addEventListener('input', show_results, true);
