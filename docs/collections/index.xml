@@ -3,7 +3,8 @@
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/collections.png" alt="The Collections shelf with Billing smoke open: a favourite endpoint line with a capture, an endpoint line, and a shell line" loading="lazy"&gt;
  &lt;figcaption&gt;Collections, with three shelves on the left. Favourites stay at the top; each line has Copy, Run, and ×.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;/p&gt;</description></item><item><title>Run as a runbook</title><link>https://termorq-docs.garrardkitchen.com/docs/collections/runbooks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/collections/runbooks/</guid><description>&lt;p&gt;&lt;strong&gt;Run as runbook&lt;/strong&gt; on the Collections page runs that collection’s lines in the order shown, in the current tab. Favourites run first, then the rest, which is the same order Pro &lt;code&gt;termorq-cli run&lt;/code&gt; uses.&lt;/p&gt;
+&lt;/p&gt;</description></item><item><title>Run as a runbook</title><link>https://termorq-docs.garrardkitchen.com/docs/collections/runbooks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/collections/runbooks/</guid><description>&lt;p&gt;&lt;strong&gt;Pro&lt;/strong&gt; — Running a collection as a runbook is a Pro feature. &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/#upgrade-to-pro"&gt;Upgrade in the app&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Run as runbook&lt;/strong&gt; on the Collections page runs that collection’s lines in the order shown, in the current tab. Favourites run first, then the rest, which is the same order Pro &lt;code&gt;termorq-cli run&lt;/code&gt; uses.&lt;/p&gt;
 &lt;pre class="mermaid"&gt;flowchart LR
  shelf[(&amp;#34;Collection&amp;#34;)]:::store
  fav[&amp;#34;Favourites,\nthen the rest&amp;#34;]:::step

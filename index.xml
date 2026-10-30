@@ -65,23 +65,21 @@
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;Save&lt;/strong&gt; keeps it. &lt;strong&gt;Save and connect&lt;/strong&gt; also opens it in a new tab.&lt;/p&gt;</description></item><item><title>Install Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/get-started/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/get-started/install/</guid><description>&lt;p&gt;Termorq is a Windows desktop app available from the Microsoft Store. It comes in two editions, Free and Pro, each with its own Store listing. Use a badge to open that edition in the Store and install it. See &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/"&gt;Free vs Pro&lt;/a&gt; for what each includes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Save&lt;/strong&gt; keeps it. &lt;strong&gt;Save and connect&lt;/strong&gt; also opens it in a new tab.&lt;/p&gt;</description></item><item><title>Install Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/get-started/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/get-started/install/</guid><description>&lt;p&gt;Termorq is a Windows desktop app. Install the Free app from the Microsoft Store. There is no separate Pro listing: upgrade to Pro in the app when you need it, by selecting a Pro feature or opening &lt;strong&gt;License&lt;/strong&gt; from the jump list (&lt;strong&gt;Ctrl+J&lt;/strong&gt;) and choosing &lt;strong&gt;Try or buy Pro&lt;/strong&gt;. See &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/"&gt;Free vs Pro&lt;/a&gt; for what each includes and how the trial works.&lt;/p&gt;
 &lt;div class="store-badges"&gt;
  &lt;div class="store-badge-item"&gt;
- &lt;span class="store-badge-label"&gt;Termorq Free&lt;/span&gt;
+ &lt;span class="store-badge-label"&gt;Termorq Free · upgrade to Pro in the app&lt;/span&gt;
  &lt;a class="store-badge" href="https://get.microsoft.com/installer/download/9n4wvw3sq6ks?referrer=appbadge&amp;amp;cid=termorq-docs" target="_self"&gt;
  &lt;img src="https://get.microsoft.com/images/en-us%20light.svg" width="200" alt="Get Termorq Free from Microsoft"&gt;
  &lt;/a&gt;
  &lt;/div&gt;
- &lt;div class="store-badge-item"&gt;
- &lt;span class="store-badge-label"&gt;Termorq Pro &lt;span class="store-badge-paid"&gt;Paid&lt;/span&gt;&lt;/span&gt;
- &lt;a class="store-badge" href="https://get.microsoft.com/installer/download/9ng0hk4w5xxg?referrer=appbadge&amp;amp;cid=termorq-docs" target="_self"&gt;
- &lt;img src="https://get.microsoft.com/images/en-us%20dark.svg" width="200" alt="Get Termorq Pro from Microsoft"&gt;
- &lt;/a&gt;
- &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;p&gt;After installation, open &lt;strong&gt;Termorq&lt;/strong&gt; from the Windows Start menu. Microsoft Store delivers app updates for the Store edition.&lt;/p&gt;</description></item><item><title>Model connections</title><link>https://termorq-docs.garrardkitchen.com/docs/models/connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/models/connections/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@create openai
+&lt;p&gt;After installation, open &lt;strong&gt;Termorq&lt;/strong&gt; from the Windows Start menu. Microsoft Store delivers app updates.&lt;/p&gt;</description></item><item><title>Model connections</title><link>https://termorq-docs.garrardkitchen.com/docs/models/connections/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/models/connections/</guid><description>&lt;p&gt;&lt;strong&gt;Pro&lt;/strong&gt; — Model connections are a Pro feature. &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/#upgrade-to-pro"&gt;Upgrade in the app&lt;/a&gt;.&lt;/p&gt;
+
+
+ 
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@create openai
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@openai&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;code&gt;@create openai&lt;/code&gt; asks for a name, a provider, an endpoint, a model or deployment, an API key, and an optional system prompt.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
@@ -129,7 +127,7 @@
  linkStyle 1,2 stroke:#FFC131,stroke-width:2.5px
  linkStyle 3,4 stroke:#67e8f9,stroke-width:2.5px
 &lt;/pre&gt;
-&lt;h2 id="the-keychain"&gt;The keychain &lt;a href="#the-keychain" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;API keys, bearer tokens, basic passwords, client secrets, the OpenAI key, the MCP Azure client secret, and stdio env values whose names look like secrets use the OS keychain. The service name is &lt;code&gt;com.garrardkitchen.ai-terminal&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Open, save, status, close</title><link>https://termorq-docs.garrardkitchen.com/docs/workspace/team-folder/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/workspace/team-folder/</guid><description>&lt;p&gt;Team workspace is a Pro feature. The &lt;code&gt;@workspace&lt;/code&gt; commands are available in Pro builds; Free builds keep local definitions and collections.&lt;/p&gt;
+&lt;h2 id="the-keychain"&gt;The keychain &lt;a href="#the-keychain" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;API keys, bearer tokens, basic passwords, client secrets, the OpenAI key, the MCP Azure client secret, and stdio env values whose names look like secrets use the OS keychain. The service name is &lt;code&gt;termorq&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Open, save, status, close</title><link>https://termorq-docs.garrardkitchen.com/docs/workspace/team-folder/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/workspace/team-folder/</guid><description>&lt;p&gt;Team workspace is a Pro feature. The &lt;code&gt;@workspace&lt;/code&gt; commands are available in Pro builds; Free builds keep local definitions and collections.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/library-import.png" alt="Library import menu showing collection and workspace transfer formats" loading="lazy"&gt;
  &lt;figcaption&gt;Transfer formats available in the Termorq library.&lt;/figcaption&gt;
@@ -257,8 +255,9 @@
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/collections.png" alt="The Collections shelf with Billing smoke open: a favourite endpoint line with a capture, an endpoint line, and a shell line" loading="lazy"&gt;
  &lt;figcaption&gt;Collections, with three shelves on the left. Favourites stay at the top; each line has Copy, Run, and ×.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;/p&gt;</description></item><item><title>Capture a session as a Workflow</title><link>https://termorq-docs.garrardkitchen.com/docs/workflows/session-capture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/workflows/session-capture/</guid><description>&lt;p&gt;Use &lt;strong&gt;Capture session&lt;/strong&gt; from the &lt;code&gt;@&lt;/code&gt; command list, type &lt;code&gt;@capture&lt;/code&gt;, or press &lt;strong&gt;Ctrl+Alt+R&lt;/strong&gt; (&lt;strong&gt;Ctrl+Shift+R&lt;/strong&gt; is an alternate on Windows and Linux where AltGr occupies Ctrl+Alt; macOS uses &lt;strong&gt;Cmd+Option+R&lt;/strong&gt;). Capture is Pro and applies to the current tab. Ask the AI in the prompt, run a shell command, call a saved endpoint, or call an MCP tool as usual. Start capture before the actions you want to include.&lt;/p&gt;
-&lt;p&gt;While capture is active, a pulsing &lt;strong&gt;Capturing&lt;/strong&gt; pill in the footer shows how many actions have been recorded so far. Select the pill to see the action list and choose &lt;strong&gt;Finish and review&lt;/strong&gt; or &lt;strong&gt;Keep capturing&lt;/strong&gt;. The pill stays visible if you switch tabs.&lt;/p&gt;</description></item><item><title>Ask the model</title><link>https://termorq-docs.garrardkitchen.com/docs/models/ask/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/models/ask/</guid><description>&lt;p&gt;Each of these uses the OpenAI connection selected on the &lt;strong&gt;current tab&lt;/strong&gt;. Nothing is sent when that pill says none.&lt;/p&gt;
+&lt;/p&gt;</description></item><item><title>Capture a session as a Workflow</title><link>https://termorq-docs.garrardkitchen.com/docs/workflows/session-capture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/workflows/session-capture/</guid><description>&lt;p&gt;&lt;strong&gt;Pro&lt;/strong&gt; — Capturing a session as a Workflow is a Pro feature. &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/#upgrade-to-pro"&gt;Upgrade in the app&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Use &lt;strong&gt;Capture session&lt;/strong&gt; from the &lt;code&gt;@&lt;/code&gt; command list, type &lt;code&gt;@capture&lt;/code&gt;, or press &lt;strong&gt;Ctrl+Alt+R&lt;/strong&gt; (&lt;strong&gt;Ctrl+Shift+R&lt;/strong&gt; is an alternate on Windows and Linux where AltGr occupies Ctrl+Alt; macOS uses &lt;strong&gt;Cmd+Option+R&lt;/strong&gt;). Capture is Pro and applies to the current tab. Ask the AI in the prompt, run a shell command, call a saved endpoint, or call an MCP tool as usual. Start capture before the actions you want to include.&lt;/p&gt;</description></item><item><title>Ask the model</title><link>https://termorq-docs.garrardkitchen.com/docs/models/ask/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/models/ask/</guid><description>&lt;p&gt;&lt;strong&gt;Pro&lt;/strong&gt; — &lt;code&gt;@chat&lt;/code&gt;, Ask, Agent, &lt;code&gt;@explain&lt;/code&gt;, &lt;code&gt;#&lt;/code&gt; lines and &lt;code&gt;@agent&lt;/code&gt; need Termorq Pro. &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/#upgrade-to-pro"&gt;Upgrade in the app&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Each of these uses the OpenAI connection selected on the &lt;strong&gt;current tab&lt;/strong&gt;. Nothing is sent when that pill says none.&lt;/p&gt;
 &lt;pre class="mermaid"&gt;flowchart LR
  you[&amp;#34;You&amp;#34;]:::step
  approve{&amp;#34;You approve?&amp;#34;}:::gate
@@ -431,7 +430,8 @@
  
  &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@mcp signin Docs
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@mcp signout Docs&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;code&gt;@mcp signin &amp;lt;server&amp;gt;&lt;/code&gt; finds the authorization server from the &lt;code&gt;WWW-Authenticate&lt;/code&gt; &lt;code&gt;resource_metadata&lt;/code&gt; link (protected resource metadata, RFC 9728), and falls back to the well-known URLs. It then reads &lt;code&gt;/.well-known/oauth-authorization-server&lt;/code&gt; (RFC 8414), then OpenID discovery.&lt;/p&gt;</description></item><item><title>Run as a runbook</title><link>https://termorq-docs.garrardkitchen.com/docs/collections/runbooks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/collections/runbooks/</guid><description>&lt;p&gt;&lt;strong&gt;Run as runbook&lt;/strong&gt; on the Collections page runs that collection’s lines in the order shown, in the current tab. Favourites run first, then the rest, which is the same order Pro &lt;code&gt;termorq-cli run&lt;/code&gt; uses.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@mcp signin &amp;lt;server&amp;gt;&lt;/code&gt; finds the authorization server from the &lt;code&gt;WWW-Authenticate&lt;/code&gt; &lt;code&gt;resource_metadata&lt;/code&gt; link (protected resource metadata, RFC 9728), and falls back to the well-known URLs. It then reads &lt;code&gt;/.well-known/oauth-authorization-server&lt;/code&gt; (RFC 8414), then OpenID discovery.&lt;/p&gt;</description></item><item><title>Run as a runbook</title><link>https://termorq-docs.garrardkitchen.com/docs/collections/runbooks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/collections/runbooks/</guid><description>&lt;p&gt;&lt;strong&gt;Pro&lt;/strong&gt; — Running a collection as a runbook is a Pro feature. &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/#upgrade-to-pro"&gt;Upgrade in the app&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Run as runbook&lt;/strong&gt; on the Collections page runs that collection’s lines in the order shown, in the current tab. Favourites run first, then the rest, which is the same order Pro &lt;code&gt;termorq-cli run&lt;/code&gt; uses.&lt;/p&gt;
 &lt;pre class="mermaid"&gt;flowchart LR
  shelf[(&amp;#34;Collection&amp;#34;)]:::store
  fav[&amp;#34;Favourites,\nthen the rest&amp;#34;]:::step
@@ -460,7 +460,8 @@
 &lt;li&gt;The connection&amp;rsquo;s vault reference, &lt;code&gt;akv://…&lt;/code&gt; or &lt;code&gt;op://…&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;The app&amp;rsquo;s secret store, when that store can be reached on this machine.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;The variable name is the connection name in upper case, with every other character written as &lt;code&gt;_&lt;/code&gt;. &lt;strong&gt;Users API&lt;/strong&gt; becomes &lt;code&gt;AIT_SECRET_USERS_API&lt;/code&gt;. &lt;strong&gt;gh-prod.v2&lt;/strong&gt; becomes &lt;code&gt;AIT_SECRET_GH_PROD_V2&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Sessions and files</title><link>https://termorq-docs.garrardkitchen.com/docs/ssh/sessions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/ssh/sessions/</guid><description>&lt;h2 id="open-a-session"&gt;Open a session &lt;a href="#open-a-session" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The variable name is the connection name in upper case, with every other character written as &lt;code&gt;_&lt;/code&gt;. &lt;strong&gt;Users API&lt;/strong&gt; becomes &lt;code&gt;AIT_SECRET_USERS_API&lt;/code&gt;. &lt;strong&gt;gh-prod.v2&lt;/strong&gt; becomes &lt;code&gt;AIT_SECRET_GH_PROD_V2&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Sessions and files</title><link>https://termorq-docs.garrardkitchen.com/docs/ssh/sessions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/ssh/sessions/</guid><description>&lt;p&gt;&lt;strong&gt;Pro&lt;/strong&gt; — SSH sessions need Termorq Pro. &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/#upgrade-to-pro"&gt;Upgrade in the app&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="open-a-session"&gt;Open a session &lt;a href="#open-a-session" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;
 
  
  &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#d8dee9;background-color:#2e3440;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;@ssh
@@ -520,101 +521,19 @@
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/start-work-palette.png" alt="The @work palette with issue #79 selected and its Start work button, and the footer hint s start work" loading="lazy"&gt;
  &lt;figcaption&gt;Start work is on issues and work items, not on pull requests.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;/p&gt;</description></item><item><title>Agent Skills</title><link>https://termorq-docs.garrardkitchen.com/docs/models/skills/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/models/skills/</guid><description>&lt;p&gt;Agent Skills are local &lt;code&gt;SKILL.md&lt;/code&gt; instruction packs that Termorq can include in model requests. This is separate from the &lt;code&gt;/&lt;/code&gt; prompt palette: those entries are Termorq prompt recipes; Agent Skills are portable instructions discovered from folders on your account.&lt;/p&gt;
+&lt;/p&gt;</description></item><item><title>Agent Skills</title><link>https://termorq-docs.garrardkitchen.com/docs/models/skills/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/models/skills/</guid><description>&lt;p&gt;&lt;strong&gt;Pro&lt;/strong&gt; — Agent Skills are a Pro feature. &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/#upgrade-to-pro"&gt;Upgrade in the app&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Agent Skills are local &lt;code&gt;SKILL.md&lt;/code&gt; instruction packs that Termorq can include in model requests. This is separate from the &lt;code&gt;/&lt;/code&gt; prompt palette: those entries are Termorq prompt recipes; Agent Skills are portable instructions discovered from folders on your account.&lt;/p&gt;
 &lt;h2 id="choose-sources-and-defaults"&gt;Choose sources and defaults &lt;a href="#choose-sources-and-defaults" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Open &lt;strong&gt;Settings → AI → Skills&lt;/strong&gt;. Skill discovery is on by default and reads these folders under the selected home folder (blank uses your operating-system account home). Select &lt;strong&gt;Refresh&lt;/strong&gt; after adding or changing skill files to rescan the enabled folders. Providers use distinct coloured pills; each skill shows a short description you can expand, and &lt;strong&gt;Common defaults&lt;/strong&gt; starts collapsed:&lt;/p&gt;</description></item><item><title>Calling an endpoint</title><link>https://termorq-docs.garrardkitchen.com/docs/http/calling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/http/calling/</guid><description>&lt;p&gt;&lt;code&gt;@create endpoint&lt;/code&gt; asks for the connection, the name, the method, and the path. Methods are &lt;code&gt;GET&lt;/code&gt;, &lt;code&gt;POST&lt;/code&gt;, &lt;code&gt;PUT&lt;/code&gt;, &lt;code&gt;PATCH&lt;/code&gt;, &lt;code&gt;DELETE&lt;/code&gt;, &lt;code&gt;HEAD&lt;/code&gt;, and &lt;code&gt;OPTIONS&lt;/code&gt;. You can add query defaults, path parameters, and extra headers.&lt;/p&gt;
-&lt;p&gt;The execution target is &lt;strong&gt;This computer&lt;/strong&gt;, the &lt;strong&gt;Invoking tab&lt;/strong&gt;, or a &lt;strong&gt;Named WSL distribution&lt;/strong&gt; and Linux user. A blank user is that distribution&amp;rsquo;s default. An endpoint saved before targets existed stays on this computer. The form shows that runtime before test and call. A run keeps the resolved computer or distribution together with the endpoint revision. The named user stays on the saved target used for that call. A collection run and Web Check do not send a WSL target from this computer. They stop instead.&lt;/p&gt;</description></item><item><title>Code and block examples</title><link>https://termorq-docs.garrardkitchen.com/docs/workflows/code-examples/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/workflows/code-examples/</guid><description>&lt;p&gt;These examples use the &lt;a href="https://termorq-docs.garrardkitchen.com/docs/workflows/node-types/#what-termorq_input-is-for"&gt;input and output contract&lt;/a&gt;. &lt;code&gt;TERMORQ_INPUT&lt;/code&gt; contains a &lt;strong&gt;path&lt;/strong&gt;. Read that file; do not parse the environment variable itself as JSON. The code runs locally, so install the language runtime listed in &lt;a href="https://termorq-docs.garrardkitchen.com/docs/workflows/node-types/#all-supported-code-languages"&gt;Node types and code languages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The execution target is &lt;strong&gt;This computer&lt;/strong&gt;, the &lt;strong&gt;Invoking tab&lt;/strong&gt;, or a &lt;strong&gt;Named WSL distribution&lt;/strong&gt; and Linux user. A blank user is that distribution&amp;rsquo;s default. An endpoint saved before targets existed stays on this computer. The form shows that runtime before test and call. A run keeps the resolved computer or distribution together with the endpoint revision. The named user stays on the saved target used for that call. A collection run and Web Check do not send a WSL target from this computer. They stop instead.&lt;/p&gt;</description></item><item><title>Code and block examples</title><link>https://termorq-docs.garrardkitchen.com/docs/workflows/code-examples/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/workflows/code-examples/</guid><description>&lt;p&gt;&lt;strong&gt;Pro&lt;/strong&gt; — Workflows are a Pro feature. &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/#upgrade-to-pro"&gt;Upgrade in the app&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;These examples use the &lt;a href="https://termorq-docs.garrardkitchen.com/docs/workflows/node-types/#what-termorq_input-is-for"&gt;input and output contract&lt;/a&gt;. &lt;code&gt;TERMORQ_INPUT&lt;/code&gt; contains a &lt;strong&gt;path&lt;/strong&gt;. Read that file; do not parse the environment variable itself as JSON. The code runs locally, so install the language runtime listed in &lt;a href="https://termorq-docs.garrardkitchen.com/docs/workflows/node-types/#all-supported-code-languages"&gt;Node types and code languages&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="start-with-a-code-block"&gt;Start with a Code block &lt;a href="#start-with-a-code-block" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Create a workflow, switch to &lt;strong&gt;YAML&lt;/strong&gt;, and paste this complete example. Return to &lt;strong&gt;Editor&lt;/strong&gt;, select &lt;strong&gt;Echo&lt;/strong&gt;, open its code editor, and choose &lt;strong&gt;Execute step&lt;/strong&gt;. The saved sample supplies the input for this isolated test.&lt;/p&gt;</description></item><item><title>Files</title><link>https://termorq-docs.garrardkitchen.com/docs/reference/files/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/reference/files/</guid><description>&lt;p&gt;Two places hold state. The &lt;strong&gt;data folder&lt;/strong&gt; is this machine. The &lt;strong&gt;workspace folder&lt;/strong&gt; is what you commit.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/library-import.png" alt="Library import menu showing the supported transfer file types" loading="lazy"&gt;
  &lt;figcaption&gt;Import choices include individual files and a full backup.&lt;/figcaption&gt;
 &lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id="data-folder"&gt;Data folder &lt;a href="#data-folder" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;com.garrardkitchen.ai-terminal&lt;/code&gt; under the platform data directory.&lt;/p&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;Platform&lt;/th&gt;
- &lt;th&gt;Path&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;macOS&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;~/Library/Application Support/com.garrardkitchen.ai-terminal&lt;/code&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Linux&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;$XDG_DATA_HOME&lt;/code&gt; or &lt;code&gt;~/.local/share/com.garrardkitchen.ai-terminal&lt;/code&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Windows&lt;/td&gt;
- &lt;td&gt;&lt;code&gt;%APPDATA%\com.garrardkitchen.ai-terminal&lt;/code&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;File&lt;/th&gt;
- &lt;th&gt;What it is&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;collections.json&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;The shelf. Older &lt;code&gt;localStorage&lt;/code&gt; data is moved here once&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;workflows/user/&amp;lt;id&amp;gt;.yml&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;A workflow you saved. Included workflows ship read-only with the app&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;workflows/runs/&amp;lt;workflow id&amp;gt;/&amp;lt;run id&amp;gt;/&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;One run: &lt;code&gt;run.json&lt;/code&gt;, masked block logs, and &lt;code&gt;files/&lt;/code&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;command_history.json&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;The last 500 commands and their times&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;api_connections.json&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;API connections, without secret values&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;api_endpoints.json&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Endpoints&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;openai_connections.json&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Model connections, without the key&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;mcp_connections.json&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;MCP servers, without secret values&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;ssh_connections.json&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;SSH connections, without passwords or passphrases&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;ssh_known_hosts&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Host keys you trusted, in OpenSSH format. &lt;code&gt;~/.ssh/known_hosts&lt;/code&gt; is read, never written&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;mcp_prefs.json&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Favourites and related MCP preferences&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;network_settings.json&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;The additional CA certificate setting&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;reports/&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;&lt;a href="https://termorq-docs.garrardkitchen.com/docs/models/report/"&gt;AI content reports&lt;/a&gt;: &lt;code&gt;ai-report-YYYYMMDD-HHMMSS.json&lt;/code&gt; and &lt;code&gt;.md&lt;/code&gt;, UTC time. No API key. A Microsoft Store install keeps this folder under &lt;code&gt;%LOCALAPPDATA%\Packages\&amp;lt;package family&amp;gt;\LocalCache\Roaming\com.garrardkitchen.ai-terminal&lt;/code&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;The keychain service is &lt;code&gt;com.garrardkitchen.ai-terminal&lt;/code&gt;. An AES-256-GCM fallback file lives in this folder when the keychain cannot be used. Do not edit it to plant a token.&lt;/p&gt;</description></item><item><title>Free and Pro feature comparison</title><link>https://termorq-docs.garrardkitchen.com/docs/settings/editions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/settings/editions/</guid><description>&lt;p&gt;Termorq has Free and Pro editions. This table shows which features each edition includes. The edition is the &lt;strong&gt;FREE&lt;/strong&gt; or &lt;strong&gt;PRO&lt;/strong&gt; pill at the right of the header. Free also shows &lt;strong&gt;created by Garrard Kitchen&lt;/strong&gt; on the footer. Open &lt;strong&gt;License&lt;/strong&gt; from the jump list (&lt;strong&gt;Ctrl+J&lt;/strong&gt;) to compare plans; the current build is highlighted.&lt;/p&gt;
+&lt;h2 id="data-folder"&gt;Data folder &lt;a href="#data-folder" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;code&gt;termorq&lt;/code&gt; under the platform data directory.&lt;/p&gt;
+&lt;p&gt;Builds before this change used &lt;code&gt;com.garrardkitchen.ai-terminal&lt;/code&gt;. When the app or &lt;code&gt;termorq-cli&lt;/code&gt; starts and finds that folder, it moves the contents into &lt;code&gt;termorq&lt;/code&gt;. If a file exists in both, the copy in &lt;code&gt;termorq&lt;/code&gt; is kept. The old folder is then deleted. If any copy fails, the old folder is kept and the move runs again at the next start. The result goes to the OS log and to &lt;code&gt;logs/app-data-migration.log&lt;/code&gt;:&lt;/p&gt;</description></item><item><title>Free and Pro feature comparison</title><link>https://termorq-docs.garrardkitchen.com/docs/settings/editions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/settings/editions/</guid><description>&lt;p&gt;Termorq has Free and Pro editions. This table shows which features each edition includes. The edition is the &lt;strong&gt;FREE&lt;/strong&gt;, &lt;strong&gt;TRIAL&lt;/strong&gt; or &lt;strong&gt;PRO&lt;/strong&gt; pill at the right of the header. Free also shows &lt;strong&gt;created by Garrard Kitchen&lt;/strong&gt; on the footer. Open &lt;strong&gt;License&lt;/strong&gt; from the jump list (&lt;strong&gt;Ctrl+J&lt;/strong&gt;) to compare plans; the current build is highlighted.&lt;/p&gt;
 &lt;p&gt;The root &lt;code&gt;features.yml&lt;/code&gt; manifest is the source of this feature list and the app&amp;rsquo;s feature availability. Every new feature must have an explicit plan assignment there.&lt;/p&gt;</description></item><item><title>Pipelines</title><link>https://termorq-docs.garrardkitchen.com/docs/cli/pipelines/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/cli/pipelines/</guid><description>&lt;p&gt;&lt;code&gt;termorq-cli&lt;/code&gt; is a Pro-only runner. A pipeline downloads the Pro CLI release asset for its runner, points it at the checkout with an absolute path, and passes each connection secret in from the forge&amp;rsquo;s secret store. The JUnit document is written to standard output. Warnings stay on standard error, so a skipped step does not corrupt the XML.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/cli/termorq-cli-025-run-smoke.png" alt="Pro termorq-cli successfully runs the sample Smoke collection" loading="lazy"&gt;
@@ -746,7 +665,8 @@
  &lt;/tr&gt;
  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;A section the server has no capability for shows an empty state.&lt;/p&gt;</description></item><item><title>Triggers, runs, and notices</title><link>https://termorq-docs.garrardkitchen.com/docs/workflows/triggers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/workflows/triggers/</guid><description>&lt;p&gt;A workflow runs when you press &lt;strong&gt;Run&lt;/strong&gt;, or when its selected automatic trigger fires. Choose one automatic trigger in &lt;strong&gt;Triggers&lt;/strong&gt;. Switching types keeps each type&amp;rsquo;s saved settings, but only the selected type starts automatic runs. Older workflows with several configured triggers keep their settings when you choose which one is active. Manual runs stay available in the editor. Triggers run only while Termorq is open. A missed schedule is not replayed. One workflow has one active run. A second start is recorded as &lt;strong&gt;Skipped · already running&lt;/strong&gt;. Two workflows may run at once.&lt;/p&gt;</description></item><item><title>Web Check</title><link>https://termorq-docs.garrardkitchen.com/docs/cli/web-check/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/cli/web-check/</guid><description>&lt;p&gt;Web Check is a Pro feature, powered by the Pro-only &lt;code&gt;termorq-cli&lt;/code&gt;. In the installed Windows app, open Termorq&amp;rsquo;s notification-area icon and choose &lt;strong&gt;Start Web Check&lt;/strong&gt;. On macOS, use the menu-bar or Dock menu. Choose &lt;strong&gt;Show Web Check output&lt;/strong&gt; to open the local URL and pairing code, then enter that code in the browser.&lt;/p&gt;
+&lt;p&gt;A section the server has no capability for shows an empty state.&lt;/p&gt;</description></item><item><title>Triggers, runs, and notices</title><link>https://termorq-docs.garrardkitchen.com/docs/workflows/triggers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/workflows/triggers/</guid><description>&lt;p&gt;&lt;strong&gt;Pro&lt;/strong&gt; — Workflows, including their triggers and runs, are a Pro feature. &lt;a href="https://termorq-docs.garrardkitchen.com/docs/settings/editions/#upgrade-to-pro"&gt;Upgrade in the app&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A workflow runs when you press &lt;strong&gt;Run&lt;/strong&gt;, or when its selected automatic trigger fires. Choose one automatic trigger in &lt;strong&gt;Triggers&lt;/strong&gt;. Switching types keeps each type&amp;rsquo;s saved settings, but only the selected type starts automatic runs. Older workflows with several configured triggers keep their settings when you choose which one is active. Manual runs stay available in the editor. Triggers run only while Termorq is open. A missed schedule is not replayed. One workflow has one active run. A second start is recorded as &lt;strong&gt;Skipped · already running&lt;/strong&gt;. Two workflows may run at once.&lt;/p&gt;</description></item><item><title>Web Check</title><link>https://termorq-docs.garrardkitchen.com/docs/cli/web-check/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/cli/web-check/</guid><description>&lt;p&gt;Web Check is a Pro feature, powered by the Pro-only &lt;code&gt;termorq-cli&lt;/code&gt;. In the installed Windows app, open Termorq&amp;rsquo;s notification-area icon and choose &lt;strong&gt;Start Web Check&lt;/strong&gt;. On macOS, use the menu-bar or Dock menu. Choose &lt;strong&gt;Show Web Check output&lt;/strong&gt; to open the local URL and pairing code, then enter that code in the browser.&lt;/p&gt;
 &lt;p&gt;The tray menu starts with the &lt;a href="https://termorq-docs.garrardkitchen.com/docs/terminal/recording/#from-the-tray-pro"&gt;recording rows&lt;/a&gt; (&lt;strong&gt;Start recording&lt;/strong&gt; or &lt;strong&gt;Stop recording&lt;/strong&gt; and &lt;strong&gt;Cancel recording&lt;/strong&gt;, then &lt;strong&gt;Open recording…&lt;/strong&gt;), then a &lt;strong&gt;Web Check&lt;/strong&gt; submenu (&lt;strong&gt;Start Web Check&lt;/strong&gt;, &lt;strong&gt;Show Web Check output&lt;/strong&gt;, &lt;strong&gt;Stop Web Check&lt;/strong&gt;, &lt;strong&gt;Open Web Check URL&lt;/strong&gt;). On Windows and macOS a &lt;strong&gt;Copy&lt;/strong&gt; submenu, after a divider, copies the URL, pairing code, data folder path, and source folder path. &lt;strong&gt;Open docs (help)&lt;/strong&gt; opens this guide. On macOS click the Termorq icon in the menu bar to open the menu; on Windows right-click the notification-area icon. &lt;strong&gt;Open Web Check URL&lt;/strong&gt; and &lt;strong&gt;Copy Web Check URL&lt;/strong&gt; need Web Check running.&lt;/p&gt;</description></item><item><title>History and plain English</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/history/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/history/</guid><description>&lt;h2 id="command-history"&gt;Command history &lt;a href="#command-history" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/cli/termorq-cli-025-run-smoke.png" alt="Pro termorq-cli output from a successful sample collection run" loading="lazy"&gt;
  &lt;figcaption&gt;Pro termorq-cli prints each step and its result; interactive history remains scoped to the app tab.&lt;/figcaption&gt;
