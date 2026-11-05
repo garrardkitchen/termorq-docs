@@ -51,6 +51,10 @@
  &lt;td&gt;An MCP tool on a server connected to this tab&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;?&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Saved collection lines, favourites first. Enter runs the highlighted line. Tab edits a value already stored on it&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
  &lt;td&gt;&lt;code&gt;/explain how to make tea&lt;/code&gt;&lt;/td&gt;
  &lt;td&gt;A skill from &lt;code&gt;skills.yaml&lt;/code&gt;&lt;/td&gt;
  &lt;/tr&gt;
@@ -60,7 +64,7 @@
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td&gt;Agent on, then &lt;code&gt;why was that empty?&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;The same chat, without typing &lt;code&gt;@chat&lt;/code&gt;. A line that starts with &lt;code&gt;@&lt;/code&gt; still runs&lt;/td&gt;
+ &lt;td&gt;The same chat, without typing &lt;code&gt;@chat&lt;/code&gt;. A line that starts with &lt;code&gt;@&lt;/code&gt; still runs. &lt;code&gt;?&lt;/code&gt; opens collections and is not sent to the model&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td&gt;&lt;code&gt;# find files over 100 MB here&lt;/code&gt;&lt;/td&gt;
