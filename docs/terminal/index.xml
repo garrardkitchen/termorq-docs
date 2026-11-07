@@ -1,86 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The terminal on Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/</link><description>Recent content in The terminal on Termorq</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://termorq-docs.garrardkitchen.com/docs/terminal/index.xml" rel="self" type="application/rss+xml"/><item><title>The prompt</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/the-prompt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/the-prompt/</guid><description>&lt;p&gt;You type in one place, on the line after the latest output. The first characters decide what runs. The accent caret follows the insertion point as you edit the line. The folder is on the footer.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The terminal on Termorq</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/</link><description>Recent content in The terminal on Termorq</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://termorq-docs.garrardkitchen.com/docs/terminal/index.xml" rel="self" type="application/rss+xml"/><item><title>The prompt</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/the-prompt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/the-prompt/</guid><description>&lt;p&gt;You type in one place, on the line after the latest output. The first characters decide what runs. The accent caret follows the insertion point as you edit the line. The folder is on the footer. When that folder is inside a Git repository, a read-only Git chip sits beside the shell name.&lt;/p&gt;
 &lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/window.png" alt="Termorq prompt after an @endpoint call, ready for the next command" loading="lazy"&gt;
  &lt;figcaption&gt;The prompt sits under the last result. The scrollback marks the call with an endpoint pill, its time, and the status.&lt;/figcaption&gt;
 &lt;/figure&gt;
-&lt;/p&gt;
-&lt;pre class="mermaid"&gt;flowchart LR
- line[&amp;#34;The line you type&amp;#34;]:::step
- shell[&amp;#34;Shell&amp;#34;]:::out
- endpoint[&amp;#34;@endpoint&amp;#34;]:::step
- tool[&amp;#34;@tool&amp;#34;]:::store
- skill[&amp;#34;/ skill&amp;#34;]:::gate
- model{&amp;#34;@chat # @agent&amp;#34;}:::gate
-
- line --&amp;gt; shell
- line --&amp;gt; endpoint
- line --&amp;gt; tool
- line --&amp;gt; skill
- line --&amp;gt; model
-
- classDef store fill:#134e4a,stroke:#5eead4,stroke-width:2px,color:#f4fbfa
- classDef gate fill:#FFC131,stroke:#b45309,stroke-width:2px,color:#1a1404
- classDef step fill:#0f766e,stroke:#99f6e4,stroke-width:2px,color:#f4fbfa
- classDef out fill:#155e75,stroke:#67e8f9,stroke-width:2px,color:#f4fbfa
- linkStyle 0,2 stroke:#5eead4,stroke-width:2.5px
- linkStyle 1 stroke:#67e8f9,stroke-width:2.5px
- linkStyle 3,4 stroke:#FFC131,stroke-width:2.5px
-&lt;/pre&gt;
-&lt;table&gt;
- &lt;thead&gt;
- &lt;tr&gt;
- &lt;th&gt;You type&lt;/th&gt;
- &lt;th&gt;What runs&lt;/th&gt;
- &lt;/tr&gt;
- &lt;/thead&gt;
- &lt;tbody&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;The tab’s shell. Output streams in. &lt;code&gt;cd&lt;/code&gt; and &lt;code&gt;export&lt;/code&gt; carry to the next line on bash, zsh, sh, and PowerShell&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;A command on more than one line&lt;/td&gt;
- &lt;td&gt;One submission in that shell. bash, zsh, and sh &lt;code&gt;eval&lt;/code&gt; it once from a single line, so &lt;code&gt;!&lt;/code&gt; is not history-expanded and &lt;code&gt;read&lt;/code&gt; gets your answer from the terminal. fish &lt;code&gt;eval&lt;/code&gt;s it the same way from one line, so a syntax error is reported at once; fish syntax applies (&lt;code&gt;for i in (seq 1 5) … end&lt;/code&gt;). PowerShell uses a dot-sourced block. Command Prompt runs it as a batch file with &lt;code&gt;call&lt;/code&gt; in the same &lt;code&gt;cmd.exe&lt;/code&gt;, so batch syntax applies (&lt;a href="https://termorq-docs.garrardkitchen.com/docs/terminal/the-prompt/#multiline-commands"&gt;Multiline commands&lt;/a&gt;). A shell that has not published a command status is refused before the command is sent&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;@endpoint List users&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;A saved HTTP call&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;@tool search --query tea&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;An MCP tool on a server connected to this tab&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;?&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;Saved collection lines, favourites first. Enter runs the highlighted line. Tab edits a value already stored on it&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;/explain how to make tea&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;A skill from &lt;code&gt;skills.yaml&lt;/code&gt;&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;@chat why was that empty?&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;The tab’s model, with recent scrollback. It can call this tab’s MCP tools and saved endpoints; you approve each call&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;Agent on, then &lt;code&gt;why was that empty?&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;The same chat, without typing &lt;code&gt;@chat&lt;/code&gt;. A line that starts with &lt;code&gt;@&lt;/code&gt; still runs. &lt;code&gt;?&lt;/code&gt; opens collections and is not sent to the model&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;# find files over 100 MB here&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;The model writes one command into the prompt. You press Enter&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
- &lt;td&gt;&lt;code&gt;@history&lt;/code&gt;&lt;/td&gt;
- &lt;td&gt;The history overlay for this tab&lt;/td&gt;
- &lt;/tr&gt;
- &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
- &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/block-prompt.png" alt="The command list inside the open prompt block" loading="lazy"&gt;
- &lt;figcaption&gt;The browser build at localhost:1420. @ opens the list in the block under the line. invoke fails here, so the red lines are the missing shell and the list is the built-in commands. The shell needs pnpm tauri dev.&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;/p&gt;</description></item><item><title>Shells</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/shells/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/shells/</guid><description>&lt;p&gt;A line that is not an &lt;code&gt;@&lt;/code&gt; command or a &lt;code&gt;/&lt;/code&gt; skill runs in the tab’s shell. One command runs at a time per tab. Output streams in while it runs. &lt;strong&gt;Ctrl+C&lt;/strong&gt; stops that command and everything it started.&lt;/p&gt;
+&lt;/p&gt;</description></item><item><title>Snippets</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/snippets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/snippets/</guid><description>&lt;p&gt;Snippets are a folder of &lt;a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets" rel="external" target="_blank"&gt;VS Code &lt;code&gt;.code-snippets&lt;/code&gt;&lt;svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"&gt;&lt;path fill="currentColor" d="M14 5c-.552 0-1-.448-1-1s.448-1 1-1h6c.552 0 1 .448 1 1v6c0 .552-.448 1-1 1s-1-.448-1-1v-3.586l-7.293 7.293c-.391.39-1.024.39-1.414 0-.391-.391-.391-1.024 0-1.414l7.293-7.293h-3.586zm-9 2c-.552 0-1 .448-1 1v11c0 .552.448 1 1 1h11c.552 0 1-.448 1-1v-4.563c0-.552.448-1 1-1s1 .448 1 1v4.563c0 1.657-1.343 3-3 3h-11c-1.657 0-3-1.343-3-3v-11c0-1.657 1.343-3 3-3h4.563c.552 0 1 .448 1 1s-.448 1-1 1h-4.563z"/&gt;&lt;/svg&gt;&lt;/a&gt; files. The default is the &lt;code&gt;snippets&lt;/code&gt; folder inside the app data folder. Choose another folder in &lt;strong&gt;Settings → Workspace&lt;/strong&gt;, or leave the field blank to use that default. It is not a Note workspace.&lt;/p&gt;</description></item><item><title>Shells</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/shells/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/shells/</guid><description>&lt;p&gt;A line that is not an &lt;code&gt;@&lt;/code&gt; command or a &lt;code&gt;/&lt;/code&gt; skill runs in the tab’s shell. One command runs at a time per tab. Output streams in while it runs. &lt;strong&gt;Ctrl+C&lt;/strong&gt; stops that command and everything it started.&lt;/p&gt;
 &lt;p&gt;Each tab starts one persistent interactive shell session when it opens. Termorq loads that shell’s normal startup configuration once, then sends each composer command to the same session. The working directory and exported variables therefore carry forward to later commands in that tab.&lt;/p&gt;</description></item><item><title>Tabs and splits</title><link>https://termorq-docs.garrardkitchen.com/docs/terminal/tabs-and-splits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://termorq-docs.garrardkitchen.com/docs/terminal/tabs-and-splits/</guid><description>&lt;p&gt;Each tab is its own session: scrollback, folder, history, MCP servers, and OpenAI connection. Switching tabs leaves a running command where it is.&lt;/p&gt;
 &lt;h2 id="add-rename-close"&gt;Add, rename, close &lt;a href="#add-rename-close" class="anchor" aria-hidden="true"&gt;&lt;i class="material-icons align-middle"&gt;link&lt;/i&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;figure class="termorq-cli-figure"&gt;
  &lt;img src="https://termorq-docs.garrardkitchen.com/images/app/tabs-new-shell.png" alt="Termorq tab row with the shell picker menu open" loading="lazy"&gt;
